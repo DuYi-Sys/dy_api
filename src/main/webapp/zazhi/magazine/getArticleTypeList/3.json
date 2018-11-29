@@ -1,0 +1,32 @@
+{
+  "code": 0,
+  "msg": "OK",
+  "data": [{
+      "markPeople": "neffy",
+      "markPeopleAvatar": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3767933055,258610378&fm=27&gp=0.jpg",
+      "markCount": "270",
+      "articleImgSrc": "/image/list/article/4.png",
+      "articleTitle": "三毛：不雕琢痛苦，不敷衍生活",
+      "id": "3",
+      "publishTime": "1天前"
+    },
+    {
+      "markPeople": "Benson",
+      "markPeopleAvatar": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3767933055,258610378&fm=27&gp=0.jpg",
+      "markCount": "7",
+      "articleImgSrc": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2795508467,2677631400&fm=27&gp=0.jpg",
+      "articleTitle": "回忆顾城和谢烨 | 舒婷",
+      "id": "10",
+      "publishTime": "1天前"
+    },
+    {
+      "markPeople": "赵旭",
+      "markPeopleAvatar": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3767933055,258610378&fm=27&gp=0.jpg",
+      "markCount": "114",
+      "articleImgSrc": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1539155923724&di=7f94856b8def4f3fc056342d59d10cad&imgtype=0&src=http%3A%2F%2Fpic.qbaobei.com%2FUploads%2FEditor%2F2016-03-05%2F56da4cdc782e1.png",
+      "articleTitle": "人生呐，只有吃不可辜负",
+      "id": "11",
+      "publishTime": "9月26日"
+    }
+  ]
+}

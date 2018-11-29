@@ -1,0 +1,33 @@
+{
+  "code": 0,
+  "msg": "OK",
+  "data": [{
+      "markPeople": "neffy",
+      "markPeopleAvatar": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3859421672,511986628&fm=200&gp=0.jpg",
+      "markCount": "50",
+      "articleImgSrc": "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=929253180,1330877412&fm=27&gp=0.jpg",
+      "articleTitle": "你真正需要的，可能没有你以为的那么多 | 什么是极简主义？",
+      "articleType": "人生整理术",
+      "id": "2",
+      "publishTime": "1天前"
+    },
+    {
+      "markPeople": "小样",
+      "markPeopleAvatar": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3767933055,258610378&fm=27&gp=0.jpg",
+      "markCount": "1458",
+      "articleImgSrc": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=790956830,3597761397&fm=27&gp=0.jpg",
+      "articleTitle": "如何真正把你的知识体系建立起来？3000字就给你说清楚",
+      "id": "12",
+      "publishTime": "9月25日"
+    },
+    {
+      "markPeople": "neffy",
+      "markPeopleAvatar": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3767933055,258610378&fm=27&gp=0.jpg",
+      "markCount": "429",
+      "articleImgSrc": "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=350898190,1138666901&fm=27&gp=0.jpg",
+      "articleTitle": "一个女人最美的时候，是她开始成为自己|KY观影：《了不起的麦瑟尔夫人》",
+      "id": "13",
+      "publishTime": "9月26日"
+    }
+  ]
+}

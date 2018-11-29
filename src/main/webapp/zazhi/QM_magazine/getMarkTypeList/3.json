@@ -1,0 +1,33 @@
+{
+  "code": 0,
+  "msg": "OK",
+  "data": [{
+      "type": "菜市场",
+      "typeId": 17
+    },
+    {
+      "type": "环球旅行",
+      "typeId": 18
+    },
+    {
+      "type": "艺术展览",
+      "typeId": 19
+    },
+    {
+      "type": "酒店民俗",
+      "typeId": 20
+    },
+    {
+      "type": "日本旅行",
+      "typeId": 21
+    },
+    {
+      "type": "出行锦囊",
+      "typeId": 22
+    },
+    {
+      "type": "打折机票",
+      "typeId": 23
+    }
+  ]
+}

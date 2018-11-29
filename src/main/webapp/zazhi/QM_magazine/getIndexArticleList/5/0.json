@@ -1,0 +1,84 @@
+{
+
+  "code": 0,
+  "msg": "OK",
+  "data": [
+    {
+      type: 4,
+      tag: "成长",
+      tagId: 37,
+      artId: 46,
+      mark: {
+        avatar: "http://imgsrc.baidu.com/forum/w%3D580/sign=91c3fd483f6d55fbc5c6762e5d234f40/d1e5153b5bb5c9eaa29a9275d739b6003bf3b3be.jpg",
+        people: "水手辛巴德",
+        count: 582
+      },
+      video: {},
+      imgArray: [],
+      mainTitle: "所以，人生的成功并不是比别人成功，而是找到自己喜欢且擅长的事，按自己喜欢的方式安排人生",
+      subHead: "最好在25岁之前想明白的七件事"
+    },
+    {
+      type: 0,
+      tag: "人生整理术",
+      tagId: 34,
+      artId: 47,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 49
+      },
+      video: {},
+      imgArray: ["http://03imgmini.eastday.com/mobile/20181025/20181025170641_d41d8cd98f00b204e9800998ecf8427e_1.jpeg"],
+      mainTitle: "“世界上最好吃的鸡蛋做法”。引来十万围观",
+      subHead: ""
+    },
+    {
+      type: 4,
+      tag: "心理",
+      tagId: 35,
+      artId: 48,
+      mark: {
+        avatar: "http://imgsrc.baidu.com/forum/w%3D580/sign=91c3fd483f6d55fbc5c6762e5d234f40/d1e5153b5bb5c9eaa29a9275d739b6003bf3b3be.jpg",
+        people: "水手辛巴德",
+        count: 582
+      },
+      video: {},
+      imgArray: [],
+      mainTitle: "“不要冒然评价我，你只知道我的名字，却不知道我的故事。你只听闻我做了什么，却不知道我经历过什么。”",
+      subHead: "“看你微信头像，就知道你没见过世面”"
+    },
+    {
+      type: 2,
+      tag: "心理",
+      tagId: 35,
+      artId: 49,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 33
+      },
+      video: {},
+      imgArray: ["http://5b0988e595225.cdn.sohucs.com/images/20181020/18462a2dfde847c6a5f36f87126710b8.jpeg"],
+      mainTitle: "情商高的人，绝不会用这4句话安慰人",
+      subHead: "赶走伤心的“理解”，需要两人共同达成"
+    },
+    {
+      type: 0,
+      tag: "人生整理术",
+      tagId: 34,
+      artId: 50,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 46
+      },
+      video: {},
+      imgArray: ["https://inews.gtimg.com/newsapp_bt/0/5982634682/1000"],
+      mainTitle: "如何有效地组织你的时间和精力来达成目标",
+      subHead: ""
+    }
+    
+  ]
+
+}

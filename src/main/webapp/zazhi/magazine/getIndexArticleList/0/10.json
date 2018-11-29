@@ -1,0 +1,111 @@
+{
+
+  "code": 0,
+  "msg": "OK",
+  "data": [{
+      type: 2,
+      tag: "心理",
+      tagId: 5,
+      artId: 1,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 19
+      },
+      video: {},
+      imgArray: ["http://spider.nosdn.127.net/ad1f9380165b740153769549b97e0e9c.jpeg?imageView&thumbnail=750x0&quality=85&type=jpg&interlace=1"],
+      mainTitle: "《我不是药神》：惜命的最好方式不是养生，而是管理情绪",
+      subHead: "世界真的会惩罚，那些总是忽视自己内心的人"
+    },
+    {
+      type: 1,
+      tag: "吃喝攻略",
+      tagId: 6,
+      artId: 2,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 1
+      },
+      video: {},
+      imgArray: [
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/8c5787bfe46c432db3604b5754262d04.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/44f295bf5f844cdb8991be7f814b3090.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/a22ee130e4294188a44984381901aa04.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/c0d74a6328b4497894a5a5d20e0f66e0.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/3eda289991664b188f70c0d3fa9112f5.gif",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/027a46ae145a4e568516254b074ca9e4.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/fdb7bdecba12438bbfe58945a0bd6b4f.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/f4de71d7c0544c08a52869e7320e3c9e.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/c9ad3a206c384901a490c7499a68cef4.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/b3cb4fd76c94474182a8ee414a281a71.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/858113f570f44a45ab6f0de76f206a33.gif",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/5a38b0ba63164001acdbbeeb8a091d9c.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/51d6593fadac4499a99701bb395e36da.gif",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/d07e5261c5114b64ab7c2ccc9b6ecd00.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/7122290d8e0f4503851e16649f589612.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/8abc0c5c245f4f55969d6048e84fd3e5.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/29d5684bbc2f49f3b612cfdb5743f160.gif",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/aeeffe550dbd41dbba090e6cd706832d.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/90014703f9f049f4b88dd896b9a62711.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/0213b3d98edd4c7f910fc2e6b5586c3f.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/188abcd511f245c092ca3bd5e2ca3296.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/14098ec1447649488f3f6b1c7b4e4f2e.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181020/3430dcc84f8444cf962b539ca05c5421.jpeg"
+      ],
+      mainTitle: "一环边这个老工厂摇身一变成涂鸦背景墙，混搭着重口味和小清新！",
+      subHead: ""
+    },
+    {
+      type: 3,
+      tag: "吃喝攻略",
+      tagId: 6,
+      artId: 3,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 6
+      },
+      video: {
+        src: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4f",
+        poster: "https://upfile.asqql.com/2009pasdfasdfic2009s305985-ts/2018-7/2018714146564762.gif",
+        duration: "41'",
+        id: "video2018102201"
+      },
+      imgArray: [],
+      mainTitle: "酒不醉人虾醉人~",
+      subHead: ""
+    },
+    {
+      type: 4,
+      tag: "心理",
+      tagId: 5,
+      artId: 4,
+      mark: {
+        avatar: "http://imgsrc.baidu.com/forum/w%3D580/sign=91c3fd483f6d55fbc5c6762e5d234f40/d1e5153b5bb5c9eaa29a9275d739b6003bf3b3be.jpg",
+        people: "水手辛巴德",
+        count: 582
+      },
+      video: {},
+      imgArray: [],
+      mainTitle: "“我所向往的自律，是每天能够高效地完成工作，然后有充足的时间去享受生活，而不是完美而严苛的时间表。因为，自律本身并不诱人，自律背后的自由才诱人。”",
+      subHead: "写给“普通人”的五大自律法则"
+    },
+    {
+      type: 0,
+      tag: "男性穿搭",
+      tagId: 1,
+      artId: 5,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 9
+      },
+      video: {},
+      imgArray: ["http://img.mp.itc.cn/upload/20170718/99b66e79c9134ce9afd795063cc7460e_th.jpg"],
+      mainTitle: "穿上这个夹克，我可以飞起来！",
+      subHead: ""
+    }
+  ]
+
+}

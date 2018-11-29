@@ -1,0 +1,37 @@
+{
+  "code": 0,
+  "msg": "OK",
+  "data": [{
+      "type": "日韩剧",
+      "typeId": 9
+    },
+    {
+      "type": "游戏",
+      "typeId": 10
+    },
+    {
+      "type": "古典音乐",
+      "typeId": 11
+    },
+    {
+      "type": "手账",
+      "typeId": 12
+    },
+    {
+      "type": "电影",
+      "typeId": 13
+    },
+    {
+      "type": "健身",
+      "typeId": 14
+    },
+    {
+      "type": "咖啡",
+      "typeId": 15
+    },
+    {
+      "type": "手机摄影",
+      "typeId": 16
+    }
+  ]
+}

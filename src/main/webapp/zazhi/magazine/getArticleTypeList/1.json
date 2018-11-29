@@ -1,0 +1,32 @@
+{
+  "code": 0,
+  "msg": "OK",
+  "data": [{
+      "markPeople": "neffy",
+      "markPeopleAvatar": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3767933055,258610378&fm=27&gp=0.jpg",
+      "markCount": "33",
+      "articleImgSrc": "/image/list/article/2.png",
+      "articleTitle": "秋季衬衫准没错？中了这几点就白买了",
+      "id": "1",
+      "publishTime": "1天前"
+    },
+    {
+      "markPeople": "neffy",
+      "markPeopleAvatar": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3767933055,258610378&fm=27&gp=0.jpg",
+      "markCount": "96",
+      "articleImgSrc": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1539153076120&di=4f09fd266aa23c1d0245c80ceaf441ea&imgtype=0&src=http%3A%2F%2Fm.360buyimg.com%2Fn12%2Fjfs%2Ft187%2F172%2F2274836882%2F164857%2F3723d609%2F53c9201fN68199544.jpg%2521q70.jpg",
+      "articleTitle": "换季耍帅不能停，get这几件男神必备衬衫就够了",
+      "id": "8",
+      "publishTime": "1天前"
+    },
+    {
+      "markPeople": "PILL",
+      "markPeopleAvatar": "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=4252777213,3972425634&fm=27&gp=0.jpg",
+      "markCount": "63",
+      "articleImgSrc": "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3215783548,1016421227&fm=27&gp=0.jpg",
+      "articleTitle": "潮物 | 我想全色入手！百元Champion卫衣入球必备",
+      "id": "9",
+      "publishTime": "1天前"
+    }
+  ]
+}

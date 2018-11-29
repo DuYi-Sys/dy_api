@@ -1,0 +1,101 @@
+{
+
+  "code": 0,
+  "msg": "OK",
+  "data": [{
+      type: 2,
+      tag: "吃喝攻略",
+      tagId: 1,
+      artId: 11,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 11
+      },
+      video: {},
+      imgArray: ["https://inews.gtimg.com/newsapp_bt/0/5817627438/1000"],
+      mainTitle: "从挑到吃，一份鲜活的海胆指南请收好",
+      subHead: "你第一次吃到海胆也是这个反应..."
+    },
+    {
+      type: 1,
+      tag: "吃喝攻略",
+      tagId: 1,
+      artId: 12,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 1
+      },
+      video: {},
+      imgArray: [
+        "http://5b0988e595225.cdn.sohucs.com/images/20181016/be2464569000484dba982f9a9a303642.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181016/0e432cb38cf3456ea2f106cc1cba51df.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181016/d3678c9308ae4284aefc2c6bfb384ed2.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181016/bd8b1159fee147e99ff90e3d886abf72.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181016/385135cc84064425a7f3fa883640e901.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181016/59ce3389cec046499fc0a20b478c553b.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181016/7d6c0cbbd85646e5afea4847abe818bb.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181016/e758079786e0419ebc2ce371ee63c48c.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181016/04abe77478354a18afe5facf4baf51a5.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181016/200150e46a5947c78baa6d31d0b5e08e.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181016/f63e0aa8b8bb4ae5bc7f69f442946f33.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181016/ae7eb4b9cb684d10902d124c8ddf5978.jpeg",
+        "http://5b0988e595225.cdn.sohucs.com/images/20181016/3704b1c7fd2a4404adf57ba67bd56ce1.jpeg"
+      ],
+      mainTitle: "惠州，一个让人发胖的地方",
+      subHead: ""
+    },
+    {
+      type: 3,
+      tag: "吃喝攻略",
+      tagId: 1,
+      artId: 13,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 6
+      },
+      video: {
+        src: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4f",
+        poster: "https://upfile.asqql.com/2009pasdfasdfic2009s305985-ts/2015-4/20154722382561294.gif",
+        duration: "41'",
+        id: "video201803"
+      },
+      imgArray: [],
+      mainTitle: "重阳节一过，蟹黄扑扑满的母蟹，正式进入巅峰时期",
+      subHead: ""
+    },
+    {
+      type: 4,
+      tag: "吃喝攻略",
+      tagId: 1,
+      artId: 14,
+      mark: {
+        avatar: "http://imgsrc.baidu.com/forum/w%3D580/sign=91c3fd483f6d55fbc5c6762e5d234f40/d1e5153b5bb5c9eaa29a9275d739b6003bf3b3be.jpg",
+        people: "水手辛巴德",
+        count: 52
+      },
+      video: {},
+      imgArray: [],
+      mainTitle: "这里摒弃了“老卤”制作卤鹅回味悠长的传统说法，认为“老卤”多酸、粘稠，而每日新调的卤水更为健康、鲜甜，慢慢凭借实力赢得了口碑",
+      subHead: "美食旅行团 | 汕头，一座用来吃掉的城市"
+    },
+    {
+      type: 0,
+      tag: "吃喝攻略",
+      tagId: 1,
+      artId: 15,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 8
+      },
+      video: {},
+      imgArray: ["http://5b0988e595225.cdn.sohucs.com/images/20181023/65577bc7ef94474cb07a4ad37fb114e9.jpeg"],
+      mainTitle: "禾祥西小岔路里，居然藏了十几家隐世好店！",
+      subHead: ""
+    }
+  ]
+
+}

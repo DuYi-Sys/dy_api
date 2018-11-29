@@ -1,0 +1,15 @@
+{
+  "code": 0,
+  "msg": "OK",
+  "data": [{
+    type: 0,
+    tag: "",
+    tagId: 33,
+    artId: 56,
+    mark: {},
+    video: {},
+    imgArray: ["https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=4263116944,2408875331&fm=173&app=25&f=JPEG?w=500&h=300&s=A480A3F1484074CE1234D8D0030040B3"],
+    mainTitle: "从读书说起：古人读书难，读书慢，读书苦",
+    subHead: ""
+  }]
+}

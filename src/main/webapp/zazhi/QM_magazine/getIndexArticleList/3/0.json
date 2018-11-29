@@ -1,0 +1,72 @@
+{
+
+  "code": 0,
+  "msg": "OK",
+  "data": [{
+      type: 2,
+      tag: "日本旅行",
+      tagId: 19,
+      artId: 39,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 25
+      },
+      video: {},
+      imgArray: ["http://image01.dujiabieshu.com/uploads/destination/article/5/5412/11.jpg"],
+      mainTitle: "京都超人气日式旅馆推荐，住过就不想离开！",
+      subHead: "古香古色，很有韵味哦~"
+    },
+    {
+      type: 3,
+      tag: "艺术展览",
+      tagId: 17,
+      artId: 40,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 6
+      },
+      video: {
+        src: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4f",
+        poster: "https://upfile.asqql.com/2009pasdfasdfic2009s305985-ts/2018-4/201841020232380597.gif",
+        duration: "3'9''",
+        id: "video201807"
+      },
+      imgArray: [],
+      mainTitle: "艺术家、匠人、科学家？",
+      subHead: ""
+    },
+    {
+      type: 2,
+      tag: "环球旅行",
+      tagId: 16,
+      artId: 41,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 160
+      },
+      video: {},
+      imgArray: ["http://p0.ifengimg.com/pmop/2018/1017/EBD1C2065B3DD6CBC6C9D98A0868CF133C301C7E_size226_w1080_h1620.jpeg"],
+      mainTitle: "有哪些听起来高大上但性价比极高的旅行目的地？",
+      subHead: "现在就出发！"
+    },
+    {
+      type: 0,
+      tag: "环球旅行",
+      tagId: 16,
+      artId: 42,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 7
+      },
+      video: {},
+      imgArray: ["https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540566861912&di=76d423784e76679b025649ebfe9ef70d&imgtype=0&src=http%3A%2F%2Fwww.fireflytrip.com%2Fimages%2F20150907%2F1347494394.jpg"],
+      mainTitle: "展讯 | 去南美，学几何",
+      subHead: ""
+    }
+  ]
+
+}

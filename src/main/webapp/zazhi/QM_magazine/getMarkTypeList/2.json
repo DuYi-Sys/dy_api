@@ -1,0 +1,41 @@
+{
+  "code": 0,
+  "msg": "OK",
+  "data": [{
+      "type": "潮牌",
+      "typeId": 0
+    },
+    {
+      "type": "吃喝攻略",
+      "typeId": 1
+    },
+    {
+      "type": "理财",
+      "typeId": 2
+    },
+    {
+      "type": "家居好物",
+      "typeId": 3
+    },
+    {
+      "type": "深度阅读",
+      "typeId": 4
+    },
+    {
+      "type": "智能生活",
+      "typeId": 5
+    },
+    {
+      "type": "礼物",
+      "typeId": 6
+    },
+    {
+      "type": "球鞋",
+      "typeId": 7
+    },
+    {
+      "type": "男性穿搭",
+      "typeId": 8
+    }
+  ]
+}

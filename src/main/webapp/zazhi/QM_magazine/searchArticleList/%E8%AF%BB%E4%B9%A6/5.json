@@ -1,0 +1,61 @@
+{
+  "code": 0,
+  "msg": "OK",
+  "data": [{
+      type: 0,
+      tag: "",
+      tagId: 33,
+      artId: 51,
+      mark: {},
+      video: {},
+      imgArray: ["https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=4263116944,2408875331&fm=173&app=25&f=JPEG?w=500&h=300&s=A480A3F1484074CE1234D8D0030040B3"],
+      mainTitle: "从读书说起：古人读书难，读书慢，读书苦",
+      subHead: ""
+    },
+    {
+      type: 0,
+      tag: "人文阅读",
+      tagId: 40,
+      artId: 52,
+      mark: {},
+      video: {},
+      imgArray: ["https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=876141918,3152813930&fm=173&s=C5D69AF7070264F44919C1600300F077&w=600&h=533&img.JPG"],
+      mainTitle: "要读书处处可读书",
+      subHead: ""
+    },
+    {
+      type: 0,
+      tag: "",
+      tagId: 33,
+      artId: 53,
+      mark: {},
+      video: {},
+      imgArray: ["https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1275428850,2530840896&fm=173&app=25&f=JPEG?w=640&h=401&s=E51A31D754A33AA7A815F8E103003030"],
+      mainTitle: "读书 | 老舍：谈读书",
+      subHead: ""
+    },
+    {
+      type: 0,
+      tag: "",
+      tagId: 33,
+      artId: 54,
+      mark: {},
+      video: {},
+      imgArray: ["https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2011288658,2936704849&fm=200&gp=0.jpg"],
+      mainTitle: "读书 | 可以不读书，但不可以不读《读书》",
+      subHead: ""
+    },
+    {
+      type: 0,
+      tag: "",
+      tagId: 33,
+      artId: 55,
+      mark: {},
+      video: {},
+      imgArray: ["https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2315868742,2481208892&fm=170&s=7C83DE1C53A2C14D5434BD78030050F9&w=441&h=265&img.PNG"],
+      mainTitle: "爱读书，会读书，读好书--世界第21个读书日",
+      subHead: ""
+    }
+
+  ]
+}

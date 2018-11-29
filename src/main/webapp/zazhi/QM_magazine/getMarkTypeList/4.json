@@ -1,0 +1,41 @@
+{
+  "code": 0,
+  "msg": "OK",
+  "data": [{
+      "type": "轻芒杂志",
+      "typeId": 24
+    },
+    {
+      "type": "设计生活",
+      "typeId": 25
+    },
+    {
+      "type": "轻芒封面文章",
+      "typeId": 26
+    },
+    {
+      "type": "iPhone",
+      "typeId": 27
+    },
+    {
+      "type": "宇宙探索",
+      "typeId": 28
+    },
+    {
+      "type": "第一财经周刊",
+      "typeId": 29
+    },
+    {
+      "type": "人工智能",
+      "typeId": 30
+    },
+    {
+      "type": "Google",
+      "typeId": 31
+    },
+    {
+      "type": "轻芒热点",
+      "typeId": 32
+    }
+  ]
+}

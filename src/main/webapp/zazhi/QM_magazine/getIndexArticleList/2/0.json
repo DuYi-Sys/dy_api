@@ -1,0 +1,86 @@
+{
+
+  "code": 0,
+  "msg": "OK",
+  "data": [{
+      type: 0,
+      tag: "男性穿搭",
+      tagId: 1,
+      artId: 31,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 9
+      },
+      video: {},
+      imgArray: ["http://imgboys1.yohobuy.com/contentimg/2018/10/25/12/01fc985067985cab0e452d58dda2b36be0.jpg"],
+      mainTitle: "不给鞋就捣蛋！教你如何搭配OFF-WHITE x Nike的第一双节日主题鞋款",
+      subHead: ""
+    },
+    {
+      type: 3,
+      tag: "家居好物",
+      tagId: 3,
+      artId: 32,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 6
+      },
+      video: {
+        src: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4f",
+        poster: "https://upfile.asqql.com/2009pasdfasdfic2009s305985-ts/2018-1/2018112217647788.gif",
+        duration: "59''",
+        id: "video201806"
+      },
+      imgArray: [],
+      mainTitle: "炫酷黑科技，放热水自动搅拌，快速降温，太神奇了！",
+      subHead: ""
+    },
+    {
+      type: 2,
+      tag: "吃喝攻略",
+      tagId: 1,
+      artId: 33,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 19
+      },
+      video: {},
+      imgArray: ["http://5b0988e595225.cdn.sohucs.com/images/20181024/582443db94de42abb12a5c01965fa150.jpeg"],
+      mainTitle: "淘宝跨省嗦粉指南 | 羊肉牛肉肥肠粉，都到我碗里来",
+      subHead: "一起嗦粉吧！"
+    },
+    {
+      type: 0,
+      tag: "男性穿搭",
+      tagId: 1,
+      artId: 34,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 9
+      },
+      video: {},
+      imgArray: ["http://upload.pig66.com/toutiao/1952035-81c368d776cb602f9b330d230c85b236"],
+      mainTitle: "能穿十年的赤耳牛仔夹克，你选中国品牌还是外国品牌呢？",
+      subHead: ""
+    },
+    {
+      type: 0,
+      tag: "家居好物",
+      tagId: 3,
+      artId: 35,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 9
+      },
+      video: {},
+      imgArray: ["https://r.sinaimg.cn/large/article/28c9c7724ba6a58fbc99878bc4ee10bf"],
+      mainTitle: "那些深藏在淘宝中的优质家居店，终于帮你找到了",
+      subHead: ""
+    }
+  ]
+}

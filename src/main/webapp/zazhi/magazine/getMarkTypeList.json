@@ -1,0 +1,36 @@
+{
+  "code": 0,
+  "msg": "OK",
+  "data": [{
+      "type": "女性穿搭",
+      "typeId": "7"
+    },
+    {
+      "type": "男性穿搭",
+      "typeId": "1"
+    },
+    {
+      "type": "心理",
+      "typeId": "5"
+    },
+    {
+      "type": "深度阅读",
+      "typeId": "0"
+    },
+    {
+      "type": "人生整理术",
+      "typeId": "2"
+    },
+    {
+      "type": "读书",
+      "typeId": "3"
+    },
+    {
+      "type": "日韩剧",
+      "typeId": "4"
+    },
+    {
+      "type": "吃喝攻略",
+      "typeId": "6"
+    }]
+}

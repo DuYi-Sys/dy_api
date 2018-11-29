@@ -1,0 +1,53 @@
+{
+
+  "code": 0,
+  "msg": "OK434445",
+  "data": [
+    {
+      type: 0,
+      tag: "设计生活",
+      tagId: 23,
+      artId: 43,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 85
+      },
+      video: {},
+      imgArray: ["http://d.ifengimg.com/w600/p0.ifengimg.com/pmop/2018/1025/6DA4774297584051DE3DBAE4C32466AA19833506_size157_w820_h1230.jpeg"],
+      mainTitle: "怎样设计出高级感？看看佐藤大怎么做的",
+      subHead: ""
+    },
+    {
+      type: 2,
+      tag: "轻芒封面文章",
+      tagId: 24,
+      artId: 44,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 152
+      },
+      video: {},
+      imgArray: ["http://www.woshiqian.com/zb_users/upload/2018/06/201806201529468438702726.png"],
+      mainTitle: "自媒体的至暗时刻？",
+      subHead: "这几天，自媒体被轮番锤了一波......"
+    },
+    {
+      type: 2,
+      tag: "设计生活",
+      tagId: 23,
+      artId: 45,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 152
+      },
+      video: {},
+      imgArray: ["http://5b0988e595225.cdn.sohucs.com/images/20181025/a87061b8ff5c41f582ab271a9fbf42e9.jpeg"],
+      mainTitle: "导演了《Call Me by Your Name》后，他又“导演”了Aesop新店",
+      subHead: "Lucs Guadagnino首次操刀设计零售空间"
+    }
+  ]
+
+}

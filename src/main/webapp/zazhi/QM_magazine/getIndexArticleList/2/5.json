@@ -1,0 +1,52 @@
+{
+
+  "code": 0,
+  "msg": "OK",
+  "data": [{
+      type: 0,
+      tag: "男性穿搭",
+      tagId: 1,
+      artId: 36,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 9
+      },
+      video: {},
+      imgArray: ["http://5b0988e595225.cdn.sohucs.com/images/20181020/0dee75ebafce4a00aae710af37a4a9b8.jpeg"],
+      mainTitle: "女生看了都觉得OK的男生穿搭，该怎么搭？",
+      subHead: ""
+    },
+    {
+      type: 0,
+      tag: "智能生活",
+      tagId: 4,
+      artId: 37,
+      mark: {
+        avatar: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1583048521,3913773527&fm=27&gp=0.jpg",
+        people: "neffy",
+        count: 9
+      },
+      video: {},
+      imgArray: ["http://img5.pcpop.com/ArticleImages/730x547/4/4177/004177537.jpg"],
+      mainTitle: "WIFI还是蓝牙？音响这样买才够稳！",
+      subHead: ""
+    },
+    {
+      type: 4,
+      tag: "礼物",
+      tagId: 5,
+      artId: 38,
+      mark: {
+        avatar: "http://imgsrc.baidu.com/forum/w%3D580/sign=91c3fd483f6d55fbc5c6762e5d234f40/d1e5153b5bb5c9eaa29a9275d739b6003bf3b3be.jpg",
+        people: "水手辛巴德",
+        count: 970
+      },
+      video: {},
+      imgArray: [],
+      mainTitle: "遇到喜欢的人已经很难了，就不要错过喜欢的东西了",
+      subHead: "今天推荐点高颜值的好物怎么样？"
+    }
+  ]
+
+}

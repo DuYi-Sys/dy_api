@@ -1,0 +1,37 @@
+{
+  "code": 0,
+  "msg": "OK",
+  "data": [{
+      "type": "男性穿搭",
+      "typeId": 8
+    },
+    {
+      "type": "古典音乐",
+      "typeId": 11
+    },
+    {
+      "type": "心理",
+      "typeId": 37
+    },
+    {
+      "type": "深度阅读",
+      "typeId": 4
+    },
+    {
+      "type": "人生整理术",
+      "typeId": 36
+    },
+    {
+      "type": "读书",
+      "typeId": 33
+    },
+    {
+      "type": "日韩剧",
+      "typeId": 9
+    },
+    {
+      "type": "吃喝攻略",
+      "typeId": 1
+    }
+  ]
+}
