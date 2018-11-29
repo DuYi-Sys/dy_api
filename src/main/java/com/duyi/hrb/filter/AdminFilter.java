@@ -111,7 +111,7 @@ public class AdminFilter implements Filter {
 
             System.out.println("跳转回adminLogin.html");
 
-            resp.sendRedirect("/login/login.html#login");
+            resp.sendRedirect("/login.html");
 
 //            req.getRequestDispatcher("/login/login.html#login").forward(req, res);
 

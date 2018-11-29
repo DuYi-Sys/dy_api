@@ -23,7 +23,7 @@
         <!-- 用户名 -->
         <property name="user" value="root" />
         <!-- 密码 -->
-        <property name="password" value="sasa" />
+        <property name="password" value="123456" />
         <!-- 当连接池中的连接耗尽的时候c3p0一次同时获取的连接数  -->
         <property name="acquireIncrement" value="5"></property>
         <!-- 初始连接池大小 -->

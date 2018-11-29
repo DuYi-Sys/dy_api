@@ -173,7 +173,7 @@ public class AdminController extends BaseController {
 
     //@RequestParam(name = "callback") String callback,
 
-    public void registe(String account, String password, String rePassword, String email, HttpServletResponse resp) throws Exception {
+    public void registe(@RequestParam("account") String account, @RequestParam("password") String password, @RequestParam("rePassword") String rePassword, @RequestParam("email") String email, HttpServletResponse resp) throws Exception {
 
 //        resp.setHeader("content-type", "application:json;charset=utf8");
 //        resp.setHeader("Access-Control-Allow-Origin", "*");

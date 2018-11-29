@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渡一API</title>
+
+    <style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .main_panel {
+            /*background: blue;*/
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            width: 500px;
+            height: 200px;
+        }
+
+        .title {
+            position: relative;
+            display: inline-block;
+            width: 260px;
+            font-size: 70px;
+            color: #222;
+            text-align: center;
+            background: white;
+            float: left;
+            margin-bottom: 10px;
+        }
+
+        .title_line {
+            display: inline-block;
+            float: left;
+            width: 120px;
+            height: 4px;
+            margin-top: 50px;
+            background: #222;
+        }
+
+        .input {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 440px;
+            height: 40px;
+            padding: 5px 24px;
+            font-size: 16px;
+            font-color: #666;
+            margin-top: 15px;
+        }
+
+        .register_btn {
+            position: relative;
+            display: block;
+            width: 490px;
+            margin-left: auto;
+            margin-right: auto;
+            background: #222;
+            color: white;
+            text-align: center;
+            height: 38px;
+            line-height: 38px;
+            margin-top: 30px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+
+        function register() {
+            var account = document.getElementById("account").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var rePassword = document.getElementById("repeat").value;
+
+            var data =  "account=" + account + "&email=" + email + "&password=" + password + "&rePassword=" + rePassword;
+
+            var ajax = new XMLHttpRequest();
+            ajax.open('post','/register');
+            ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            ajax.send(data);
+            ajax.onreadystatechange = function () {
+                if (ajax.readyState==4 && ajax.status==200) {
+                    alert("请前往邮箱激活~");
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+<div class="main_panel">
+    <div class="title_line"></div>
+    <div class="title">DUYI</div>
+    <div class="title_line"></div>
+    <input type="text" class="input" placeholder="用&nbsp;户&nbsp;名" id="account"/>
+    <input type="text" class="input" placeholder="邮&nbsp;&nbsp;&nbsp;&nbsp;箱" id="email"/>
+    <input type="password" class="input" placeholder="密&nbsp;&nbsp;&nbsp;&nbsp;码" id="password"/>
+    <input type="password" class="input" placeholder="确认密码" id="repeat"/>
+    <div class="register_btn" onclick="register()">注册</div>
+</div>
+
+</body>
+</html>
