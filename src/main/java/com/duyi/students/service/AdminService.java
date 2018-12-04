@@ -2,8 +2,8 @@ package com.duyi.students.service;
 
 import com.duyi.students.dao.AdminDao;
 import com.duyi.students.domain.Admin;
-import com.duyi.students.util.MD5Util;
-import com.duyi.students.util.MailOperation;
+import com.duyi.util.MD5Util;
+import com.duyi.util.MailOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

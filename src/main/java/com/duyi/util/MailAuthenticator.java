@@ -1,4 +1,4 @@
-package com.duyi.students.util;
+package com.duyi.util;
 
 import javax.mail.Authenticator;
 import javax.mail.PasswordAuthentication;

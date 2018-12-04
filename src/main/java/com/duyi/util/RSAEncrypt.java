@@ -1,4 +1,4 @@
-package com.duyi.students.util;
+package com.duyi.util;
 
 import org.apache.commons.codec.binary.Base64;
 import javax.crypto.Cipher;

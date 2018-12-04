@@ -2,7 +2,7 @@ package com.duyi.students.filter;
 
 import com.duyi.students.domain.Student;
 import com.duyi.students.service.StudentService;
-import com.duyi.students.util.RSAEncrypt;
+import com.duyi.util.RSAEncrypt;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 

@@ -1,4 +1,4 @@
-package com.duyi.students.util;
+package com.duyi.util;
 
 import javax.mail.Message;
 import javax.mail.Multipart;
