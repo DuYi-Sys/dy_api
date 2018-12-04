@@ -1,7 +1,4 @@
-import com.duyi.hrb.util.RSAEncrypt;
-
-import java.net.URLDecoder;
-import java.net.URLEncoder;
+import com.duyi.util.RSAEncrypt;
 
 public class test3 {
     public static void main(String[] args) throws Exception {

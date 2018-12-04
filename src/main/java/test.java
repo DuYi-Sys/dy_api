@@ -1,4 +1,4 @@
-import com.duyi.hrb.util.MailOperation;
+import com.duyi.util.MailOperation;
 
 public class test {
     public static void main(String[] args) {

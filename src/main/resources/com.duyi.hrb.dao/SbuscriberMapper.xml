@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<!--美团用户mapper-->
+
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.duyi.meituan.dao.SbuscriberDao">
 
-<mapper namespace="com.duyi.students.dao.AdminDao">
+    <insert id="add" parameterType="com.duyi.meituan.domain.Sbuscriber">
 
-    <insert id="add" parameterType="com.duyi.students.domain.Admin">
-
-        insert into admin_inf(account,password,email) values(#{account},#{password},#{email});
+        insert into student.m_user_inf(account,name,password,email,phone,born,ctime,utime)
+        values(#{account},#{name},#{password},#{email},#{phone},#{born},now(),now());
 
     </insert>
 

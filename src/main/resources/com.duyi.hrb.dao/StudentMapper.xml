@@ -3,15 +3,15 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.duyi.hrb.dao.StudentDao">
+<mapper namespace="com.duyi.students.dao.StudentDao">
 
-    <insert id="add" parameterType="com.duyi.hrb.domain.Student">
+    <insert id="add" parameterType="com.duyi.students.domain.Student">
 
         insert into student_inf(sno, name, email,sex,birth,phone,address,uid,ctime,utime)values (#{sNo},#{name},#{email},#{sex},#{birth},#{phone},#{address},#{uId},now(),now())
 
     </insert>
 
-    <update id="update" parameterType="com.duyi.hrb.domain.Student"  >
+    <update id="update" parameterType="com.duyi.students.domain.Student"  >
 
         update student_inf set email = #{email}, name = #{name}, sex = #{sex}, birth = #{birth}, phone = #{phone}, address = #{address} where sno = #{sNo};
 
@@ -23,19 +23,19 @@
 
     </delete>
 
-    <select id="findByAll" parameterType="String" resultType="com.duyi.hrb.domain.Student">
+    <select id="findByAll" parameterType="String" resultType="com.duyi.students.domain.Student">
 
        select * from student_inf where uid = #{uId};
 
     </select>
 
-    <select id="findByPage" resultType="com.duyi.hrb.domain.Student">
+    <select id="findByPage" resultType="com.duyi.students.domain.Student">
 
         select * from student_inf where uid = #{uId} limit #{offset},#{size};
 
     </select>
 
-    <select id="findBySno" resultType="com.duyi.hrb.domain.Student">
+    <select id="findBySno" resultType="com.duyi.students.domain.Student">
 
         select * from student_inf where sNo = #{sNo};
 

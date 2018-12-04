@@ -4,28 +4,17 @@ import java.util.Date;
 import java.util.Objects;
 
 public class Student {
+
     private int id;
-
     private String sNo;
-
     private String name;
-
     private String email;
-
     private int sex;
-
     private int birth;
-
     private String phone;
-
     private String address;
-
     private String uId;
-
-//    private int page;
-
     private Date ctime;
-
     private Date utime;
 
 

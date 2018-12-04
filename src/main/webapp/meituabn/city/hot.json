@@ -1,0 +1,35 @@
+{
+    "status": 0,
+    "msg": "成功",
+    "data": [{
+        "id": 1,
+        "name": "北京",
+        "pinyin": "beijing",
+        "acronym": "bj",
+        "rank": "S",
+        "firstChar": "b"
+    },
+    {
+        "id": 10,
+        "name": "上海",
+        "pinyin": "shanghai",
+        "acronym": "sh",
+        "rank": "S",
+        "firstChar": "s"
+    },{
+        "id": 20,
+        "name": "广州",
+        "pinyin": "guangzhou",
+        "acronym": "gz",
+        "rank": "S",
+        "firstChar": "g"
+    },
+    {
+        "id": 30,
+        "name": "深圳",
+        "pinyin": "shenzheng",
+        "acronym": "sz",
+        "rank": "S",
+        "firstChar": "s"
+    }]
+}

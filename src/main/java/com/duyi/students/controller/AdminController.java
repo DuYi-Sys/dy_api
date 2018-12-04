@@ -177,9 +177,6 @@ public class AdminController extends BaseController {
         String resultString = "";
 
         System.out.println(account + password + rePassword + email);
-
-        JSONObject result = new JSONObject();
-
         if (account == null || account.equals("")) {
 
             resultString = JSON.toJSONString(

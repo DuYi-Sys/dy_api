@@ -1,0 +1,20 @@
+{
+    "status": 0,
+    "msg": "成功",
+    "data": [{
+        "id": 20,
+        "name": "广州",
+        "pinyin": "guangzhou",
+        "acronym": "gz",
+        "rank": "S",
+        "firstChar": "g"
+    },
+    {
+        "id": 30,
+        "name": "深圳",
+        "pinyin": "shenzheng",
+        "acronym": "sz",
+        "rank": "S",
+        "firstChar": "s"
+    }]
+}
