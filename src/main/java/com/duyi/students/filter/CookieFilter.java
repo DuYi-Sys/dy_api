@@ -1,10 +1,8 @@
-package com.duyi.hrb.filter;
+package com.duyi.students.filter;
 
-import com.duyi.hrb.dao.StudentDao;
-import com.duyi.hrb.domain.Student;
-import com.duyi.hrb.service.StudentService;
-import com.duyi.hrb.util.RSAEncrypt;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.duyi.students.domain.Student;
+import com.duyi.students.service.StudentService;
+import com.duyi.students.util.RSAEncrypt;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 

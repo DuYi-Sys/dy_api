@@ -1,17 +1,14 @@
-package com.duyi.hrb.controller;
+package com.duyi.students.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.duyi.hrb.domain.Admin;
-import com.duyi.hrb.domain.RespModel;
-import com.duyi.hrb.domain.Student;
-import com.duyi.hrb.enums.RespStatusEnum;
-import com.duyi.hrb.service.AdminService;
-import com.duyi.hrb.service.StudentService;
-import com.duyi.hrb.util.MD5Util;
-import com.duyi.hrb.util.MailOperation;
-import com.duyi.hrb.util.RSAEncrypt;
-import org.apache.ibatis.annotations.Param;
+import com.duyi.students.domain.Admin;
+import com.duyi.students.domain.RespModel;
+import com.duyi.students.domain.Student;
+import com.duyi.students.enums.RespStatusEnum;
+import com.duyi.students.service.AdminService;
+import com.duyi.students.service.StudentService;
+import com.duyi.students.util.RSAEncrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,9 +20,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.net.URLDecoder;
 import java.net.URLEncoder;
-import java.security.NoSuchAlgorithmException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

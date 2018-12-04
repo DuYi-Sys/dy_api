@@ -1,9 +1,9 @@
-package com.duyi.hrb.service;
+package com.duyi.students.service;
 
-import com.duyi.hrb.dao.AdminDao;
-import com.duyi.hrb.domain.Admin;
-import com.duyi.hrb.util.MD5Util;
-import com.duyi.hrb.util.MailOperation;
+import com.duyi.students.dao.AdminDao;
+import com.duyi.students.domain.Admin;
+import com.duyi.students.util.MD5Util;
+import com.duyi.students.util.MailOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

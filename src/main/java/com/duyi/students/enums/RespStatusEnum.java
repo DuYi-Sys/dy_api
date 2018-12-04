@@ -1,4 +1,4 @@
-package com.duyi.hrb.enums;
+package com.duyi.students.enums;
 
 public enum RespStatusEnum {
 

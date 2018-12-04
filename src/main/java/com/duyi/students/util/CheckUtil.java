@@ -1,4 +1,4 @@
-package com.duyi.hrb.util;
+package com.duyi.students.util;
 
 public class CheckUtil {
 

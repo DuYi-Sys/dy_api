@@ -1,6 +1,5 @@
-package com.duyi.hrb.domain;
+package com.duyi.students.domain;
 
-import java.util.Date;
 import java.util.Objects;
 
 public class Admin {

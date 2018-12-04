@@ -1,6 +1,6 @@
-package com.duyi.hrb.dao;
+package com.duyi.students.dao;
 
-import com.duyi.hrb.domain.Admin;
+import com.duyi.students.domain.Admin;
 
 import java.util.List;
 

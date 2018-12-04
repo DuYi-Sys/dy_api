@@ -1,4 +1,4 @@
-package com.duyi.hrb.domain;
+package com.duyi.students.domain;
 
 public class RespModel {
 

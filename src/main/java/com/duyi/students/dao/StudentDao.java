@@ -1,6 +1,6 @@
-package com.duyi.hrb.dao;
+package com.duyi.students.dao;
 
-import com.duyi.hrb.domain.Student;
+import com.duyi.students.domain.Student;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

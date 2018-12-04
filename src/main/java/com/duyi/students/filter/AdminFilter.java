@@ -1,8 +1,8 @@
-package com.duyi.hrb.filter;
+package com.duyi.students.filter;
 
-import com.duyi.hrb.domain.Admin;
-import com.duyi.hrb.service.AdminService;
-import com.duyi.hrb.util.RSAEncrypt;
+import com.duyi.students.domain.Admin;
+import com.duyi.students.service.AdminService;
+import com.duyi.students.util.RSAEncrypt;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 

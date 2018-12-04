@@ -1,9 +1,7 @@
-package com.duyi.hrb.service;
+package com.duyi.students.service;
 
-import com.duyi.hrb.dao.StudentDao;
-import com.duyi.hrb.domain.Student;
-import com.duyi.hrb.util.MD5Util;
-import org.apache.ibatis.annotations.Param;
+import com.duyi.students.dao.StudentDao;
+import com.duyi.students.domain.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
