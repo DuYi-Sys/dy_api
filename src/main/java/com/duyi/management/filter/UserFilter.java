@@ -1,7 +1,7 @@
-package com.duyi.students.filter;
+package com.duyi.management.filter;
 
-import com.duyi.students.domain.Admin;
-import com.duyi.students.service.AdminService;
+import com.duyi.management.domain.User;
+import com.duyi.management.service.UserService;
 import com.duyi.util.RSAEncrypt;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
@@ -12,16 +12,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class AdminFilter implements Filter {
+public class UserFilter implements Filter {
 
     private static ApplicationContext ac;
 
-    private static AdminService adminService;
+    private static UserService userService;
 
     static {
         ac = new FileSystemXmlApplicationContext("classpath:applicationContext.xml");
 
-        adminService = (AdminService) ac.getBean("adminService");
+        userService = (UserService) ac.getBean("userService");
     }
 
     @Override
@@ -32,9 +32,6 @@ public class AdminFilter implements Filter {
     @Override
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain fil) throws IOException, ServletException {
         System.out.println("filter execute");
-//
-//        HttpServletRequest request = (HttpServletRequest) req;
-//
         HttpServletResponse resp = (HttpServletResponse) res;
 //
 //        StringBuffer path = ((HttpServletRequest) req).getRequestURL();
@@ -71,12 +68,12 @@ public class AdminFilter implements Filter {
 
                     System.out.println(encodeSno);
 
-                    Admin admin = adminService.findByAccount(encodeSno);
+                    User user = userService.findByAccount(encodeSno);
 
                     //判断是否登录
-                    if (admin != null) {
+                    if (user != null) {
 
-                        if (admin.getStatus() == 0) {
+                        if (user.getStatus() == 0) {
 
                             a = 1; //1:登录未激活
 
@@ -99,25 +96,12 @@ public class AdminFilter implements Filter {
                 }
             }
         }
-//        if (!b) {
-//
-//            System.out.println("跳转回adminLogin.html");
-//
-//            req.getRequestDispatcher("/adminLogin").forward(req, res);
-//
-//        }
 
         if ( a == 0) {
 
-            System.out.println("跳转回adminLogin.html");
-
             resp.sendRedirect("/login.html");
 
-//            req.getRequestDispatcher("/login/login.html#login").forward(req, res);
-
         } else if ( a == 1) { //登录未激活，跳转到激活页面
-
-            System.out.println("跳转回activate.html");
 
             req.getRequestDispatcher("/activate.html").forward(req, res);
 

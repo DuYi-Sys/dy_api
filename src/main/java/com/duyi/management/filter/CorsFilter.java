@@ -1,4 +1,4 @@
-package com.duyi.students.filter;
+package com.duyi.management.filter;
 
 
 import javax.servlet.*;

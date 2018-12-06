@@ -7,43 +7,43 @@
 
     <insert id="add" parameterType="com.duyi.students.domain.Student">
 
-        insert into student_inf(sno, name, email,sex,birth,phone,address,uid,ctime,utime)values (#{sNo},#{name},#{email},#{sex},#{birth},#{phone},#{address},#{uId},now(),now())
+        insert into stu_student(sno, name, email,sex,birth,phone,address,uid,ctime,utime)values (#{sNo},#{name},#{email},#{sex},#{birth},#{phone},#{address},#{uId},now(),now())
 
     </insert>
 
     <update id="update" parameterType="com.duyi.students.domain.Student"  >
 
-        update student_inf set email = #{email}, name = #{name}, sex = #{sex}, birth = #{birth}, phone = #{phone}, address = #{address} where sno = #{sNo};
+        update stu_student set email = #{email}, name = #{name}, sex = #{sex}, birth = #{birth}, phone = #{phone}, address = #{address} where sno = #{sNo};
 
     </update>
 
     <delete id="del" parameterType="String">
 
-        delete from student_inf where sno = #{sNo};
+        delete from stu_student where sno = #{sNo};
 
     </delete>
 
     <select id="findByAll" parameterType="String" resultType="com.duyi.students.domain.Student">
 
-       select * from student_inf where uid = #{uId};
+       select * from stu_student where uid = #{uId};
 
     </select>
 
     <select id="findByPage" resultType="com.duyi.students.domain.Student">
 
-        select * from student_inf where uid = #{uId} limit #{offset},#{size};
+        select * from stu_student where uid = #{uId} limit #{offset},#{size};
 
     </select>
 
     <select id="findBySno" resultType="com.duyi.students.domain.Student">
 
-        select * from student_inf where sNo = #{sNo};
+        select * from stu_student where sNo = #{sNo};
 
     </select>
 
     <select id="getPageSum" resultType="integer">
 
-        select count(1) from student_inf;
+        select count(1) from stu_student;
 
     </select>
 </mapper>

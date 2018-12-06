@@ -88,12 +88,12 @@
             var data =  "account=" + account + "&password=" + password;
 
             var ajax = new XMLHttpRequest();
-            ajax.open('post','/login');
+            ajax.open('post','/adminLogin');
             ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             ajax.send(data);
             ajax.onreadystatechange = function () {
                 if (ajax.readyState==4 && ajax.status==200) {
-                    location.href = "/";
+                    alert("登录成功，可以开始使用接口了");
                 }
             }
         }

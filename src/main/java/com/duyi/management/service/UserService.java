@@ -1,7 +1,7 @@
-package com.duyi.students.service;
+package com.duyi.management.service;
 
-import com.duyi.students.dao.AdminDao;
-import com.duyi.students.domain.Admin;
+import com.duyi.management.dao.UserDao;
+import com.duyi.management.domain.User;
 import com.duyi.util.MD5Util;
 import com.duyi.util.MailOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,36 +10,38 @@ import org.springframework.stereotype.Service;
 import java.security.NoSuchAlgorithmException;
 
 @Service
-public class AdminService {
+public class UserService {
 
     @Autowired
-    AdminDao adminDao;
+    UserDao userDao;
 
-    public boolean addAdmin(String account, String password, String email) throws NoSuchAlgorithmException {
+    public boolean addUser(String account, String password, String email, String appkey, int ctime, int utime) throws NoSuchAlgorithmException {
 
-        Admin a = findByAccount(account);
+        User user = userDao.findByAccount(account);
 
-        if (a != null) {
+        if (user != null) {
 
             return false;
 
         } else {
 
-            Admin admin = new Admin();
+            user = new User();
 
-            admin.setAccount(account);
+            user.setAccount(account);
 
-            String md5Password = MD5Util.MD5Encode(password, "utf8");
+            user.setPassword(MD5Util.MD5Encode(password, "utf8"));
 
-            System.out.println(md5Password);
+            user.setEmail(email);
 
-            admin.setPassword(md5Password);
+            user.setAppkey(appkey);
 
-            admin.setEmail(email);
+            user.setCtime(ctime);
+
+            user.setUtime(utime);
 
             try {
 
-                adminDao.add(admin);
+                userDao.add(user);
 
             } catch (Exception e) {
 
@@ -47,20 +49,19 @@ public class AdminService {
 
             }
 
-
             return true;
         }
     }
 
-    public Admin login(String account, String password) {
+    public User login(String account, String password) {
 
-        Admin a = findByAccount(account);
+        User user = userDao.findByAccount(account);
 
         String md5Password = MD5Util.MD5Encode(password, "utf8");
 
-        if (a != null && a.getPassword().equals(md5Password)) {
+        if (user != null && user.getPassword().equals(md5Password)) {
 
-            return a;
+            return user;
 
         } else {
 
@@ -69,15 +70,15 @@ public class AdminService {
         }
     }
 
-    public Admin findByAccount(String account) {
+    public User findByEmail(String email) {
 
-        return adminDao.findByAccount(account);
+        return userDao.findByEmail(email);
 
     }
 
-    public Admin findByEmail(String email) {
+    public User findByAccount(String account) {
 
-        return adminDao.findByEmail(email);
+        return userDao.findByAccount(account);
 
     }
 
@@ -89,7 +90,7 @@ public class AdminService {
 
         MailOperation operation = new MailOperation();
 
-        String yzm = "http://127.0.0.1:8080/adminActivate?encryptionAccount=" + encryptionAccount;
+        String yzm = "http://127.0.0.1:8080/userActivate?encryptionAccount=" + encryptionAccount;
 
         sb.append("<!DOCTYPE>" + "<div bgcolor='#f1fcfa'   style='border:1px solid #d9f4ee; font-size:14px; line-height:22px; color:#005aa0;padding-left:1px;padding-top:5px;   padding-bottom:5px;'><span style='font-weight:bold;'>温馨提示：</span>"
                 + "<div style='width:950px;font-family:arial;'>欢迎使用渡一教育平台，您的激活链接为：<br/><h2 style='color:green'><a href=" + yzm + ">" + yzm + "</a></h2><br/>本邮件由系统自动发出，请勿回复。<br/>感谢您的使用。<br/>XXXX有限公司</div>"
@@ -130,15 +131,17 @@ public class AdminService {
 
     public boolean updateStatus(String account) {
 
-        Admin admin = adminDao.findByAccount(account);
+        User user = userDao.findByAccount(account);
 
-        if (admin == null) {
+        if (user == null) {
 
             return false;
+
         } else {
 
-            admin.setStatus(1);
-            adminDao.update(admin);
+            user.setStatus(1);
+
+            userDao.update(user);
 
             return true;
 
@@ -148,18 +151,19 @@ public class AdminService {
 
     public boolean updatePassword(String account, String newPassword) {
 
-        Admin admin = adminDao.findByAccount(account);
+        User user = userDao.findByAccount(account);
 
         String md5Password = MD5Util.MD5Encode(newPassword, "utf8");
 
-        if (admin == null) {
+        if (user == null) {
 
             return false;
+
         } else {
 
-            admin.setPassword(md5Password);
+            user.setPassword(md5Password);
 
-            adminDao.updatePassword(admin);
+            userDao.updatePassword(user);
 
             return true;
 

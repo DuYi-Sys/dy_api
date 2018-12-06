@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.duyi.management.dao.UserDao">
+
+    <insert id="add" parameterType="com.duyi.management.domain.User">
+
+        insert into sys_user(account, password, email, status, appkey, ctime, utime) values(#{account}, #{password}, #{email}, #{status}, #{appkey}, #{ctime}, #{utime});
+
+    </insert>
+
+
+    <update id="update" parameterType="com.duyi.management.domain.User"  >
+
+        update sys_user set status = #{status} where account = #{account};
+
+    </update>
+
+    <update id="updatePassword" parameterType="com.duyi.management.domain.User"  >
+
+        update sys_user set password = #{password} where account = #{account};
+
+    </update>
+
+    <select id="findAll" resultType="com.duyi.management.domain.User">
+
+        select * from sys_user;
+
+    </select>
+
+    <select id="findByAccount" parameterType="String" resultType="com.duyi.management.domain.User">
+
+       select * from sys_user where account = #{account};
+
+    </select>
+
+    <select id="findByEmail" parameterType="String" resultType="com.duyi.management.domain.User">
+
+       select * from sys_user where email = #{email};
+
+    </select>
+
+</mapper>

@@ -43,7 +43,7 @@ public class RSAEncrypt {
      * @throws Exception
      *             加密过程中的异常信息
      */
-    public static String encrypt( String str) throws Exception{
+    public static String encrypt( String str) throws Exception {
         //base64编码的公钥
         byte[] decoded = Base64.decodeBase64(pubKey);
         RSAPublicKey pubKey = (RSAPublicKey) KeyFactory.getInstance("RSA").generatePublic(new X509EncodedKeySpec(decoded));

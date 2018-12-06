@@ -1,4 +1,4 @@
-package com.duyi.students.controller;
+package com.duyi.common;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

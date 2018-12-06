@@ -2,6 +2,7 @@ package com.duyi.students.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.duyi.common.BaseController;
 import com.duyi.students.domain.RespModel;
 import com.duyi.students.domain.Student;
 import com.duyi.students.enums.RespStatusEnum;

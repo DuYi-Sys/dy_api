@@ -13,15 +13,17 @@
 
     <!--<bean id="cookieFilter"  class="com.duyi.students.filter.CookieFilter"></bean>-->
 
+    <context:property-placeholder ignore-unresolvable="true" location="classpath:database.properties"/>
+
     <bean id="datasource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
         <!--驱动类名 -->
-        <property name="driverClass" value="com.mysql.jdbc.Driver" />
+        <property name="driverClass" value="${db.driver}" />
         <!-- url -->
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/student?characterEncoding=utf-8" />
+        <property name="jdbcUrl" value="${db.jdbcUrl}" />
         <!-- 用户名 -->
-        <property name="user" value="root" />
+        <property name="user" value="${db.user}" />
         <!-- 密码 -->
-        <property name="password" value="123456" />
+        <property name="password" value="${db.password}" />
         <!-- 当连接池中的连接耗尽的时候c3p0一次同时获取的连接数  -->
         <property name="acquireIncrement" value="5"></property>
         <!-- 初始连接池大小 -->
@@ -36,7 +38,12 @@
         <!-- 数据源 -->
         <property name="dataSource" ref="datasource"></property>
         <!-- sql映射文件路径 -->
-        <property name="mapperLocations" value="classpath*:com.duyi.hrb.dao/*Mapper.xml"></property>
+        <property name="mapperLocations">
+            <list>
+                <value>classpath*:com/duyi/hrb/management/dao/*.xml</value>
+                <value>classpath*:com/duyi/hrb/student/dao/*.xml</value>
+            </list>
+        </property>
 
     </bean>
 
@@ -48,5 +55,43 @@
         <property name="basePackage" value="com.duyi.*.dao"></property>
     </bean>
 
+    <bean class="org.springframework.web.servlet.view.velocity.VelocityConfigurer" id="velocityConfigurer">
+        <property name="resourceLoaderPath">
+            <value>/templates</value>
+        </property>
+
+        <property name="velocityProperties">
+            <props>
+                <prop key="input.encoding">utf-8</prop>
+                <prop key="output.encoding">utf-8</prop>
+                <prop key="directive.foreach.counter.name">loopCounter</prop>
+                <prop key="directive.foreach.counter.initial.value">0</prop>
+                <!--<prop key="velocimacro.library.autoreload">true</prop>-->
+                <!--<prop key="velocimacro.library">macro.vm</prop>-->
+            </props>
+        </property>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.view.velocity.VelocityViewResolver" id="viewResolver">
+        <property name="suffix">
+            <value>.vm</value>
+        </property>
+        <property name="contentType"><value>text/html;charset=UTF-8</value></property>
+        <property name="prefix" value=""/>
+        <property name="cache" value="false"/>
+        <property name="toolboxConfigLocation" value="/WEB-INF/classes/tools.xml"></property>
+        <property name="exposeSpringMacroHelpers" value="true"/>
+        <property name="viewClass" value="com.duyi.util.VelocityToolbox20View" />
+        <property name="order" value="0"/>
+        <property name="dateToolAttribute"><value>dateTool</value></property>
+        <property name="numberToolAttribute"><value>numberTool</value></property>
+        <property name="requestContextAttribute" value="rc"></property>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.view.velocity.VelocityViewResolver" id="viewResolverSession">
+        <property name="suffix"> <value>.vm</value> </property>
+        <property name="contentType"> <value>text/html;charset=utf-8</value> </property>
+        <property name="exposeSessionAttributes"> <value>true</value> </property>
+    </bean>
 
 </beans>

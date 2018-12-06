@@ -4,7 +4,6 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
-
   <servlet-mapping>
     <servlet-name>default</servlet-name>
     <url-pattern>*.html</url-pattern>
@@ -25,24 +24,34 @@
     <url-pattern>/</url-pattern>
   </servlet-mapping>
 
+  <!--<filter>-->
+    <!--<filter-name>CookieFilter</filter-name>-->
+    <!--<filter-class>com.duyi.students.filter.CookieFilter</filter-class>-->
+  <!--</filter>-->
+
+  <!--<filter-mapping>-->
+    <!--<filter-name>CookieFilter</filter-name>-->
+    <!--<url-pattern>/page/*</url-pattern>-->
+  <!--</filter-mapping>-->
+
+  <!--<filter>-->
+    <!--<filter-name>CookieFilter2</filter-name>-->
+    <!--<filter-class>com.duyi.students.filter.AdminFilter</filter-class>-->
+  <!--</filter>-->
+
+  <!--<filter-mapping>-->
+    <!--<filter-name>CookieFilter2</filter-name>-->
+    <!--<url-pattern>/adm/*</url-pattern>-->
+  <!--</filter-mapping>-->
+
   <filter>
-    <filter-name>CookieFilter</filter-name>
-    <filter-class>com.duyi.students.filter.CookieFilter</filter-class>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>com.duyi.management.filter.LoginFilter</filter-class>
   </filter>
 
   <filter-mapping>
-    <filter-name>CookieFilter</filter-name>
-    <url-pattern>/page/*</url-pattern>
-  </filter-mapping>
-
-  <filter>
-    <filter-name>CookieFilter2</filter-name>
-    <filter-class>com.duyi.students.filter.AdminFilter</filter-class>
-  </filter>
-
-  <filter-mapping>
-    <filter-name>CookieFilter2</filter-name>
-    <url-pattern>/adm/*</url-pattern>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/management/*</url-pattern>
   </filter-mapping>
 
   <filter>

@@ -1,14 +1,14 @@
-package com.duyi.students.controller;
+package com.duyi.management.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.duyi.students.domain.Admin;
+import com.duyi.common.BaseController;
+import com.duyi.management.domain.User;
+import com.duyi.management.service.UserService;
 import com.duyi.students.domain.RespModel;
-import com.duyi.students.domain.Student;
 import com.duyi.students.enums.RespStatusEnum;
-import com.duyi.students.service.AdminService;
-import com.duyi.students.service.StudentService;
 import com.duyi.util.RSAEncrypt;
+import com.duyi.util.TimeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,48 +19,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-@Controller
-public class AdminController extends BaseController {
+public class UserController extends BaseController {
 
     @Autowired
-    AdminService adminService;
+    UserService userService;
 
-    @Autowired
-    StudentService studentService;
-
-    private void setHeader(HttpServletResponse resp) {
-
-        resp.setHeader("Access-Control-Allow-Origin", "*");
-        resp.setHeader("content-type", "application:json;charset=utf8");
-        resp.setHeader("Access-Control-Allow-Methods", "POST");
-        resp.setHeader("Access-Control-Allow-Headers", "x-requested-with,content-type");
-
-    }
-
-    @RequestMapping(value = "/adminLogin",method = RequestMethod.POST)//不能是post~~~~？？？？？
-    //@RequestParam(name = "callback") String callback,
+    @RequestMapping(value = "/login",method = RequestMethod.POST)
     @ResponseBody
     public void login( String account, String password, HttpServletResponse resp) throws Exception {
 
-//        setHeader(resp);
-
-//        resp.setHeader("content-type", "application/json;charset=utf8");
-//        resp.setHeader("Access-Control-Allow-Origin", "*");//跨域
-//        resp.setHeader("Access-Control-Allow-Methods", "POST");
-//        resp.setHeader("Access-Control-Allow-Headers", "x-requested-with,content-type,Set-Cookie");
-//      resp.setHeader("Access-Control-Allow-Credentials", "true");
         String resultString = "";
-
-        System.out.println("账号：" + account);
-
-        System.out.println("密码：" + password);
-
-//        System.out.println(callback);
 
         JSONObject result = new JSONObject();
 
@@ -85,9 +57,9 @@ public class AdminController extends BaseController {
             return;
         }
 
-        Admin admin = adminService.login(account, password);
+        User user = userService.login(account, password);
 
-        if (admin == null) {
+        if (user == null) {
 
             resultString = JSON.toJSONString(
                     new RespModel(
@@ -113,47 +85,7 @@ public class AdminController extends BaseController {
 
     }
 
-    @RequestMapping(value = "/adminActivate", method = RequestMethod.GET)
 
-    //@RequestParam(name = "callback") String callback,
-    //添加一个update修改状态
-    public void adminActivate( String encryptionAccount, HttpServletRequest res, HttpServletResponse resp) throws Exception {
-
-        setHeader(resp);
-
-        System.out.println(encryptionAccount);
-
-        String encodeAccount = RSAEncrypt.decrypt(encryptionAccount);
-
-        System.out.println(encodeAccount);
-
-        JSONObject result = new JSONObject();
-
-        boolean isTrue = adminService.updateStatus(encodeAccount);
-
-
-        if (isTrue) {
-
-            result.put("status", "success");
-
-            resp.getWriter().write( result.toJSONString() );
-
-//            resp.getWriter().write(callback + "(" + result.toJSONString() + ")");
-
-
-        } else {
-
-            result.put("message", "not find this user");
-
-            result.put("status", "fail");
-
-            resp.getWriter().write( result.toJSONString() );
-
-//            resp.getWriter().write(callback + "(" + result.toJSONString() + ")");
-
-        }
-
-    }
 
     /**
      * 用户注册
@@ -166,14 +98,8 @@ public class AdminController extends BaseController {
      */
     @RequestMapping(value = "/register", method = RequestMethod.POST)
 
-    //@RequestParam(name = "callback") String callback,
-
     public void registe(@RequestParam("account") String account, @RequestParam("password") String password, @RequestParam("rePassword") String rePassword, @RequestParam("email") String email, HttpServletResponse resp) throws Exception {
 
-//        resp.setHeader("content-type", "application:json;charset=utf8");
-//        resp.setHeader("Access-Control-Allow-Origin", "*");
-//        resp.setHeader("Access-Control-Allow-Methods", "POST");
-//        resp.setHeader("Access-Control-Allow-Headers", "x-requested-with,content-type");
         String resultString = "";
 
         System.out.println(account + password + rePassword + email);
@@ -266,7 +192,7 @@ public class AdminController extends BaseController {
 
         }
 
-        boolean isTrue = adminService.addAdmin(account, password, email);
+        boolean isTrue = userService.addUser(account, password, email, "", TimeUtil.getNow(), TimeUtil.getNow());
 
         if (isTrue) {
 
@@ -284,7 +210,7 @@ public class AdminController extends BaseController {
 
             String encryptionAccount = URLEncoder.encode(RSAEncrypt.encrypt(account));
 
-            adminService.senEmail(encryptionAccount, user, password1, host, from, to, subject);
+            userService.senEmail(encryptionAccount, user, password1, host, from, to, subject);
 
             resultString = JSON.toJSONString(
                     new RespModel(
@@ -306,47 +232,6 @@ public class AdminController extends BaseController {
             writeJsonp(resp,resultString);
 
         }
-    }
-
-    /**
-     * 查找一个学生
-     * @param callback
-     * @param sNo
-     * @param resp
-     * @throws IOException
-     */
-
-    @RequestMapping(value = "/adm/findBySno", method = RequestMethod.GET)
-    @ResponseBody
-
-    public void findBySno(@RequestParam(name = "callback") String callback,@RequestParam(name = "sNo") String sNo, HttpServletResponse resp) throws IOException {
-
-        System.out.println("sNo:" + sNo);
-
-        String resultString = "";
-
-        Student stu = studentService.findBySno(sNo);
-
-        setHeader(resp);
-
-        if (stu == null) {
-
-            resultString = JSON.toJSONString(
-                    new RespModel(
-                            RespStatusEnum.FAIL.getValue(),
-                            "The student not exit",
-                            null));
-
-        } else {
-
-            resultString = JSON.toJSONString(
-                    new RespModel(
-                            RespStatusEnum.SUCCESS.getValue(),
-                            null,
-                            stu));
-
-        }
-            writeJsonp(resp,callback,resultString);
     }
 
     @RequestMapping(value = "/act", method = RequestMethod.POST)
@@ -386,11 +271,11 @@ public class AdminController extends BaseController {
             String subject = "输入邮件主题";
 
 
-            Admin ad = adminService.findByEmail(email);
+            User dyUser = userService.findByEmail(email);
 
 //            判断是否存在这个人
 
-            if (ad == null) {
+            if (dyUser == null) {
 
                 resultString = JSON.toJSONString(
                         new RespModel(
@@ -404,11 +289,11 @@ public class AdminController extends BaseController {
 
             }
 
-            String encryptionAccount = RSAEncrypt.encrypt(ad.getAccount());
+            String encryptionAccount = RSAEncrypt.encrypt(dyUser.getAccount());
 
             String urlEncryptionAccount = URLEncoder.encode(encryptionAccount, "utf-8");
 
-            adminService.senEmail(urlEncryptionAccount, user, password, host, from, to, subject);
+            userService.senEmail(urlEncryptionAccount, user, password, host, from, to, subject);
 
             resultString = JSON.toJSONString(
                     new RespModel(
@@ -469,11 +354,11 @@ public class AdminController extends BaseController {
             String subject = "输入邮件主题";
 
 
-            Admin ad = adminService.findByEmail(email);
+            User dyUser = userService.findByEmail(email);
 
 //            判断是否存在这个人
 
-            if (ad == null) {
+            if (dyUser == null) {
 
                 resultString = JSON.toJSONString(
                         new RespModel(
@@ -484,14 +369,13 @@ public class AdminController extends BaseController {
                 writeJsonp(resp,resultString);
 
                 return;
-
             }
 
-            String encryptionAccount = RSAEncrypt.encrypt(ad.getAccount());
+            String encryptionAccount = RSAEncrypt.encrypt(dyUser.getAccount());
 
             String urlEncryptionAccount = URLEncoder.encode(encryptionAccount, "utf-8");
 
-            adminService.senForgetEmail(urlEncryptionAccount, user, password, host, from, to, subject);
+            userService.senForgetEmail(urlEncryptionAccount, user, password, host, from, to, subject);
 
 
             resultString = JSON.toJSONString(
@@ -523,8 +407,6 @@ public class AdminController extends BaseController {
                                @RequestParam(name = "urlEncryptionAccount") String urlEncryptionAccount, HttpServletResponse resp) throws Exception {
 
         String resultString = "";
-
-//        setHeader(resp);
 
         if (newPassword == null || newPassword.equals("")) {
 
@@ -568,19 +450,11 @@ public class AdminController extends BaseController {
 
         }
 
-        System.out.println("urlEncryptionAccount:" + urlEncryptionAccount);
-
-//        String encryptionAccount = URLDecoder.decode(urlEncryptionAccount,"utf-8");
-
-//        System.out.println("encryptionAccount:" + encryptionAccount);
-
         String encodeAccount = RSAEncrypt.decrypt(urlEncryptionAccount);
-
-        System.out.println("encodeAccount" + encodeAccount);
 
         //修改密码语句
 
-        boolean isTrue = adminService.updatePassword(encodeAccount, newPassword);
+        boolean isTrue = userService.updatePassword(encodeAccount, newPassword);
 
         if (isTrue) {
 
@@ -603,6 +477,4 @@ public class AdminController extends BaseController {
 
 
     }
-
-
 }
