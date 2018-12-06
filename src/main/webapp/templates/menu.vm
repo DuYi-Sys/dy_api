@@ -5,12 +5,12 @@
         <ul id="sideNav" class="nav nav-pills nav-stacked">
             <li class="top-search">
                 <form>
-                    <input type="text" name="search" placeholder="Search ...">
+                    <input type="text" name="search" placeholder="搜索 ...">
                     <button type="submit"><i class="ec-search s20"></i>
                     </button>
                 </form>
             </li>
-            <li><a href="/management/index">Dashboard <i class="im-screen"></i></a></li>
+            <li><a href="/management/index">主面板 <i class="im-screen"></i></a></li>
             <li><a href="/management/stu">学生信息管理系统 <i class="im-table2"></i></a></li>
             <li><a href="/management/mt">美团外卖系统 <i class="st-chart"></i></a></li>
 

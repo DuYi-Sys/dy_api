@@ -201,7 +201,7 @@
                     <!-- Start .row -->
                     <!-- Start .page-header -->
                     <div class="col-lg-12 heading">
-                        <h1 class="page-header"><i class="im-screen"></i> Dashboard</h1>
+                        <h1 class="page-header"><i class="im-screen"></i> 主面板</h1>
                         <!-- Start .bredcrumb -->
 ##                        <ul id="crumb" class="breadcrumb"></ul>
                         <!-- End .breadcrumb -->
@@ -323,10 +323,10 @@
                                     <div class="item active">
                                         <div class="tile red">
                                             <div class="tile-icon">
-                                                <i class="br-cart s64"></i>
+                                                <i class="im-pencil s64"></i>
                                             </div>
                                             <div class="tile-content">
-                                                <div class="number">107</div>
+                                                <div class="number">0</div>
                                                 <h3>今日使用次数</h3>
                                             </div>
                                         </div>
@@ -353,10 +353,10 @@
                                     <div class="item active">
                                         <div class="tile blue">
                                             <div class="tile-icon">
-                                                <i class="st-chat s64"></i>
+                                                <i class="im-clock s64"></i>
                                             </div>
                                             <div class="tile-content">
-                                                <div class="number">24</div>
+                                                <div class="number">0</div>
                                                 <h3>近三日使用次数</h3>
                                             </div>
                                         </div>
@@ -383,10 +383,10 @@
                                     <div class="item active">
                                         <div class="tile green">
                                             <div class="tile-icon">
-                                                <i class="ec-users s64"></i>
+                                                <i class="im-quill s64"></i>
                                             </div>
                                             <div class="tile-content">
-                                                <div class="number">325</div>
+                                                <div class="number">0</div>
                                                 <h3>近七日使用次数</h3>
                                             </div>
                                         </div>
@@ -414,10 +414,10 @@
                                         <div class="tile teal">
                                             <!-- tile start here -->
                                             <div class="tile-icon">
-                                                <i class="ec-images s64"></i>
+                                                <i class="im-star3 s64"></i>
                                             </div>
                                             <div class="tile-content">
-                                                <div class="number">45</div>
+                                                <div class="number">0</div>
                                                 <h3>总使用次数</h3>
                                             </div>
                                         </div>
@@ -442,7 +442,12 @@
                     <!-- End .row -->
                     <div class="row">
                         <div class="col-lg-6 col-md-6 sortable-layout">
-                            您的Appkey:${user.getAppkey()}
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                您的appkey是：
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                ${user.getAppkey()}
+                            </div>
                         </div>
                     </div>
 ##                    <div class="row">
