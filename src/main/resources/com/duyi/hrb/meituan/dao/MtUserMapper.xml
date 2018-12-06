@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.duyi.meituan.dao.MtUserDao">
+
+    <insert id="add" parameterType="com.duyi.meituan.domain.MtUser">
+
+        insert into mt_user(user_name, password, appkey, ctime, utime) values(#{userName}, #{password}, #{appkey}, #{ctime}, #{utime});
+
+    </insert>
+
+    <select id="queryByAppkeyAndName" parameterType="String" resultType="com.duyi.meituan.domain.MtUser">
+
+       select * from mt_user where appkey = #{appkey} and user_name = #{userName};
+
+    </select>
+
+</mapper>

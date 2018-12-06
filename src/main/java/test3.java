@@ -1,17 +1,10 @@
 import com.duyi.util.RSAEncrypt;
+import com.duyi.util.RegExUtil;
 
 public class test3 {
     public static void main(String[] args) throws Exception {
-        
-//        String urlEncryptionAccount ="EtlnIykx/4jo56GOAAfikyJopdWGNf8TZFD6PYeBwN48rrhbFYuDwPtkSrsg+i9oOYKnd5MZJ0uB4hxWkIbmhpuBFaLQshizo81Lc+HsFgGDvfVB3Njj/yFWSNIJgURsleA9Yq1AN7iDbAZUpszCiMls44OyMU7tsUlUXtXrgyQ=";
-//
-//        String encodeAccount = URLDecoder.decode(urlEncryptionAccount);
-        String urlEncryptionAccount = RSAEncrypt.encrypt("1001");
-        
-        System.out.println("urlEncryptionAccount:" + urlEncryptionAccount);
-        
-//        System.out.println("encodeAccount" + encodeAccount);
-    
+
+        System.out.println(RegExUtil.match("^[a-zA-Z0-9_]{4,16}$", "ab_A0*cd"));
 
     }
 
