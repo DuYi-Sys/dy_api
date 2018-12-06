@@ -70,6 +70,10 @@ public class UserService {
         }
     }
 
+    public User queryById(long id) {
+        return userDao.queryById(id);
+    }
+
     public User queryByAppkey(String appkey) {
         return userDao.queryByAppkey(appkey);
     }

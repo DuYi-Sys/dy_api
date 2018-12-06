@@ -440,6 +440,11 @@
                         </div>
                     </div>
                     <!-- End .row -->
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 sortable-layout">
+                            您的Appkey:${user.getAppkey()}
+                        </div>
+                    </div>
 ##                    <div class="row">
 ##                        <!-- Start .row -->
 ##                        <div class="col-lg-6 col-md-6 sortable-layout">

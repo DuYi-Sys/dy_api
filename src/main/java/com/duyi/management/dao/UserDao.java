@@ -13,6 +13,8 @@ public interface UserDao {
 
     void updatePassword(User admin);
 
+    User queryById(@Param("id") long id);
+
     User queryByAppkey(@Param("appkey") String appkey);
 
     User findByAccount(@Param("account") String account);

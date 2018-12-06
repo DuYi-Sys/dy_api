@@ -45,13 +45,8 @@ public class LoginFilter implements Filter {
                     String encodeSno = RSAEncrypt.decrypt(cookie.getValue());
                     User user = userService.findByAccount(encodeSno);
                     if (user != null) {
-                        if (user.getStatus() == 0) {
-                            request.getRequestDispatcher("/activate.html").forward(servletRequest, servletResponse);
-                            return;
-                        } else {
-                            filterChain.doFilter(servletRequest, servletResponse);
-                            return;
-                        }
+                        filterChain.doFilter(servletRequest, servletResponse);
+                        return;
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
