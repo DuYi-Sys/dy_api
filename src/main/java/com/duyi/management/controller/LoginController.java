@@ -191,7 +191,7 @@ public class LoginController extends BaseController {
 
         }
 
-        boolean isTrue = userService.addUser(account, password, email, "", TimeUtil.getNow(), TimeUtil.getNow());
+        boolean isTrue = userService.addUser(account, password, email, account + "_" + TimeUtil.getNowTime(), TimeUtil.getNow(), TimeUtil.getNow());
 
         if (isTrue) {
 
