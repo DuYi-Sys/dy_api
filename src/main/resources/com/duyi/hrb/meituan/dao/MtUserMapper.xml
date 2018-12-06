@@ -11,7 +11,7 @@
 
     </insert>
 
-    <select id="queryByAppkeyAndName" parameterType="String" resultType="com.duyi.meituan.domain.MtUser">
+    <select id="queryByAppkeyAndName" resultType="com.duyi.meituan.domain.MtUser">
 
        select * from mt_user where appkey = #{appkey} and user_name = #{userName};
 

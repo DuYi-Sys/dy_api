@@ -42,6 +42,7 @@
             <list>
                 <value>classpath*:com/duyi/hrb/management/dao/*.xml</value>
                 <value>classpath*:com/duyi/hrb/student/dao/*.xml</value>
+                <value>classpath*:com/duyi/hrb/meituan/dao/*.xml</value>
             </list>
         </property>
 

@@ -24,6 +24,12 @@
 
     </update>
 
+    <select id="queryByAppkey" resultType="com.duyi.management.domain.User">
+
+        select * from sys_user where appkey = #{appkey};
+
+    </select>
+
     <select id="findAll" resultType="com.duyi.management.domain.User">
 
         select * from sys_user;

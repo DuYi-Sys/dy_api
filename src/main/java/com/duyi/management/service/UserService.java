@@ -70,6 +70,10 @@ public class UserService {
         }
     }
 
+    public User queryByAppkey(String appkey) {
+        return userDao.queryByAppkey(appkey);
+    }
+
     public User findByEmail(String email) {
 
         return userDao.findByEmail(email);

@@ -51,6 +51,7 @@ public class MtUserService {
 
         MtLoginStatusEnum(String msg, RespStatusEnum statusEnum) {
             this.msg = msg;
+            this.statusEnum = statusEnum;
         }
 
         public RespStatusEnum getStatusEnum() {

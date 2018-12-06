@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Controller
-@RequestMapping(value = "/meituan")
+@RequestMapping(value = "/api/meituan")
 public class MtLoginController extends BaseController {
 
     @Autowired
