@@ -1,74 +1,79 @@
 package com.duyi.util;
 
-import javax.activation.DataHandler;
-import javax.activation.FileDataSource;
-import javax.mail.Message;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMultipart;
-import java.io.FileOutputStream;
+import javax.mail.*;
+import javax.mail.internet.*;
+import java.io.UnsupportedEncodingException;
+import java.util.Date;
 import java.util.Properties;
 
 public class MailUtil {
 
-    public static void main(String[] args) throws Exception {
-
-        Properties prop = new Properties();
-        prop.setProperty("mail.host", "smtp.sohu.com");
-        prop.setProperty("mail.transport.protocol", "smtp");
-        prop.setProperty("mail.smtp.auth", "true");
-        //使用JavaMail发送邮件的5个步骤
-        //1、创建session
-        Session session = Session.getInstance(prop);
-        //开启Session的debug模式，这样就可以查看到程序发送Email的运行状态
-        session.setDebug(true);
-        //2、通过session得到transport对象
-        Transport ts = session.getTransport();
-        //3、连上邮件服务器
-        ts.connect("smtp.sohu.com", "gacl", "邮箱密码");
-        //4、创建邮件
-        Message message = createAttachMail(session);
-        //5、发送邮件
-        ts.sendMessage(message, message.getAllRecipients());
-        ts.close();
+    /**
+     * 进行base64加密，防止中文乱码
+     */
+    private static String changeEncode(String str) {
+        try {
+            str = MimeUtility.encodeText(new String(str.getBytes(), "UTF-8"), "UTF-8", "B"); // "B"代表Base64
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return str;
     }
 
-    public static MimeMessage createAttachMail(Session session) throws Exception{
+    public static boolean sendMail(String toUser, String subject, String content) {
+        Properties properties = new Properties();
+        properties.put("mail.smtp.host", "smtp.duyiedu.com");
+        properties.put("mail.transport.protocol", "smtp");
+        properties.put("mail.smtp.auth", "true");
+        properties.put("mail.smtp.port", "25");
+        properties.put("mail.smtp.socketFactory.port","25");
+        Session session = Session.getInstance(properties);
+        session.setDebug(true);
         MimeMessage message = new MimeMessage(session);
 
-        //设置邮件的基本信息
-        //发件人
-        message.setFrom(new InternetAddress("gacl@sohu.com"));
-        //收件人
-        message.setRecipient(Message.RecipientType.TO, new InternetAddress("xdp_gacl@sina.cn"));
-        //邮件标题
-        message.setSubject("JavaMail邮件发送测试");
+        try {
+            // 发件人
+            Address address = new InternetAddress("duyioa@duyi-inc.com");
+            message.setFrom(address);
+            // 收件人
+            Address toAddress = new InternetAddress(toUser);
+            message.setRecipient(MimeMessage.RecipientType.TO, toAddress); // 设置收件人,并设置其接收类型为TO
 
-        //创建邮件正文，为了避免邮件正文中文乱码问题，需要使用charset=UTF-8指明字符编码
-        MimeBodyPart text = new MimeBodyPart();
-        text.setContent("使用JavaMail创建的带附件的邮件", "text/html;charset=UTF-8");
+            // 主题message.setSubject(changeEncode(emailInfo.getSubject()));
+            message.setSubject(subject);
+            // 时间
+            message.setSentDate(new Date());
 
-        //创建邮件附件
-        MimeBodyPart attach = new MimeBodyPart();
-        DataHandler dh = new DataHandler(new FileDataSource("src\\2.jpg"));
-        attach.setDataHandler(dh);
-        attach.setFileName(dh.getName());  //
+            Multipart multipart = new MimeMultipart();
 
-        //创建容器描述数据关系
-        MimeMultipart mp = new MimeMultipart();
-        mp.addBodyPart(text);
-        mp.addBodyPart(attach);
-        mp.setSubType("mixed");
+            // 创建一个包含HTML内容的MimeBodyPart
+            BodyPart html = new MimeBodyPart();
+            // 设置HTML内容
+            html.setContent(content, "text/html; charset=utf-8");
+            multipart.addBodyPart(html);
+            // 将MiniMultipart对象设置为邮件内容
+            message.setContent(multipart);
+            message.saveChanges();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
 
-        message.setContent(mp);
-        message.saveChanges();
-        //将创建的Email写入到E盘存储
-        message.writeTo(new FileOutputStream("E:\\attachMail.eml"));
-        //返回生成的邮件
-        return message;
+        try {
+            Transport transport = session.getTransport("smtp");
+            transport.connect("smtp.duyiedu.com", "duyioa@duyi-inc.com", "Dy123456");
+            transport.sendMessage(message, message.getAllRecipients());
+            transport.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+        MailUtil.sendMail("982294498@qq.com", "这是主体", "还有中文");
     }
 
 }

@@ -3,7 +3,7 @@ package com.duyi.management.service;
 import com.duyi.management.dao.UserDao;
 import com.duyi.management.domain.User;
 import com.duyi.util.MD5Util;
-import com.duyi.util.MailOperation;
+import com.duyi.util.MailUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -95,9 +95,6 @@ public class UserService {
         //邮箱内容
         StringBuffer sb = new StringBuffer();
 
-
-        MailOperation operation = new MailOperation();
-
         String yzm = "http://127.0.0.1:8080/userActivate?encryptionAccount=" + encryptionAccount;
 
         sb.append("<!DOCTYPE>" + "<div bgcolor='#f1fcfa'   style='border:1px solid #d9f4ee; font-size:14px; line-height:22px; color:#005aa0;padding-left:1px;padding-top:5px;   padding-bottom:5px;'><span style='font-weight:bold;'>温馨提示：</span>"
@@ -105,21 +102,13 @@ public class UserService {
                 + "</div>");
 
 
-        String res = operation.sendMail(user, password, host, from, to,
-                subject, sb.toString());
-
-        System.out.println(res);
-
-
+        MailUtil.sendMail(to, subject, yzm);
     }
 
     public void senForgetEmail(String urlEncryptionAccount, String user, String password, String host, String from, String to, String subject) throws Exception {
 
         //邮箱内容
         StringBuffer sb = new StringBuffer();
-
-
-        MailOperation operation = new MailOperation();
 
         String yzm = "http://127.0.0.1:8080/resetPasswords.html?urlEncryptionAccount=" + urlEncryptionAccount;
         System.out.println("ras:" + urlEncryptionAccount);
@@ -129,11 +118,7 @@ public class UserService {
                 + "</div>");
 
 
-        String res = operation.sendMail(user, password, host, from, to,
-                subject, sb.toString());
-
-        System.out.println(res);
-
+        MailUtil.sendMail(to, subject, yzm);
 
     }
 

@@ -195,13 +195,13 @@ public class LoginController extends BaseController {
 
         if (isTrue) {
 
-            String user = "18846411586@163.com";
+            String user = "duyioa@duyi-inc.com";
 
-            String password1 = "ywywenyu22";
+            String password1 = "Dy123456";
 
-            String host = "smtp.163.com";
+            String host = "smtp.duyi-inc.com";
 
-            String from = "18846411586@163.com";
+            String from = "duyioa@duyi-inc.com";
 
             String to = email;// 收件人
 
