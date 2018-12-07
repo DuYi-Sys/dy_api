@@ -73,17 +73,26 @@
     <servlet-name>spring</servlet-name>
   </filter-mapping>
 
+
   <context-param>
-    <param-name>webAppRootKey</param-name>
-    <param-value>/var/duyi</param-value>
+    <param-name>log4jConfigLocation</param-name>
+    <param-value>classpath:log4j.xml</param-value>
   </context-param>
-  <!--<context-param>
-      <param-name>log4jConfigLocation</param-name>
-      <param-value>classpath:log4j2.xml</param-value>
-  </context-param>-->
+  <!-- 配置log4j.xml监听器 -->
   <listener>
     <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
   </listener>
+
+  <!-- 配置log4j.xml变量 -->
+  <context-param>
+    <param-name>rootLevel</param-name>
+    <param-value>DEBUG</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>loggingLevel</param-name>
+    <param-value>INFO</param-value>
+  </context-param>
 
   <!--<filter>-->
     <!--<filter-name>springCharacterEncodingFilter</filter-name>-->
