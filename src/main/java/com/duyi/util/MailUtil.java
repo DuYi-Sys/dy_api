@@ -10,7 +10,7 @@ import java.util.Properties;
 
 public class MailUtil {
 
-//    private static Logger logger = Logger.getLogger(MailUtil.class);
+    private static Logger logger = Logger.getLogger(MailUtil.class);
 
     /**
      * 进行base64加密，防止中文乱码
@@ -25,7 +25,7 @@ public class MailUtil {
     }
 
     public static boolean sendMail(String toUser, String subject, String content) {
-//        logger.info("开始发送邮件");
+        logger.info("开始发送邮件");
         final String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
         Properties properties = new Properties();
         properties.put("mail.smtp.host", "smtp.duyiedu.com");
@@ -63,7 +63,7 @@ public class MailUtil {
             message.setContent(multipart);
             message.saveChanges();
         } catch (Exception e) {
-//            logger.error(e);
+            logger.error(e);
             e.printStackTrace();
             return false;
         }
@@ -73,9 +73,10 @@ public class MailUtil {
             transport.connect("smtp.duyiedu.com", "duyioa@duyi-inc.com", "Dy123456");
             transport.sendMessage(message, message.getAllRecipients());
             transport.close();
+
         } catch (Exception e) {
-//            logger.error(e);
-            e.printStackTrace();
+            logger.error(e);
+//            e.printStackTrace();
             return false;
         }
 
