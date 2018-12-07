@@ -32,6 +32,7 @@ public class MailUtil {
         properties.put("mail.transport.protocol", "smtp");
         properties.put("mail.smtp.auth", "true");
         properties.put("mail.smtp.port", "465");
+        properties.put("mail.smtp.ssl.enable", true);
         properties.put("mail.smtp.socketFactory.port","465");
         properties.setProperty("mail.smtp.socketFactory.class", SSL_FACTORY);
         properties.setProperty("mail.smtp.socketFactory.fallback", "false");
