@@ -13,7 +13,7 @@
 
     <!-- [公共Appender] -->
     <appender name="DEFAULT-APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="/var/changlifeng/logs/schedule.log"/>
+        <param name="File" value="/usr/share/tomcat/logs/schedule.log"/>
         <param name="Append" value="true"/>
         <param name="encoding" value="UTF-8"/>
         <param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
@@ -24,7 +24,7 @@
 
     <!-- [错误日志APPENDER] -->
     <appender name="ERROR-APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="/var/logs/common-error.log"/>
+        <param name="File" value="/usr/share/tomcat/logs/common-error.log"/>
         <param name="Append" value="true"/>
         <param name="encoding" value="UTF-8"/>
         <param name="threshold" value="error"/>
@@ -37,7 +37,7 @@
     <!-- [组件日志APPENDER] -->
     <appender name="COMPONENT-APPENDER"
               class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="/var/changlifeng/logs/logistics-component.log"/>
+        <param name="File" value="/usr/share/tomcat/logs/logistics-component.log"/>
         <param name="Append" value="true"/>
         <param name="encoding" value="UTF-8"/>
         <param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
