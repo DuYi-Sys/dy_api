@@ -75,7 +75,7 @@
 
   <context-param>
     <param-name>webAppRootKey</param-name>
-    <param-value>webApp.root</param-value>
+    <param-value>/var/duyi</param-value>
   </context-param>
   <!--<context-param>
       <param-name>log4jConfigLocation</param-name>
