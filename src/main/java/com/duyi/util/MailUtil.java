@@ -10,7 +10,7 @@ import java.util.Properties;
 
 public class MailUtil {
 
-    private static Logger logger = Logger.getLogger(MailUtil.class);
+//    private static Logger logger = Logger.getLogger(MailUtil.class);
 
     /**
      * 进行base64加密，防止中文乱码
@@ -19,19 +19,22 @@ public class MailUtil {
         try {
             str = MimeUtility.encodeText(new String(str.getBytes(), "UTF-8"), "UTF-8", "B"); // "B"代表Base64
         } catch (UnsupportedEncodingException e) {
-            logger.error(e);
+//            logger.error(e);
         }
         return str;
     }
 
     public static boolean sendMail(String toUser, String subject, String content) {
-        logger.info("开始发送邮件");
+//        logger.info("开始发送邮件");
+        final String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
         Properties properties = new Properties();
         properties.put("mail.smtp.host", "smtp.duyiedu.com");
         properties.put("mail.transport.protocol", "smtp");
         properties.put("mail.smtp.auth", "true");
-        properties.put("mail.smtp.port", "25");
-        properties.put("mail.smtp.socketFactory.port","25");
+        properties.put("mail.smtp.port", "465");
+        properties.put("mail.smtp.socketFactory.port","465");
+        properties.setProperty("mail.smtp.socketFactory.class", SSL_FACTORY);
+        properties.setProperty("mail.smtp.socketFactory.fallback", "false");
         Session session = Session.getInstance(properties);
         session.setDebug(true);
         MimeMessage message = new MimeMessage(session);
@@ -60,7 +63,8 @@ public class MailUtil {
             message.setContent(multipart);
             message.saveChanges();
         } catch (Exception e) {
-            logger.error(e);
+//            logger.error(e);
+            e.printStackTrace();
             return false;
         }
 
@@ -70,7 +74,8 @@ public class MailUtil {
             transport.sendMessage(message, message.getAllRecipients());
             transport.close();
         } catch (Exception e) {
-            logger.error(e);
+//            logger.error(e);
+            e.printStackTrace();
             return false;
         }
 
