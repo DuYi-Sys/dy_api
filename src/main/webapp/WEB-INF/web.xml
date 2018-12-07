@@ -73,6 +73,18 @@
     <servlet-name>spring</servlet-name>
   </filter-mapping>
 
+  <context-param>
+    <param-name>webAppRootKey</param-name>
+    <param-value>webApp.root</param-value>
+  </context-param>
+  <!--<context-param>
+      <param-name>log4jConfigLocation</param-name>
+      <param-value>classpath:log4j2.xml</param-value>
+  </context-param>-->
+  <listener>
+    <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+  </listener>
+
   <!--<filter>-->
     <!--<filter-name>springCharacterEncodingFilter</filter-name>-->
     <!--<filter-class>org.springframework.web.filter.RequestContextFilter</filter-class>-->

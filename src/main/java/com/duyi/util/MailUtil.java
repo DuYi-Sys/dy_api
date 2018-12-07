@@ -1,5 +1,7 @@
 package com.duyi.util;
 
+import org.apache.log4j.Logger;
+
 import javax.mail.*;
 import javax.mail.internet.*;
 import java.io.UnsupportedEncodingException;
@@ -8,6 +10,8 @@ import java.util.Properties;
 
 public class MailUtil {
 
+    private static Logger logger = Logger.getLogger(MailUtil.class);
+
     /**
      * 进行base64加密，防止中文乱码
      */
@@ -15,12 +19,13 @@ public class MailUtil {
         try {
             str = MimeUtility.encodeText(new String(str.getBytes(), "UTF-8"), "UTF-8", "B"); // "B"代表Base64
         } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+            logger.error(e);
         }
         return str;
     }
 
     public static boolean sendMail(String toUser, String subject, String content) {
+        logger.info("开始发送邮件");
         Properties properties = new Properties();
         properties.put("mail.smtp.host", "smtp.duyiedu.com");
         properties.put("mail.transport.protocol", "smtp");
@@ -55,7 +60,7 @@ public class MailUtil {
             message.setContent(multipart);
             message.saveChanges();
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(e);
             return false;
         }
 
@@ -65,7 +70,7 @@ public class MailUtil {
             transport.sendMessage(message, message.getAllRecipients());
             transport.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(e);
             return false;
         }
 
