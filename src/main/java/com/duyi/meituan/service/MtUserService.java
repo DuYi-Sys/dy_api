@@ -72,6 +72,8 @@ public class MtUserService {
         private String msg;
 
         MtUserStatusEnum (String msg, RespStatusEnum statusEnum) {
+
+            this.statusEnum = statusEnum;
             this.msg = msg;
         }
 

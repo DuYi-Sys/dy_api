@@ -90,12 +90,12 @@ public class UserService {
 
     }
 
-    public void senEmail(String encryptionAccount, String user, String password, String host, String from, String to, String subject) throws Exception {
+    public void senEmail(String encryptionAccount, String to, String subject) throws Exception {
 
         //邮箱内容
         StringBuffer sb = new StringBuffer();
 
-        String yzm = "http://127.0.0.1:8080/userActivate?encryptionAccount=" + encryptionAccount;
+        String yzm = "http://api.duyiedu.com/userActivate?encryptionAccount=" + encryptionAccount;
 
         sb.append("<!DOCTYPE>" + "<div bgcolor='#f1fcfa'   style='border:1px solid #d9f4ee; font-size:14px; line-height:22px; color:#005aa0;padding-left:1px;padding-top:5px;   padding-bottom:5px;'><span style='font-weight:bold;'>温馨提示：</span>"
                 + "<div style='width:950px;font-family:arial;'>欢迎使用渡一教育平台，您的激活链接为：<br/><h2 style='color:green'><a href=" + yzm + ">" + yzm + "</a></h2><br/>本邮件由系统自动发出，请勿回复。<br/>感谢您的使用。<br/>XXXX有限公司</div>"
@@ -110,7 +110,7 @@ public class UserService {
         //邮箱内容
         StringBuffer sb = new StringBuffer();
 
-        String yzm = "http://127.0.0.1:8080/resetPasswords.html?urlEncryptionAccount=" + urlEncryptionAccount;
+        String yzm = "http://api.duyiedu.com/resetPasswords.html?urlEncryptionAccount=" + urlEncryptionAccount;
         System.out.println("ras:" + urlEncryptionAccount);
 
         sb.append("<!DOCTYPE>" + "<div bgcolor='#f1fcfa'   style='border:1px solid #d9f4ee; font-size:14px; line-height:22px; color:#005aa0;padding-left:1px;padding-top:5px;   padding-bottom:5px;'><span style='font-weight:bold;'>温馨提示：</span>"
@@ -163,5 +163,4 @@ public class UserService {
         }
 
     }
-
 }

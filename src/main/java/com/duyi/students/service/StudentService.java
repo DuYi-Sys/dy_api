@@ -1,146 +1,146 @@
-package com.duyi.students.service;
-
-import com.duyi.students.dao.StudentDao;
-import com.duyi.students.domain.Student;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
-
-@Service
-public class StudentService {
-
-    @Autowired
-    StudentDao studentDao;
-
-    public boolean addStudent(String sNo, String name, String email, int sex, int birth, String phone, String address, String uId) {
-
-        Student student1 = studentDao.findBySno(sNo);
-
-        if (student1 != null) {
-
-            return false;
-
-        } else {
-
-            Student student = new Student();
-
-            student.setsNo(sNo);
-
-            student.setName(name);
-
-            student.setEmail(email);
-
-            student.setSex(sex);
-
-            student.setBirth(birth);
-
-            student.setPhone(phone);
-
-            student.setAddress(address);
-
-            student.setuId(uId);
-
-            studentDao.add(student);
-
-            return true;
-        }
-    }
-
-    public boolean delBySno(String sNo) {
-        Student student1 = studentDao.findBySno(sNo);
-
-        if (student1 == null) {
-
-            return false;
-
-        } else {
-
-            studentDao.del(sNo);
-
-            return true;
-        }
-
-    }
-
-    public boolean update(String sNo, String name, String email, int sex, int birth, String phone, String address) {
-
-        Student student1 = studentDao.findBySno(sNo);
-
-        if (student1 == null) {
-
-            return false;
-
-        } else {
-
-            Student student = new Student();
-
-            student.setsNo(sNo);
-
-            student.setName(name);
-
-            student.setSex(sex);
-
-            student.setEmail(email);
-
-            student.setBirth(birth);
-
-            student.setPhone(phone);
-
-            student.setAddress(address);
-
-            studentDao.update(student);
-
-            return true;
-        }
-
-    }
-
-    public List<Student> findAll(String uId) {
-
-        return studentDao.findByAll(uId);
-    }
-
-    public List<Student> findByPage(String uId,Integer page,Integer size) {
-
-        Integer offset = (page - 1) * size ;
-
-
-        return studentDao.findByPage(uId,offset,size);
-    }
-
-    public Student findBySno(String sNo) {
-        Student student = studentDao.findBySno(sNo);
-
-        if (student == null) {
-
-            return null;
-
-        } else {
-
-            return student;
-        }
-    }
-
-    public int count() {
-        return studentDao.getPageSum();
-    }
-
-//    public Student login(String sNo, String password) {
+//package com.duyi.students.service;
 //
-//        Student student = studentDao.findBySno(sNo);
+//import com.duyi.students.dao.StudentDao;
+//import com.duyi.students.domain.Student;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.stereotype.Service;
 //
-//        String md5Password = MD5Util.MD5Encode(password,"utf8");
+//import java.util.List;
 //
-//        if (student != null && student.getPassword().equals(md5Password)) {
+//@Service
+//public class StudentService {
 //
-//            return student;
+//    @Autowired
+//    StudentDao studentDao;
+//
+//    public boolean addStudent(String sNo, String name, String email, int sex, int birth, String phone, String address, String uId) {
+//
+//        Student student1 = studentDao.findBySno(sNo);
+//
+//        if (student1 != null) {
+//
+//            return false;
+//
 //        } else {
 //
-//            return null;
+//            Student student = new Student();
 //
+//            student.setsNo(sNo);
+//
+//            student.setName(name);
+//
+//            student.setEmail(email);
+//
+//            student.setSex(sex);
+//
+//            student.setBirth(birth);
+//
+//            student.setPhone(phone);
+//
+//            student.setAddress(address);
+//
+//            student.setuId(uId);
+//
+//            studentDao.add(student);
+//
+//            return true;
+//        }
+//    }
+//
+//    public boolean delBySno(String sNo) {
+//        Student student1 = studentDao.findBySno(sNo);
+//
+//        if (student1 == null) {
+//
+//            return false;
+//
+//        } else {
+//
+//            studentDao.del(sNo);
+//
+//            return true;
 //        }
 //
 //    }
-
-}
+//
+//    public boolean update(String sNo, String name, String email, int sex, int birth, String phone, String address) {
+//
+//        Student student1 = studentDao.findBySno(sNo);
+//
+//        if (student1 == null) {
+//
+//            return false;
+//
+//        } else {
+//
+//            Student student = new Student();
+//
+//            student.setsNo(sNo);
+//
+//            student.setName(name);
+//
+//            student.setSex(sex);
+//
+//            student.setEmail(email);
+//
+//            student.setBirth(birth);
+//
+//            student.setPhone(phone);
+//
+//            student.setAddress(address);
+//
+//            studentDao.update(student);
+//
+//            return true;
+//        }
+//
+//    }
+//
+//    public List<Student> findAll(String uId) {
+//
+//        return studentDao.findByAll(uId);
+//    }
+//
+//    public List<Student> findByPage(String uId,Integer page,Integer size) {
+//
+//        Integer offset = (page - 1) * size ;
+//
+//
+//        return studentDao.findByPage(uId,offset,size);
+//    }
+//
+//    public Student findBySno(String sNo) {
+//        Student student = studentDao.findBySno(sNo);
+//
+//        if (student == null) {
+//
+//            return null;
+//
+//        } else {
+//
+//            return student;
+//        }
+//    }
+//
+//    public int count() {
+//        return studentDao.getPageSum();
+//    }
+//
+////    public Student login(String sNo, String password) {
+////
+////        Student student = studentDao.findBySno(sNo);
+////
+////        String md5Password = MD5Util.MD5Encode(password,"utf8");
+////
+////        if (student != null && student.getPassword().equals(md5Password)) {
+////
+////            return student;
+////        } else {
+////
+////            return null;
+////
+////        }
+////
+////    }
+//
+//}

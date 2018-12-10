@@ -2,6 +2,7 @@ package com.duyi.management.filter;
 
 import com.duyi.common.BaseController;
 import com.duyi.management.domain.User;
+import com.duyi.management.service.UserLogService;
 import com.duyi.management.service.UserService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
@@ -13,11 +14,11 @@ import java.io.IOException;
 public class ApiFilter extends BaseController implements Filter {
 
     private static ApplicationContext ac;
-    private static UserService userService;
+    private static UserLogService userLogService;
 
     static {
         ac = new FileSystemXmlApplicationContext("classpath:applicationContext.xml");
-        userService = (UserService) ac.getBean("userService");
+        userLogService = (UserLogService) ac.getBean("userLogService");
     }
 
     @Override
@@ -36,13 +37,14 @@ public class ApiFilter extends BaseController implements Filter {
         response.setHeader("Access-Control-Allow-Origin", "*");
 
         String appkey = servletRequest.getParameter("appkey");
+        System.out.println(appkey);
 
         if (appkey == null) {
             writeResult(response, "fail", "缺少appkey", null);
             return;
         }
         
-        User user = userService.queryByAppkey(appkey);
+        User user = userLogService.queryByAppkey(appkey);
 
         if (user == null) {
             writeResult(response, "fail", "appkey不正确", null);

@@ -33,7 +33,7 @@ public class MtLoginController extends BaseController {
         }
 
         if (!RegExUtil.match("^[a-zA-Z0-9_]{6,16}$", password)) {
-            writeResult(resp, RespStatusEnum.FAIL.getValue(), "用户名必须为6-16位的字母数字下划线组成", null);
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "密码必须为6-16位的字母数字下划线组成", null);
         }
 
         MtUserService.MtLoginStatusEnum result = mtUserService.checkLogin(appkey, userName, password);

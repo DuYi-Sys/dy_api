@@ -12,7 +12,7 @@ public interface StudentDao {
 
     void update(Student student);
 
-    List<Student> findByAll(@Param(value = "uId") String uId);
+    List<Student> findByAll(@Param(value = "appkey") String appkey);
 
     List<Student> findByPage(@Param(value = "uId") String uId,@Param(value = "offset") int offset,@Param(value = "size") int size);
 

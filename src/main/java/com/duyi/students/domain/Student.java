@@ -13,15 +13,15 @@ public class Student {
     private int birth;
     private String phone;
     private String address;
-    private String uId;
-    private Date ctime;
-    private Date utime;
+    private String appkey;
+    private int ctime;
+    private int utime;
 
 
     public Student() {
     }
 
-    public Student(int id, String sNo, String name, String email, int sex, int birth, String phone, String address, String uId, Date ctime, Date utime) {
+    public Student(int id, String sNo, String name, String email, int sex, int birth, String phone, String address, String appkey, int ctime, int utime) {
         this.id = id;
         this.sNo = sNo;
         this.name = name;
@@ -30,11 +30,10 @@ public class Student {
         this.birth = birth;
         this.phone = phone;
         this.address = address;
-        this.uId = uId;
+        this.appkey = appkey;
         this.ctime = ctime;
         this.utime = utime;
     }
-
 //    public int getPage() { return page; }
 //
 //    public void setPage(int page) { this.page = page; }
@@ -99,28 +98,28 @@ public class Student {
         this.address = address;
     }
 
-    public Date getCtime() {
+    public int getCtime() {
         return ctime;
     }
 
-    public void setCtime(Date ctime) {
+    public void setCtime(int ctime) {
         this.ctime = ctime;
     }
 
-    public Date getUtime() {
+    public int getUtime() {
         return utime;
     }
 
-    public void setUtime(Date utime) {
+    public void setUtime(int utime) {
         this.utime = utime;
     }
 
-    public String getuId() {
-        return uId;
+    public String getAppkey() {
+        return appkey;
     }
 
-    public void setuId(String uId) {
-        this.uId = uId;
+    public void setAppkey(String appkey) {
+        this.appkey = appkey;
     }
 
     @Override
@@ -148,7 +147,7 @@ public class Student {
                 ", birth=" + birth +
                 ", phone='" + phone + '\'' +
                 ", address='" + address + '\'' +
-                ", uId='" + uId + '\'' +
+                ", appkey='" + appkey + '\'' +
                 ", ctime=" + ctime +
                 ", utime=" + utime +
                 '}';
