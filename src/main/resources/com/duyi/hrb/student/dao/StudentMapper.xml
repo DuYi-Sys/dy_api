@@ -7,13 +7,13 @@
 
     <insert id="add" parameterType="com.duyi.students.domain.Student">
 
-        insert into stu_student(sno, name, email,sex,birth,phone,address,uid,ctime,utime)values (#{sNo},#{name},#{email},#{sex},#{birth},#{phone},#{address},#{uId},now(),now())
+        insert into stu_student(sno, name, email,sex,birth,phone,address,appkey,ctime,utime)values (#{sNo},#{name},#{email},#{sex},#{birth},#{phone},#{address},#{appkey},#{ctime},#{utime})
 
     </insert>
 
     <update id="update" parameterType="com.duyi.students.domain.Student"  >
 
-        update stu_student set email = #{email}, name = #{name}, sex = #{sex}, birth = #{birth}, phone = #{phone}, address = #{address} where sno = #{sNo};
+        update stu_student set email = #{email}, name = #{name}, sex = #{sex}, birth = #{birth}, phone = #{phone}, address = #{address}, utime = #{utime} where sno = #{sNo};
 
     </update>
 
@@ -25,13 +25,13 @@
 
     <select id="findByAll" parameterType="String" resultType="com.duyi.students.domain.Student">
 
-       select * from stu_student where uid = #{uId};
+       select * from stu_student where appkey = #{appkey};
 
     </select>
 
     <select id="findByPage" resultType="com.duyi.students.domain.Student">
 
-        select * from stu_student where uid = #{uId} limit #{offset},#{size};
+        select * from stu_student where appkey = #{appkey} limit #{offset},#{size};
 
     </select>
 
