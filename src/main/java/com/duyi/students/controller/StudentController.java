@@ -1,386 +1,206 @@
-//package com.duyi.students.controller;
-//
-//import com.alibaba.fastjson.JSON;
-//import com.alibaba.fastjson.JSONObject;
-//import com.duyi.common.BaseController;
-//import com.duyi.students.domain.RespModel;
-//import com.duyi.students.domain.Student;
-//import com.duyi.students.enums.RespStatusEnum;
-//import com.duyi.students.service.StudentService;
-//import com.duyi.util.RSAEncrypt;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.beans.factory.annotation.Value;
-//import org.springframework.stereotype.Controller;
-//import org.springframework.web.bind.annotation.RequestMapping;
-//import org.springframework.web.bind.annotation.RequestMethod;
-//import org.springframework.web.bind.annotation.RequestParam;
-//
-//import javax.servlet.http.HttpServletRequest;
-//import javax.servlet.http.HttpServletResponse;
-//import java.io.IOException;
-//import java.util.List;
-//
-//
-//@Controller
-//public class StudentController extends BaseController {
-//
-//    @Autowired
-//    StudentService studentService;
-//
-//    @RequestMapping(value = "/findAll", method = RequestMethod.GET)
-//
-//    public void findAll(@RequestParam(name = "callback") String callback, String uId, HttpServletResponse resp) throws Exception {
-//
-//        String resultString = "";
-//        int count = 0;
-//        if (uId == null || "".equals(uId)) {
-//
-//            resultString = JSON.toJSONString(
-//                    new RespModel(
-//                            RespStatusEnum.FAIL.getValue(),
-//                            "The uId can't get",
-//                            null
-//
-//                    ));
-//            writeJsonp(resp, callback, resultString);
-//            return;
-//        }
-//
-//        //问题1：用不用先判断一下该管理团存在？
-//
-//        List<Student> findAll = studentService.findAll(uId);
-//
-//        resultString = JSON.toJSONString(new RespModel(RespStatusEnum.SUCCESS.getValue(), null, findAll));
-//
-//        writeJsonp(resp, callback, resultString);
-//    }
-//
-//
-//    @RequestMapping(value = "/adm/findByPage", method = RequestMethod.GET)
-//
-//    public void findByPage(@RequestParam(name = "callback") String callback, @RequestParam(name = "page") int page, @RequestParam(name = "size") int size, @RequestParam(name = "uId") String uId, HttpServletRequest res, HttpServletResponse resp) throws Exception {
-//
-//        JSONObject result = new JSONObject();
-////
-////        resp.setHeader("Access-Control-Allow-Origin", "*");
-////        resp.setHeader("content-type", "application:json;charset=utf8");
-////        resp.setHeader("Access-Control-Allow-Methods", "POST");
-////        resp.setHeader("Access-Control-Allow-Headers", "x-requested-with,content-type");
-//
-////        setHeader(resp);
-//
-////        String uId = "";
-////
-////        Cookie[] cookies = res.getCookies();
-////
-////        ok:
-////        for (Cookie cookie : cookies) {
-////
-////            String accountName = cookie.getName();
-////
-////            if ("account".equals(accountName)) {
-////
-////                String accountValue = cookie.getValue();
-////
-////                uId = RSAEncrypt.decrypt(accountValue);
-////
-////                break ok;
-////            }
-////        }
-//
-//        //问题2：这个的失败结果
-//
-//        String encodeUid = RSAEncrypt.decrypt(uId);
-//        List<Student> findByPage = studentService.findByPage(encodeUid, page, size);
-//        int count = studentService.count();
-//        result.put("count", count);
-//        result.put("findBypageList", findByPage);
-//        resp.getWriter().write(callback + "(" + result.toJSONString() + ")");
-//    }
-//
-////    @RequestMapping("/page/findBySno")
-////
-////    public void findBySno(String sNo, HttpServletResponse resp) throws IOException {
-////
-////        Student stu = studentService.findBySno(sNo);
-////
-////        JSONObject result = new JSONObject();
-////
-////        if (stu == null) {
-////
-////            result.put("status", "fail");
-////
-////            result.put("message", "not find this student");
-////
-////            resp.getWriter().write(result.toJSONString());
-////
-////        } else {
-////
-////            resp.getWriter().write(stu.toString());
-////        }
-////    }
-//
-//    @RequestMapping(value = "/adm/delBySno", method = RequestMethod.GET)
-//
-//    public void delBySno(@RequestParam(name = "callback") String callback, @RequestParam(name = "sNo") String sNo, HttpServletResponse resp) throws IOException {
-//
-//        String resultString = "";
-//
-//        boolean isTrue = studentService.delBySno(sNo);
-//
-//        if (isTrue) {
-//
-//            resultString = JSON.toJSONString(new RespModel(RespStatusEnum.SUCCESS.getValue(), null, null));
-//
-//        } else {
-//
-//            resultString = JSON.toJSONString(new RespModel(RespStatusEnum.FAIL.getValue(),
-//                    "not find this student",
-//                    null));
-//
-//        }
-//        writeJsonp(resp, callback, resultString);
-//    }
-//
-//    @RequestMapping(value = "/adm/addStudent", method = RequestMethod.GET)
-//
-//    public void addStudent(@RequestParam(name = "callback") String callback, @RequestParam(name = "sNo") String sNo, @RequestParam(name = "name") String name,
-//                           @RequestParam(name = "email") String email, @RequestParam(name = "sex") Integer sex, @RequestParam(name = "birth") Integer birth, @RequestParam(name = "phone") String phone,
-//                           String address, String uId, HttpServletResponse resp) throws Exception {
-//
-//        String resultString = "";
-//
-//        if (sNo == null || sNo.equals("")) {
-//
-//            resultString = JSON.toJSONString(
-//                    new RespModel(
-//                            RespStatusEnum.FAIL.getValue(),
-//                            "The sNo is null",
-//                            null));
-//            writeJsonp(resp, callback, resultString);
-//            return;
-//        }
-//
-//        if (email == null || "".equals(email)) {
-//
-//            resultString = JSON.toJSONString(
-//                    new RespModel(
-//                            RespStatusEnum.FAIL.getValue(),
-//                            "The email is null",
-//                            null));
-//            writeJsonp(resp, callback, resultString);
-//        }
-//        if (birth == 0) {
-//
-//            resultString = JSON.toJSONString(
-//                    new RespModel(
-//                            RespStatusEnum.FAIL.getValue(),
-//                            "The birth greater than zero",
-//                            null));
-//            writeJsonp(resp, callback, resultString);
-//
-//            return;
-//        }
-//
-//        if (phone == null || "".equals(phone)) {
-//
-//            resultString = JSON.toJSONString(
-//                    new RespModel(
-//                            RespStatusEnum.FAIL.getValue(),
-//                            "The phone is null",
-//                            null));
-//            writeJsonp(resp, callback, resultString);
-//
-//            return;
-//        }
-//
-//        if (address == null || "".equals(address)) {
-//            resultString = JSON.toJSONString(
-//                    new RespModel(
-//                            RespStatusEnum.FAIL.getValue(),
-//                            "The address is null",
-//                            null));
-//            writeJsonp(resp, callback, resultString);
-//
-//            return;
-//        }
-//
-////        String uId = "";
-////
-////        Cookie[] cookies = res.getCookies();
-////
-////        ok:
-////        for (Cookie cookie : cookies) {
-////
-////            String accountName = cookie.getName();
-////
-////            if ("account".equals(accountName)) {
-////
-////                String accountValue = cookie.getValue();
-////
-////                uId = RSAEncrypt.decrypt(accountValue);
-////
-//////                System.out.println(uId);
-////
-////                break ok;
-////            }
-////        }
-//
-//        String encodeUid = RSAEncrypt.decrypt(uId);
-//
-//        boolean isTrue = studentService.addStudent(sNo, name, email, sex, birth, phone, address, encodeUid);
-//
-//
-//        if (isTrue) {
-//            resultString = JSON.toJSONString(new RespModel(RespStatusEnum.SUCCESS.getValue(), null, null));
-//
-//        } else {
-//
-//            resultString = JSON.toJSONString(
-//                    new RespModel(
-//                            RespStatusEnum.FAIL.getValue(),
-//                            "this number is exist",
-//                            null));
-//        }
-//        writeJsonp(resp, callback, resultString);
-//
-//    }
-//
-//    @RequestMapping(value = "/adm/updateStudent", method = RequestMethod.GET)
-//
-//    public void updateStudent(@RequestParam(name = "callback") String callback, @RequestParam(name = "sNo") String sNo, String name, String email, Integer sex, Integer birth, String phone, String address, HttpServletRequest res, HttpServletResponse resp) throws IOException {
-//
-//        String resultString = "";
-//
-//        if (sNo == null || sNo.equals("")) {
-//
-//            resultString = JSON.toJSONString(
-//                    new RespModel(
-//                            RespStatusEnum.FAIL.getValue(),
-//                            "The sNo is null",
-//                            null));
-//            writeJsonp(resp, callback, resultString);
-//            return;
-//        }
-//
-//        if (email == null || "".equals(email)) {
-//
-//            resultString = JSON.toJSONString(
-//                    new RespModel(
-//                            RespStatusEnum.FAIL.getValue(),
-//                            "The email is null",
-//                            null));
-//            writeJsonp(resp, callback, resultString);
-//        }
-//        if (birth == 0) {
-//
-//            resultString = JSON.toJSONString(
-//                    new RespModel(
-//                            RespStatusEnum.FAIL.getValue(),
-//                            "The birth greater than zero",
-//                            null));
-//            writeJsonp(resp, callback, resultString);
-//
-//            return;
-//        }
-//
-//        if (phone == null || "".equals(phone)) {
-//
-//            resultString = JSON.toJSONString(
-//                    new RespModel(
-//                            RespStatusEnum.FAIL.getValue(),
-//                            "The phone is null",
-//                            null));
-//            writeJsonp(resp, callback, resultString);
-//
-//            return;
-//        }
-//
-//        if (address == null || "".equals(address)) {
-//            resultString = JSON.toJSONString(
-//                    new RespModel(
-//                            RespStatusEnum.FAIL.getValue(),
-//                            "The address is null",
-//                            null));
-//            writeJsonp(resp, callback, resultString);
-//
-//            return;
-//        }
-//
-//        JSONObject result = new JSONObject();
-//
-//        boolean isTrue = studentService.update(sNo, name, email, sex, birth, phone, address);
-//
-//        if (isTrue) {
-//
-//            resultString = JSON.toJSONString(new RespModel(RespStatusEnum.SUCCESS.getValue(), null, null));
-//
-//        } else {
-//
-//            resultString = JSON.toJSONString(new RespModel(
-//                    RespStatusEnum.FAIL.getValue(),
-//                    "Not find this student",
-//                    null));
-//        }
-//
-//        writeJsonp(resp, callback, resultString);
-//    }
-//
-//    private void setHeader(HttpServletResponse resp) {
-//
-//        resp.setHeader("Access-Control-Allow-Origin", "*");
-//        resp.setHeader("content-type", "application:json;charset=utf8");
-//        resp.setHeader("Access-Control-Allow-Methods", "POST");
-//        resp.setHeader("Access-Control-Allow-Headers", "x-requested-with,content-type");
-//
-//    }
-////    @RequestMapping("/login")
-////
-////    public void login(String sNo, String password, HttpServletResponse resp, HttpServletRequest res) throws Exception {
-////
-////        JSONObject result = new JSONObject();
-////
-////        if (sNo == null || sNo.equals("")) {
-////
-////            result.put("status", "fail");
-////
-////            result.put("message", "username is null");
-////
-////            resp.getWriter().write(result.toJSONString());
-////
-////            return;
-////        }
-////
-////        if (password == null || password.equals("")) {
-////
-////            result.put("status", "fail");
-////
-////            result.put("message", "password is null");
-////
-////            resp.getWriter().write(result.toJSONString());
-////
-////            return;
-////        }
-////
-////        Student student = studentService.login(sNo, password);
-////
-////        if (student == null) {
-////
-////            result.put("status", "fail");
-////
-////            result.put("message", "username or password error");
-////
-////            resp.getWriter().write(result.toJSONString());
-////        } else {
-////            String str = RSAEncrypt.encrypt(sNo);
-////            Cookie cookie = new Cookie("sNO", str);
-////            resp.addCookie(cookie);
-//////            res.getRequestDispatcher("/page/findBySno").forward(res, resp);
-////            result.put("status", "success");
-////
-////            resp.getWriter().write(result.toJSONString());
-////        }
-////
-////    }
-//
-//}
+package com.duyi.students.controller;
+
+import com.duyi.common.BaseController;
+import com.duyi.common.RespStatusEnum;
+import com.duyi.students.domain.Student;
+import com.duyi.students.service.StudentService;
+import com.duyi.util.RegExUtil;
+import com.duyi.util.TimeUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
+
+@Controller
+@RequestMapping(value = "/api/student")
+public class StudentController extends BaseController {
+
+    @Autowired
+    StudentService studentService;
+    @RequestMapping(value = "/addStudent",method = RequestMethod.GET)
+    public void addStudent(@RequestParam(name = "appkey") String appkey,
+                           @RequestParam(name = "sNo") String sNo,
+                           @RequestParam(name = "name") String name,
+                           @RequestParam(name = "email") String email,
+                           @RequestParam(name = "sex") Integer sex,
+                           @RequestParam(name = "birth") Integer birth,
+                           @RequestParam(name = "phone") String phone,
+                           @RequestParam(name="address") String address,
+                           HttpServletResponse resp) throws Exception {
+
+        resp.setContentType("text/html;charset=utf-8");
+
+        if (!RegExUtil.match("^[0-9]{4,16}$", sNo)) {
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "学号必须为4-16位的数字组成", null);
+            return;
+        }
+
+        if(name == null || "".equals(name)) {
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "学生姓名不能为空", null);
+            return;
+        }
+
+        if(!RegExUtil.match("^[A-Za-z\\d]+([-_.][A-Za-z\\d]+)*@([A-Za-z\\d]+[-.])+[A-Za-z\\d]{2,5}$",email)) {
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "邮箱格式不正确", null);
+            return;
+        }
+
+
+        if (birth == 0) {
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "出生年份必须大于0", null);
+            return;
+        }
+
+        if(!RegExUtil.match("^[0-9]{11}$",phone)){
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "请输入正确的11位手机号", null);
+            return;
+        }
+
+        if (address == null || "".equals(address)) {
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "请填写住址", null);
+            return;
+        }
+
+        Student student = new Student();
+        student.setsNo(sNo);
+        student.setName(name);
+        student.setEmail(email);
+        student.setSex(sex);
+        student.setBirth(birth);
+        student.setPhone(phone);
+        student.setAddress(address);
+        student.setAppkey(appkey);
+        student.setCtime(TimeUtil.getNow());
+        student.setUtime(TimeUtil.getNow());
+        StudentService.addStudentStatusEnum result = studentService.addStudent(student);
+        writeResult(resp,result.getStatusEnum().getValue(),result.getMsg(),null);
+    }
+
+    /**
+     * 查询所有appkey的学生
+     * @param appkey
+     * @param resp
+     * @throws IOException
+     */
+    @RequestMapping(value = "/findAll",method = RequestMethod.GET)
+    public void findAll(@RequestParam(name = "appkey") String appkey, HttpServletResponse resp) throws IOException {
+
+        resp.setContentType("text/html;charset=utf-8");
+
+        List<Student> findAll = studentService.findAll(appkey);
+        writeResult(resp,RespStatusEnum.SUCCESS.getValue(),"",findAll);//?
+    }
+
+    /**
+     * 分页查询
+     * @param appkey
+     * @param page
+     * @param size
+     * @param res
+     * @param resp
+     * @throws IOException
+     */
+    @RequestMapping(value = "/findByPage", method = RequestMethod.GET)
+    public void findByPage(@RequestParam(name = "appkey") String appkey, @RequestParam(name = "page") int page, @RequestParam(name = "size") int size, HttpServletRequest res, HttpServletResponse resp ) throws IOException {
+
+        resp.setContentType("text/html;charset=utf-8");
+        List<Student> findByPage = studentService.findByPage(appkey, page, size);
+        int count = studentService.count();
+        writeResult(resp,RespStatusEnum.SUCCESS.getValue(),count,findByPage);//?
+
+    }
+
+    /**
+     * 删除一条学生信息
+     * @param appkey
+     * @param sNo
+     * @param resp
+     * @throws IOException
+     */
+    @RequestMapping(value = "/delBySno", method = RequestMethod.GET)
+    public void delBySno(@RequestParam(name = "appkey") String appkey, @RequestParam(name = "sNo") String sNo, HttpServletResponse resp) throws IOException {
+
+       StudentService.delStudentStatusEnum result = studentService.delBySno(sNo);
+       writeResult(resp,result.getStatusEnum().getValue(),result.getMsg(),null);
+
+    }
+
+    /**
+     * 修改一条学生记录
+     * @param appkey
+     * @param sNo
+     * @param name
+     * @param email
+     * @param sex
+     * @param birth
+     * @param phone
+     * @param address
+     * @param resp
+     * @throws IOException
+     */
+    @RequestMapping(value = "/updateStudent",method = RequestMethod.GET)
+    public void update(@RequestParam(name = "appkey") String appkey,
+                       @RequestParam(name = "sNo") String sNo,
+                       @RequestParam(name = "name") String name,
+                       @RequestParam(name="email") String email,
+                       @RequestParam(name = "sex") Integer sex,
+                       @RequestParam(name="birth") Integer birth,
+                       @RequestParam(name="phone") String phone,
+                       @RequestParam(name="address") String address,
+                       HttpServletResponse resp) throws IOException {
+
+        resp.setContentType("text/html;charset=utf-8");
+
+        if (!RegExUtil.match("^[0-9]{4,16}$", sNo)) {
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "学号必须为4-16位的数字组成", null);
+            return;
+        }
+
+        if(name == null || "".equals(name)) {
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "学生姓名不能为空", null);
+            return;
+        }
+
+        if(!RegExUtil.match("^[A-Za-z\\d]+([-_.][A-Za-z\\d]+)*@([A-Za-z\\d]+[-.])+[A-Za-z\\d]{2,5}$",email)) {
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "邮箱格式不正确", null);
+            return;
+        }
+
+        if (birth == 0) {
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "出生年份必须大于0", null);
+            return;
+        }
+
+        if(!RegExUtil.match("^[0-9]{11}$",phone)){
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "请输入正确的11位手机号", null);
+            return;
+        }
+
+        if (address == null || "".equals(address)) {
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "请填写住址", null);
+            return;
+        }
+
+        Student student = new Student();
+        student.setsNo(sNo);
+        student.setName(name);
+        student.setEmail(email);
+        student.setSex(sex);
+        student.setBirth(birth);
+        student.setPhone(phone);
+        student.setAddress(address);
+        student.setUtime(TimeUtil.getNow());
+        StudentService.updateStudentStatusEnum result = studentService.updateStudent(student);
+        writeResult(resp,result.getStatusEnum().getValue(),result.getMsg(),null);
+
+    }
+
+}
+
+
