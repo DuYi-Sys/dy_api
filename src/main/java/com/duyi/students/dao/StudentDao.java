@@ -14,7 +14,7 @@ public interface StudentDao {
 
     List<Student> findByAll(@Param(value = "appkey") String appkey);
 
-    List<Student> findByPage(@Param(value = "uId") String uId,@Param(value = "offset") int offset,@Param(value = "size") int size);
+    List<Student> findByPage(@Param(value = "appkey") String appkey,@Param(value = "offset") int offset,@Param(value = "size") int size);
 
     Student findBySno(@Param(value = "sNo") String sNo);
 

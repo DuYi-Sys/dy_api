@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
@@ -33,6 +34,7 @@ public class StudentController1 extends BaseController {
                            @RequestParam(name="address") String address,
                            HttpServletResponse resp) throws Exception {
 
+        resp.setContentType("text/html;charset=utf-8");
 
         if (!RegExUtil.match("^[0-9]{4,16}$", sNo)) {
             writeResult(resp, RespStatusEnum.FAIL.getValue(), "学号必须为4-16位的数字组成", null);
@@ -42,7 +44,6 @@ public class StudentController1 extends BaseController {
         if(name == null || "".equals(name)) {
             writeResult(resp, RespStatusEnum.FAIL.getValue(), "学生姓名不能为空", null);
             return;
-
         }
 
         if(!RegExUtil.match("^[A-Za-z\\d]+([-_.][A-Za-z\\d]+)*@([A-Za-z\\d]+[-.])+[A-Za-z\\d]{2,5}$",email)) {
@@ -90,9 +91,116 @@ public class StudentController1 extends BaseController {
     @RequestMapping(value = "/findAll",method = RequestMethod.GET)
     public void findAll(@RequestParam(name = "appkey") String appkey, HttpServletResponse resp) throws IOException {
 
+        resp.setContentType("text/html;charset=utf-8");
+
         List<Student> findAll = studentService1.findAll(appkey);
-        writeResult(resp,RespStatusEnum.SUCCESS.getValue(),"",findAll);
+        writeResult(resp,RespStatusEnum.SUCCESS.getValue(),"",findAll);//?
+    }
+
+    /**
+     * 分页查询
+     * @param appkey
+     * @param page
+     * @param size
+     * @param res
+     * @param resp
+     * @throws IOException
+     */
+    @RequestMapping(value = "/findByPage", method = RequestMethod.GET)
+    public void findByPage(@RequestParam(name = "appkey") String appkey, @RequestParam(name = "page") int page, @RequestParam(name = "size") int size, HttpServletRequest res, HttpServletResponse resp ) throws IOException {
+
+        resp.setContentType("text/html;charset=utf-8");
+        List<Student> findByPage = studentService1.findByPage(appkey, page, size);
+        int count = studentService1.count();
+        writeResult(resp,RespStatusEnum.SUCCESS.getValue(),count,findByPage);//?
+
+    }
+
+    /**
+     * 删除一条学生信息
+     * @param appkey
+     * @param sNo
+     * @param resp
+     * @throws IOException
+     */
+    @RequestMapping(value = "/delBySno", method = RequestMethod.GET)
+    public void delBySno(@RequestParam(name = "appkey") String appkey, @RequestParam(name = "sNo") String sNo, HttpServletResponse resp) throws IOException {
+
+       StudentService1.delStudentStatusEnum result = studentService1.delBySno(sNo);
+       writeResult(resp,result.getStatusEnum().getValue(),result.getMsg(),null);
+
+    }
+
+    /**
+     * 修改一条学生记录
+     * @param appkey
+     * @param sNo
+     * @param name
+     * @param email
+     * @param sex
+     * @param birth
+     * @param phone
+     * @param address
+     * @param resp
+     * @throws IOException
+     */
+    @RequestMapping(value = "/updateStudent",method = RequestMethod.GET)
+    public void update(@RequestParam(name = "appkey") String appkey,
+                       @RequestParam(name = "sNo") String sNo,
+                       @RequestParam(name = "name") String name,
+                       @RequestParam(name="email") String email,
+                       @RequestParam(name = "sex") Integer sex,
+                       @RequestParam(name="birth") Integer birth,
+                       @RequestParam(name="phone") String phone,
+                       @RequestParam(name="address") String address,
+                       HttpServletResponse resp) throws IOException {
+
+        resp.setContentType("text/html;charset=utf-8");
+
+        if (!RegExUtil.match("^[0-9]{4,16}$", sNo)) {
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "学号必须为4-16位的数字组成", null);
+            return;
+        }
+
+        if(name == null || "".equals(name)) {
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "学生姓名不能为空", null);
+            return;
+        }
+
+        if(!RegExUtil.match("^[A-Za-z\\d]+([-_.][A-Za-z\\d]+)*@([A-Za-z\\d]+[-.])+[A-Za-z\\d]{2,5}$",email)) {
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "邮箱格式不正确", null);
+            return;
+        }
+
+        if (birth == 0) {
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "出生年份必须大于0", null);
+            return;
+        }
+
+        if(!RegExUtil.match("^[0-9]{11}$",phone)){
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "请输入正确的11位手机号", null);
+            return;
+        }
+
+        if (address == null || "".equals(address)) {
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "请填写住址", null);
+            return;
+        }
+
+        Student student = new Student();
+        student.setsNo(sNo);
+        student.setName(name);
+        student.setEmail(email);
+        student.setSex(sex);
+        student.setBirth(birth);
+        student.setPhone(phone);
+        student.setAddress(address);
+        student.setUtime(TimeUtil.getNow());
+        StudentService1.updateStudentStatusEnum result = studentService1.updateStudent(student);
+        writeResult(resp,result.getStatusEnum().getValue(),result.getMsg(),null);
 
     }
 
 }
+
+

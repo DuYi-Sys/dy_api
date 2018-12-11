@@ -25,4 +25,15 @@ public class BaseController {
 
         resp.getWriter().write(result.toJSONString());
     }
+
+    public void writeResult(HttpServletResponse resp, String status, int count, Object data) throws IOException {
+
+        JSONObject result = new JSONObject();
+
+        result.put("status", status);
+        result.put("count", count);
+        result.put("findBypageList", data);
+
+        resp.getWriter().write(result.toJSONString());
+    }
 }
