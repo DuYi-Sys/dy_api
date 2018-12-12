@@ -42,6 +42,213 @@
     <link rel="icon" href="assets/img/ico/favicon.ico" type="image/png">
     <!-- Windows8 touch icon ( http://www.buildmypinnedsite.com/ )-->
     <meta name="msapplication-TileColor" content="#3399cc" />
+
+    <meta http-equiv=Content-Type content="text/html; charset=gb2312">
+    <meta name=Generator content="Microsoft Word 15 (filtered)">
+    <style>
+        <!--
+        /* Font Definitions */
+        @font-face
+        {font-family:宋体;
+            panose-1:2 1 6 0 3 1 1 1 1 1;}
+        @font-face
+        {font-family:"Cambria Math";
+            panose-1:2 4 5 3 5 4 6 3 2 4;}
+        @font-face
+        {font-family:"等线 Light";
+            panose-1:2 1 6 0 3 1 1 1 1 1;}
+        @font-face
+        {font-family:微软雅黑;
+            panose-1:2 11 5 3 2 2 4 2 2 4;}
+        @font-face
+        {font-family:Tahoma;
+            panose-1:2 11 6 4 3 5 4 4 2 4;}
+        @font-face
+        {font-family:"\@微软雅黑";}
+        @font-face
+        {font-family:"\@等线 Light";}
+        @font-face
+        {font-family:"\@宋体";
+            panose-1:2 1 6 0 3 1 1 1 1 1;}
+        /* Style Definitions */
+        p.MsoNormal, li.MsoNormal, div.MsoNormal
+        {margin:0cm;
+            margin-bottom:.0001pt;
+            font-size:10.5pt;
+            font-family:"微软雅黑",sans-serif;}
+        h1
+        {mso-style-link:"标题 1 字符";
+            margin-top:17.0pt;
+            margin-right:0cm;
+            margin-bottom:16.5pt;
+            margin-left:0cm;
+            line-height:240%;
+            page-break-after:avoid;
+            font-size:22.0pt;
+            font-family:"微软雅黑",sans-serif;}
+        h2
+        {mso-style-link:"标题 2 字符";
+            margin-top:13.0pt;
+            margin-right:0cm;
+            margin-bottom:13.0pt;
+            margin-left:0cm;
+            line-height:173%;
+            page-break-after:avoid;
+            font-size:16.0pt;
+            font-family:"等线 Light";}
+        h3
+        {mso-style-link:"标题 3 字符";
+            margin-top:13.0pt;
+            margin-right:0cm;
+            margin-bottom:13.0pt;
+            margin-left:0cm;
+            line-height:173%;
+            page-break-after:avoid;
+            font-size:16.0pt;
+            font-family:"微软雅黑",sans-serif;}
+        h4
+        {mso-style-link:"标题 4 字符";
+            margin-top:14.0pt;
+            margin-right:0cm;
+            margin-bottom:14.5pt;
+            margin-left:0cm;
+            line-height:156%;
+            page-break-after:avoid;
+            font-size:14.0pt;
+            font-family:"等线 Light";}
+        h5
+        {mso-style-link:"标题 5 字符";
+            margin-top:14.0pt;
+            margin-right:0cm;
+            margin-bottom:14.5pt;
+            margin-left:0cm;
+            line-height:156%;
+            page-break-after:avoid;
+            font-size:14.0pt;
+            font-family:"微软雅黑",sans-serif;}
+        h6
+        {mso-style-link:"标题 6 字符";
+            margin-top:12.0pt;
+            margin-right:0cm;
+            margin-bottom:3.2pt;
+            margin-left:0cm;
+            line-height:133%;
+            page-break-after:avoid;
+            font-size:12.0pt;
+            font-family:"等线 Light";}
+        p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+        {mso-style-link:"标题 7 字符";
+            margin-top:12.0pt;
+            margin-right:0cm;
+            margin-bottom:3.2pt;
+            margin-left:0cm;
+            line-height:133%;
+            page-break-after:avoid;
+            font-size:12.0pt;
+            font-family:"微软雅黑",sans-serif;
+            font-weight:bold;}
+        p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+        {mso-style-link:"标题 8 字符";
+            margin-top:12.0pt;
+            margin-right:0cm;
+            margin-bottom:3.2pt;
+            margin-left:0cm;
+            line-height:133%;
+            page-break-after:avoid;
+            font-size:12.0pt;
+            font-family:"等线 Light";}
+        p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+        {mso-style-link:"标题 9 字符";
+            margin-top:12.0pt;
+            margin-right:0cm;
+            margin-bottom:3.2pt;
+            margin-left:0cm;
+            line-height:133%;
+            page-break-after:avoid;
+            font-size:10.5pt;
+            font-family:"等线 Light";}
+        p.MsoTitle, li.MsoTitle, div.MsoTitle
+        {mso-style-link:"标题 字符";
+            margin-top:12.0pt;
+            margin-right:0cm;
+            margin-bottom:3.0pt;
+            margin-left:0cm;
+            text-align:center;
+            font-size:16.0pt;
+            font-family:"等线 Light";
+            font-weight:bold;}
+        p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+        {mso-style-link:"副标题 字符";
+            margin-top:12.0pt;
+            margin-right:0cm;
+            margin-bottom:3.0pt;
+            margin-left:0cm;
+            text-align:center;
+            line-height:130%;
+            font-size:16.0pt;
+            font-family:"等线 Light";
+            font-weight:bold;}
+        span.1
+        {mso-style-name:"标题 1 字符";
+            mso-style-link:"标题 1";
+            font-weight:bold;}
+        span.2
+        {mso-style-name:"标题 2 字符";
+            mso-style-link:"标题 2";
+            font-family:"等线 Light";
+            font-weight:bold;}
+        span.3
+        {mso-style-name:"标题 3 字符";
+            mso-style-link:"标题 3";
+            font-weight:bold;}
+        span.4
+        {mso-style-name:"标题 4 字符";
+            mso-style-link:"标题 4";
+            font-family:"等线 Light";
+            font-weight:bold;}
+        span.5
+        {mso-style-name:"标题 5 字符";
+            mso-style-link:"标题 5";
+            font-weight:bold;}
+        span.6
+        {mso-style-name:"标题 6 字符";
+            mso-style-link:"标题 6";
+            font-family:"等线 Light";
+            font-weight:bold;}
+        span.7
+        {mso-style-name:"标题 7 字符";
+            mso-style-link:"标题 7";
+            font-weight:bold;}
+        span.8
+        {mso-style-name:"标题 8 字符";
+            mso-style-link:"标题 8";
+            font-family:"等线 Light";}
+        span.9
+        {mso-style-name:"标题 9 字符";
+            mso-style-link:"标题 9";
+            font-family:"等线 Light";}
+        span.a
+        {mso-style-name:"标题 字符";
+            mso-style-link:标题;
+            font-family:"等线 Light";
+            font-weight:bold;}
+        span.a0
+        {mso-style-name:"副标题 字符";
+            mso-style-link:副标题;
+            font-family:"等线 Light";
+            font-weight:bold;}
+        .MsoChpDefault
+        {font-family:"微软雅黑",sans-serif;}
+        /* Page Definitions */
+        @page WordSection1
+        {size:595.3pt 841.9pt;
+            margin:72.0pt 90.0pt 72.0pt 90.0pt;
+            layout-grid:15.6pt;}
+        div.WordSection1
+        {page:WordSection1;}
+        -->
+    </style>
+
 </head>
 <body>
 <!-- Start #header -->
@@ -319,6 +526,1474 @@
         <div class="outlet">
             <!-- Start .outlet -->
             <!-- Page start here ( usual with .row ) -->
+
+            <div class=WordSection1 style='layout-grid:15.6pt'>
+
+                <h1 style='margin:0cm;margin-bottom:.0001pt;line-height:normal'><a
+                        name=8033-1543124906782></a><span style='font-size:21.0pt'>一、基础说明</span></h1>
+
+                <p class=MsoNormal><a name=8754-1543196710653></a><span lang=EN-US>1.</span>所有接口返回结果数据格式：</p>
+
+                <p class=MsoNormal><a name=6098-1544596031048></a><span lang=EN-US>&nbsp;</span></p>
+
+                <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+                       style='border-collapse:collapse;border:none'>
+                    <tr style='height:30.0pt'>
+                        <td width=83 style='width:62.0pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b><span
+                                    style='font-family:"Tahoma",sans-serif'>字段</span></b></p>
+                        </td>
+                        <td width=91 style='width:68.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>类型</b></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>是否必须</b></p>
+                        </td>
+                        <td width=229 style='width:172.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>备注</b></p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=83 style='width:62.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>status</span></p>
+                        </td>
+                        <td width=91 style='width:68.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+                                                                                            style='font-family:"Tahoma",sans-serif'>string</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=229 style='width:172.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>状态码，<span lang=EN-US>success</span>为成功<span lang=EN-US>,fail</span>为失败</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=83 style='width:62.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>msg</span></p>
+                        </td>
+                        <td width=91 style='width:68.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>string</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=229 style='width:172.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal><span lang=EN-US style='font-family:"Tahoma",sans-serif'>msg</span><span
+                                    style='font-family:"Tahoma",sans-serif'>为请求结果描述</span></p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=83 style='width:62.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>data</span></p>
+                        </td>
+                        <td width=91 style='width:68.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>object</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>非必须</p>
+                        </td>
+                        <td width=229 style='width:172.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal><span style='font-family:"Tahoma",sans-serif'>当需要返回数据内容是，该字段非空</span></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <h1 style='margin:0cm;margin-bottom:.0001pt;line-height:normal'><a
+                        name=1958-1543196711053></a><span style='font-size:21.0pt'>二、实体说明</span></h1>
+
+                <p class=MsoNormal><a name=3676-1544583531513></a><span lang=EN-US>&nbsp;</span></p>
+
+                <p class=MsoNormal><a name=8199-1543212212891></a><span lang=EN-US>1.student</span></p>
+
+                <p class=MsoNormal><a name=1138-1543212274797></a><span lang=EN-US>&nbsp;</span></p>
+
+                <p class=MsoNormal><a name=6712-1543212275100></a>描述：学生实体、用来描述学生的基本信息</p>
+
+                <p class=MsoNormal><a name=4139-1543212416737></a><span lang=EN-US>&nbsp;</span></p>
+
+                <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+                       style='border-collapse:collapse;border:none'>
+                    <tr style='height:30.0pt'>
+                        <td width=151 style='width:113.0pt;border:solid windowtext 1.0pt;padding:
+  0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>字段</b></p>
+                        </td>
+                        <td width=171 style='width:128.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>类型</b></p>
+                        </td>
+                        <td width=239 style='width:179.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>备注</b></p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=151 style='width:113.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>id</span></p>
+                        </td>
+                        <td width=171 style='width:128.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>int</span></p>
+                        </td>
+                        <td width=239 style='width:179.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>学生<span lang=EN-US>id</span></p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=151 style='width:113.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>sNo</span></p>
+                        </td>
+                        <td width=171 style='width:128.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>string</span></p>
+                        </td>
+                        <td width=239 style='width:179.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>学生学号</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=151 style='width:113.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>name</span></p>
+                        </td>
+                        <td width=171 style='width:128.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>string
+  </span></p>
+                        </td>
+                        <td width=239 style='width:179.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>学生姓名</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=151 style='width:113.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>email</span></p>
+                        </td>
+                        <td width=171 style='width:128.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>string
+  </span></p>
+                        </td>
+                        <td width=239 style='width:179.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>学生邮箱</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=151 style='width:113.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>sex</span></p>
+                        </td>
+                        <td width=171 style='width:128.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>int</span></p>
+                        </td>
+                        <td width=239 style='width:179.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>学生性别：</p>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>“0”</span>为男
+                                ，<span lang=EN-US>“1</span>为女<span lang=EN-US>”</span></p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=151 style='width:113.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>birth</span></p>
+                        </td>
+                        <td width=171 style='width:128.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>int</span></p>
+                        </td>
+                        <td width=239 style='width:179.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>学生出生年份</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=151 style='width:113.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>phone</span></p>
+                        </td>
+                        <td width=171 style='width:128.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>string</span></p>
+                        </td>
+                        <td width=239 style='width:179.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>学生手机号</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=151 style='width:113.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>address</span></p>
+                        </td>
+                        <td width=171 style='width:128.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>string</span></p>
+                        </td>
+                        <td width=239 style='width:179.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>学生住址</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=151 style='width:113.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+                                                                                            style='font-family:"Tahoma",sans-serif'>appkey</span></p>
+                        </td>
+                        <td width=171 style='width:128.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>string</span></p>
+                        </td>
+                        <td width=239 style='width:179.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>用户访问接口时所必须携带的身份凭据</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=151 style='width:113.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>ctime</span></p>
+                        </td>
+                        <td width=171 style='width:128.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>data</span></p>
+                        </td>
+                        <td width=239 style='width:179.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>创建时间</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=151 style='width:113.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>utime</span></p>
+                        </td>
+                        <td width=171 style='width:128.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>data</span></p>
+                        </td>
+                        <td width=239 style='width:179.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>修改时间</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <p class=MsoNormal><a name=5612-1543212260049></a><span lang=EN-US>&nbsp;</span></p>
+
+                <h1 style='margin:0cm;margin-bottom:.0001pt;line-height:normal'><a
+                        name=5896-1543213068162></a><span style='font-size:21.0pt'>三、接口文档</span></h1>
+
+                <p class=MsoNormal><a name=8860-1543213082519></a><span lang=EN-US>&nbsp;</span></p>
+
+                <h2 style='margin:0cm;margin-bottom:.0001pt;line-height:normal'><a
+                        name=9660-1543215141395></a><span lang=EN-US style='font-size:15.0pt;
+font-family:"微软雅黑",sans-serif;color:#393939;background:white'>1.</span><span
+                        style='font-size:15.0pt;font-family:"微软雅黑",sans-serif;color:#393939;background:
+white'>查询所有学生</span></h2>
+
+                <p class=MsoNormal><a name=2310-1543219354265></a><span lang=EN-US>&nbsp;</span></p>
+
+                <p class=MsoNormal><a name=9466-1543219354412></a><span lang=EN-US>url</span>：<span
+                        lang=EN-US style='color:#393939'>/api/student/findAll</span></p>
+
+                <p class=MsoNormal><a name=1492-1543215141529></a><span lang=EN-US>method</span>：<span
+                        lang=EN-US>get</span></p>
+
+                <p class=MsoNormal><a name=2867-1543272828020></a>请求参数：</p>
+
+                <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+                       style='border-collapse:collapse;border:none'>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;padding:
+  0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>字段</b></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>类型</b></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>是否必须</b></p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>备注</b></p>
+                        </td>
+                    </tr>
+                    <tr style='height:8.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:8.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>appkey</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:8.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>String
+  </span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:8.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:8.0pt'>
+                            <p class=MsoNormal>用户访问接口时所必须携带的身份凭据</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <p class=MsoNormal><a name=5696-1543272838731></a>返回结果：</p>
+
+                <p class=MsoNormal><a name=6083-1543286227737></a><span lang=EN-US>1.</span>查询成功返回：</p>
+
+                <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+                       style='border-collapse:collapse;border:none'>
+                    <tr style='height:30.0pt'>
+                        <td width=155 style='width:116.0pt;border:solid windowtext 1.0pt;padding:
+  0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>字段</b></p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>类型</b></p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>是否必须</b></p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>备注</b></p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=155 style='width:116.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>status</span></p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>string</span></p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>状态值为：<span lang=EN-US>success</span></p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=155 style='width:116.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>data</span></p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>List&lt;Student&gt;
+  </span></p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal><span style='font-family:"Tahoma",sans-serif'>返回学生信息集合</span></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <p class=MsoNormal><a name=7230-1543215141778></a>示例：</p>
+
+                <p class=MsoNormal><a name=8442-1543287984945></a><span lang=EN-US>{&quot;data&quot;:</span></p>
+
+                <p class=MsoNormal><a name=6760-1544537226064></a><span lang=EN-US>[</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt'><a name=8573-1544537368453></a><span
+                        lang=EN-US>{</span></p>
+
+                <p class=MsoNormal style='margin-left:42.0pt'><a name=9980-1544537410457></a><span
+                        lang=EN-US>&quot;id&quot;:2,</span></p>
+
+                <p class=MsoNormal style='margin-left:42.0pt'><a name=6031-1544537423821></a><span
+                        lang=EN-US>&quot;sNo&quot;:&quot;11002&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:42.0pt'><a name=3662-1544537428919></a><span
+                        lang=EN-US>&quot;name&quot;:&quot;</span>张三<span lang=EN-US>&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:42.0pt'><a name=8277-1544537440545></a><span
+                        lang=EN-US>&quot;email&quot;:&quot;382246268@qq.com&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:42.0pt'><a name=2490-1544537464021></a><span
+                        lang=EN-US>&quot;sex&quot;:1,</span></p>
+
+                <p class=MsoNormal style='margin-left:42.0pt'><a name=1879-1544537472965></a><span
+                        lang=EN-US>&quot;birth&quot;:1997,</span></p>
+
+                <p class=MsoNormal style='margin-left:42.0pt'><a name=6183-1544537487006></a><span
+                        lang=EN-US>&quot;phone&quot;:&quot;18846411586&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:42.0pt'><a name=4516-1544537373903></a><span
+                        lang=EN-US>&quot;address&quot;:&quot;</span>黑龙江省哈尔滨市<span lang=EN-US>XXXX&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:42.0pt'><a name=6551-1544537251173></a><span
+                        lang=EN-US>&quot;appkey&quot;:&quot;demo13_1544456982488&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:42.0pt'><a name=6795-1544537405482></a><span
+                        lang=EN-US>&quot;ctime&quot;:1544494165,</span></p>
+
+                <p class=MsoNormal style='margin-left:42.0pt'><a name=3551-1544537386696></a><span
+                        lang=EN-US>&quot;utime&quot;:1544494165</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt'><a name=5772-1544537393377></a><span
+                        lang=EN-US>},</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=5691-1544537395408></a><span lang=EN-US>&quot;id&quot;:3,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=4279-1544537606817></a><span lang=EN-US>&quot;sNo&quot;:&quot;11001&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=7282-1544537611933></a><span lang=EN-US>&quot;name&quot;:&quot;</span>里斯<span
+                        lang=EN-US>&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=6629-1544537663792></a><span lang=EN-US>&quot;email&quot;:&quot;382246268@qq.com&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=4550-1544537620110></a><span lang=EN-US>&quot;sex&quot;:0,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=7586-1544537646763></a><span lang=EN-US>&quot;birth&quot;:1988,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=3836-1544537696112></a><span lang=EN-US>&quot;phone&quot;:&quot;18846411586&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=1416-1544537518406></a><span lang=EN-US>&quot;address&quot;:&quot;</span>黑龙江省哈尔滨市<span
+                        lang=EN-US>XXXX&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=9050-1544537523411></a><span lang=EN-US>&quot;appkey&quot;:&quot;demo13_1544456982488&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=3738-1544537531302></a><span lang=EN-US>&quot;ctime&quot;:1544498066,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=3740-1544537558570></a><span lang=EN-US>&quot;utime&quot;:1544498138</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt'><a name=8054-1544537563133></a><span
+                        lang=EN-US>}</span></p>
+
+                <p class=MsoNormal><a name=9988-1544537573387></a><span lang=EN-US>],&quot;</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt'><a name=4892-1544537569643></a><span
+                        lang=EN-US>status&quot;:&quot;success&quot;</span></p>
+
+                <p class=MsoNormal><a name=8076-1544537585706></a><span lang=EN-US>}</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt'><a name=5319-1543287453578></a><span
+                        lang=EN-US>&nbsp;</span></p>
+
+                <p class=MsoNormal><a name=9250-1543287453791></a><span lang=EN-US>2</span>。失败返回：</p>
+
+                <p class=MsoNormal><a name=3969-1543287503333></a><span lang=EN-US
+                                                                        style='color:#393939;background:white'>1</span><span style='color:#393939;
+background:white'>）</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt'><a name=7354-1543287935122></a><span
+                        style='color:#393939;background:white'>示例：</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt'><a name=7619-1543287944300></a><span
+                        lang=EN-US style='color:#393939;background:white'>{</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=7643-1544537811228></a><span lang=EN-US style='color:#393939;background:
+white'>&quot;msg&quot;:&quot;appkey</span><span style='color:#393939;
+background:white'>不正确<span lang=EN-US>&quot;,</span></span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=7068-1544537815459></a><span lang=EN-US style='color:#393939;background:
+white'>&quot;status&quot;:&quot;fail&quot;</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt'><a name=6664-1544537817704></a><span
+                        lang=EN-US style='color:#393939;background:white'>}</span></p>
+
+                <p class=MsoNormal><a name=8547-1543287430604></a><span lang=EN-US>&nbsp;</span></p>
+
+                <h2 style='margin:0cm;margin-bottom:.0001pt;line-height:normal'><a
+                        name=7940-1543287403789></a><span lang=EN-US style='font-size:15.0pt;
+font-family:"微软雅黑",sans-serif'>2.</span><span style='font-size:15.0pt;
+font-family:"微软雅黑",sans-serif'>按页查询学生信息</span></h2>
+
+                <p class=MsoNormal><a name=5071-1543273202372></a><span lang=EN-US>&nbsp;</span></p>
+
+                <p class=MsoNormal><a name=7995-1543273204030></a><span lang=EN-US>url:<span
+                        style='color:#393939'>/api/student/findByPage</span></span></p>
+
+                <p class=MsoNormal><a name=8074-1543273227327></a><span lang=EN-US>method:get</span></p>
+
+                <p class=MsoNormal><a name=7946-1543273235644></a>请求参数：</p>
+
+                <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+                       style='border-collapse:collapse;border:none'>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;padding:
+  0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>字段</b></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>类型</b></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>是否必须</b></p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>备注</b></p>
+                        </td>
+                    </tr>
+                    <tr style='height:8.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:8.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>appkey</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:8.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>String
+  </span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:8.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:8.0pt'>
+                            <p class=MsoNormal><span lang=EN-US>jsonp</span>回调函数</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>page</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>int</span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span
+                                    style='font-family:"Tahoma",sans-serif'>必须</span></p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>第几页的页数</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>size</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>int</span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>每页显示的数量</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <p class=MsoNormal><a name=1320-1543273195603></a><span lang=EN-US>&nbsp;</span></p>
+
+                <p class=MsoNormal><a name=6539-1543292364656></a>返回结果：</p>
+
+                <p class=MsoNormal><a name=5216-1543292509189></a><span lang=EN-US>&nbsp;</span></p>
+
+                <p class=MsoNormal><a name=3742-1543292424632></a><span lang=EN-US>1.</span>查询成功返回</p>
+
+                <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+                       style='border-collapse:collapse;border:none'>
+                    <tr style='height:30.0pt'>
+                        <td width=155 style='width:116.0pt;border:solid windowtext 1.0pt;padding:
+  0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>字段</b></p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>类型</b></p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>是否必须</b></p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>备注</b></p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=155 style='width:116.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>status</span></p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>String</span></p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>是</p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>查询结果的状态</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=155 style='width:116.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>count</span></p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>int</span></p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>所有学生的总和数</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=155 style='width:116.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>data</span></p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>List&lt;Student&gt;
+  </span></p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=155 style='width:116.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal><span style='font-family:"Tahoma",sans-serif'>返回学生信息集合</span></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <p class=MsoNormal><a name=0025-1543292424770></a>示例：</p>
+
+                <p class=MsoNormal><a name=1067-1543292424895></a><span lang=EN-US>{</span></p>
+
+                <p class=MsoNormal><a name=4573-1544579619531></a><span lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;count&quot;:2,</span></p>
+
+                <p class=MsoNormal style='text-indent:21.0pt'><a name=3054-1544579631985></a><span
+                        lang=EN-US>&quot;findBypageList&quot;:</span></p>
+
+                <p class=MsoNormal style='text-indent:21.0pt'><a name=4072-1544579645659></a><span
+                        lang=EN-US>[{</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=3080-1544579640949></a><span lang=EN-US>&nbsp;&quot;id&quot;:2,&nbsp;&nbsp;
+</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=6664-1544579822622></a><span lang=EN-US>&nbsp;&quot;sNo&quot;:&quot;11002&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=7658-1544579939024></a><span lang=EN-US>&quot;name&quot;:&quot;</span>张三<span
+                        lang=EN-US>&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=9543-1544579951759></a><span lang=EN-US>&quot;birth&quot;:1997,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=2317-1544579983425></a><span lang=EN-US>&quot;phone&quot;:&quot;18846411586&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=2972-1544580062514></a><span lang=EN-US>&quot;email&quot;:&quot;382246268@qq.com&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=7381-1544580062728></a><span lang=EN-US>&quot;sex&quot;:1,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=0084-1544579652628></a><span lang=EN-US>&quot;appkey&quot;:&quot;demo13_1544456982488&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=1488-1544579929445></a><span lang=EN-US>&quot;address&quot;:&quot;</span>黑龙江省哈尔滨市<span
+                        lang=EN-US>XXXX&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=7392-1544579839022></a><span lang=EN-US>&quot;ctime&quot;:1544494165,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=1077-1544579686942></a><span lang=EN-US>&quot;utime&quot;:1544494165</span></p>
+
+                <p class=MsoNormal style='text-indent:21.0pt'><a name=3782-1544579690798></a><span
+                        lang=EN-US>}],</span></p>
+
+                <p class=MsoNormal style='text-indent:42.0pt'><a name=2242-1544579696455></a><span
+                        lang=EN-US>&quot;status&quot;:&quot;success&quot;</span></p>
+
+                <p class=MsoNormal><a name=9033-1544579701353></a><span lang=EN-US>}</span></p>
+
+                <p class=MsoNormal><a name=7440-1543292425012></a><span lang=EN-US>&nbsp;</span></p>
+
+                <h2 style='margin:0cm;margin-bottom:.0001pt;line-height:normal'><a
+                        name=7968-1543252967199></a><span lang=EN-US style='font-size:15.0pt;
+font-family:"微软雅黑",sans-serif'>3.</span><span style='font-size:15.0pt;
+font-family:"微软雅黑",sans-serif'>删除一个学生信息</span></h2>
+
+                <p class=MsoNormal><a name=6400-1543215142172></a><span lang=EN-US>url</span>：<span
+                        lang=EN-US style='color:#393939'>/api/student/delBySno</span></p>
+
+                <p class=MsoNormal><a name=2714-1543273432091></a><span lang=EN-US>method :get</span></p>
+
+                <p class=MsoNormal><a name=7655-1543273603192></a>请求参数：</p>
+
+                <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+                       style='border-collapse:collapse;border:none'>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;padding:
+  0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>字段</b></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>类型</b></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>是否必须</b></p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>备注</b></p>
+                        </td>
+                    </tr>
+                    <tr style='height:8.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:8.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>appkey</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:8.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>String
+  </span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:8.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:8.0pt'>
+                            <p class=MsoNormal>用户访问接口时所必须携带的身份凭据</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>sNo</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>String</span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>该学生的学号</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <p class=MsoNormal><a name=8068-1543273587221></a>返回结果：</p>
+
+                <p class=MsoNormal><a name=9140-1543299300229></a><span lang=EN-US>1.</span>删除成功时：</p>
+
+                <p class=MsoNormal style='margin-left:21.0pt'><a name=5000-1543299359105></a><span
+                        lang=EN-US>{</span></p>
+
+                <p class=MsoNormal style='margin-left:42.0pt'><a name=4553-1544580533094></a><span
+                        lang=EN-US>&quot;msg&quot;:&quot;</span>删除成功<span lang=EN-US>&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:42.0pt'><a name=5287-1544580534690></a><span
+                        lang=EN-US>&quot;status&quot;:&quot;success&quot;</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt'><a name=4959-1544580535885></a><span
+                        lang=EN-US>}</span></p>
+
+                <p class=MsoNormal><a name=3067-1543299364114></a><span lang=EN-US>2.</span>删除失败时：</p>
+
+                <p class=MsoNormal style='text-indent:21.0pt'><a name=9234-1543299378035></a><span
+                        lang=EN-US>{</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=7977-1543299390407></a><span lang=EN-US>&nbsp; &quot;msg&quot;: &quot;</span>未找到该学生<span
+                        lang=EN-US>&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=4090-1543299390407></a><span lang=EN-US>&nbsp; &quot;status&quot;:
+&quot;Fail&quot;</span></p>
+
+                <p class=MsoNormal style='text-indent:21.0pt'><a name=2682-1543299390407></a><span
+                        lang=EN-US>}</span></p>
+
+                <p class=MsoNormal style='text-indent:21.0pt'><a name=4223-1544581055867></a>或</p>
+
+                <p class=MsoNormal style='text-indent:21.0pt'><a name=1015-1544581057587></a><span
+                        lang=EN-US>{</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=4610-1544581058367></a><span lang=EN-US>&nbsp; &quot;msg&quot;: &quot;</span>发生未知错误<span
+                        lang=EN-US>&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=3811-1544581058367></a><span lang=EN-US>&nbsp; &quot;status&quot;:
+&quot;Fail&quot;</span></p>
+
+                <p class=MsoNormal style='text-indent:21.0pt'><a name=4950-1544581058367></a><span
+                        lang=EN-US>}</span></p>
+
+                <p class=MsoNormal style='text-indent:21.0pt'><a name=2336-1543299346541></a><span
+                        lang=EN-US>&nbsp;</span></p>
+
+                <h2 style='margin:0cm;margin-bottom:.0001pt;line-height:normal'><a
+                        name=3383-1543273634100></a><span lang=EN-US style='font-size:15.0pt;
+font-family:"微软雅黑",sans-serif'>4.</span><span style='font-size:15.0pt;
+font-family:"微软雅黑",sans-serif'>添加一个学生的信息</span></h2>
+
+                <p class=MsoNormal><a name=6250-1543273646579></a><span lang=EN-US>&nbsp;</span></p>
+
+                <p class=MsoNormal><a name=2494-1543215142295></a><span lang=EN-US>url:<span
+                        style='color:#393939'>/api/student/addStudent</span></span></p>
+
+                <p class=MsoNormal><a name=5192-1543273752036></a><span lang=EN-US>method:get</span></p>
+
+                <p class=MsoNormal><a name=2114-1543273770377></a>请求参数：</p>
+
+                <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+                       style='border-collapse:collapse;border:none'>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;padding:
+  0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>字段</b></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>类型</b></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>是否必须</b></p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>备注</b></p>
+                        </td>
+                    </tr>
+                    <tr style='height:8.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:8.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>appkey</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:8.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>String
+  </span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:8.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:8.0pt'>
+                            <p class=MsoNormal>用户访问接口时所必须携带的身份凭据</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>sNo</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>String</span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>该学生的学号</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>name</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+                                                                                            style='font-family:"Tahoma",sans-serif'>String</span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span
+                                    style='font-family:"Tahoma",sans-serif'>必须</span></p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal><span style='font-family:"Tahoma",sans-serif'>学生姓名</span></p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>sex</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>int</span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>学生性别</p>
+                            <p class=MsoNormal><span lang=EN-US>“0”</span>是男，<span lang=EN-US>“1”</span>是女（默认是<span
+                                    lang=EN-US>0</span>）</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>birth</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>int</span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>学生出生年份<span lang=EN-US>(</span>默认是<span lang=EN-US>0)</span></p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>phone</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>String</span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>学生的手机号</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>address</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>String
+  </span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>学生的住址</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>email</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>String</span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>学生邮箱</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <p class=MsoNormal><a name=9984-1543273771082></a>返回结果：</p>
+
+                <p class=MsoNormal><a name=2081-1543288333057></a><span lang=EN-US>1.</span>成功返回：</p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=3630-1544581828332></a><span lang=EN-US>{</span></p>
+
+                <p class=MsoNormal style='margin-left:42.0pt;text-indent:21.0pt'><a
+                        name=2097-1544581836016></a><span lang=EN-US>&quot;msg&quot;:&quot;</span>添加成功<span
+                        lang=EN-US>&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:42.0pt;text-indent:21.0pt'><a
+                        name=3913-1544581839915></a><span lang=EN-US>&quot;status&quot;:&quot;success&quot;</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=1045-1544581841270></a><span lang=EN-US>}</span></p>
+
+                <p class=MsoNormal><a name=7328-1543288353946></a><span lang=EN-US>2.</span>失败返回：</p>
+
+                <p class=MsoNormal style='text-indent:21.0pt'><a name=6960-1543288369680></a><span
+                        lang=EN-US>1)</span>学生已存在：</p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=4617-1543288393548></a><span lang=EN-US>{</span></p>
+
+                <p class=MsoNormal style='margin-left:42.0pt;text-indent:21.0pt'><a
+                        name=9348-1544581952122></a><span lang=EN-US>&quot;msg&quot;:&quot;</span>该学生已经存在<span
+                        lang=EN-US>&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:42.0pt;text-indent:21.0pt'><a
+                        name=6243-1544581954577></a><span lang=EN-US>&quot;status&quot;:&quot;fail&quot;</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=3213-1544581956608></a><span lang=EN-US>}</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt'><a name=3838-1543288465120></a><span
+                        lang=EN-US>2)XXX</span>为格式错误：、</p>
+
+                <p class=MsoNormal style='margin-left:21.0pt'><a name=9265-1544582236399></a><span
+                        lang=EN-US>&nbsp;&nbsp; </span>如：学号的信息格式错误：</p>
+
+                <p class=MsoNormal style='margin-left:42.0pt'><a name=7913-1543288494235></a><span
+                        lang=EN-US>{</span></p>
+
+                <p class=MsoNormal style='margin-left:63.0pt'><a name=6210-1544582044703></a><span
+                        lang=EN-US>&quot;msg&quot;:&quot;</span>学号必须为<span lang=EN-US>4-16</span>位的数字组成<span
+                        lang=EN-US>&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:63.0pt'><a name=4187-1544582047843></a><span
+                        lang=EN-US>&quot;status&quot;:&quot;fail&quot;</span></p>
+
+                <p class=MsoNormal style='margin-left:42.0pt'><a name=6440-1544582049929></a><span
+                        lang=EN-US>}</span></p>
+
+                <p class=MsoNormal style='margin-left:42.0pt;text-indent:21.0pt'><a
+                        name=1628-1543288481760></a><span lang=EN-US>&nbsp;</span></p>
+
+                <h2 style='margin:0cm;margin-bottom:.0001pt;line-height:normal'><a
+                        name=2924-1543274102056></a><span lang=EN-US style='font-size:15.0pt;
+font-family:"微软雅黑",sans-serif'>5.</span><span style='font-size:15.0pt;
+font-family:"微软雅黑",sans-serif'>修改一个学生信息</span></h2>
+
+                <p class=MsoNormal><a name=8970-1543274110403></a><span lang=EN-US>&nbsp;</span></p>
+
+                <p class=MsoNormal><a name=3380-1543274118810></a><span lang=EN-US>url:<span
+                        style='color:#393939'>/api/student/updateStudent</span></span></p>
+
+                <p class=MsoNormal><a name=1911-1543274119018></a><span lang=EN-US>method:get</span></p>
+
+                <p class=MsoNormal><a name=7765-1543274158630></a>请求参数：</p>
+
+                <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+                       style='border-collapse:collapse;border:none'>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;padding:
+  0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>字段</b></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>类型</b></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>是否必须</b></p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>备注</b></p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>appkey</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>String
+  </span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>用户访问接口时所必须携带的身份凭据</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>sNo</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>String</span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>该学生的学号</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>name</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+                                                                                            style='font-family:"Tahoma",sans-serif'>String</span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span
+                                    style='font-family:"Tahoma",sans-serif'>必须</span></p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal><span style='font-family:"Tahoma",sans-serif'>学生姓名</span></p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>sex</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>int</span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>学生性别</p>
+                            <p class=MsoNormal><span lang=EN-US>“0”</span>是男，<span lang=EN-US>“1”</span>是女</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>birth</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>int</span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>学生出生年份</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>phone</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>String</span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>学生的手机号</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>address</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>String
+  </span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>学生的住址</p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=137 style='width:103.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>email</span></p>
+                        </td>
+                        <td width=139 style='width:104.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>String</span></p>
+                        </td>
+                        <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>必须</p>
+                        </td>
+                        <td width=205 style='width:154.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal>学生邮箱</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <p class=MsoNormal><a name=8329-1543274047166></a><span lang=EN-US>&nbsp;</span></p>
+
+                <p class=MsoNormal><a name=9460-1543300428622></a>返回结果：</p>
+
+                <p class=MsoNormal><a name=8439-1543300440712></a><span lang=EN-US>1.</span>修改成功时：</p>
+
+                <p class=MsoNormal style='text-indent:21.0pt'><a name=6070-1543300450326></a><span
+                        lang=EN-US>{</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=1588-1544582371145></a><span lang=EN-US>&quot;msg&quot;:&quot;</span>修改成功<span
+                        lang=EN-US>&quot;,</span></p>
+
+                <p class=MsoNormal style='margin-left:21.0pt;text-indent:21.0pt'><a
+                        name=9040-1544582372743></a><span lang=EN-US>&quot;status&quot;:&quot;success&quot;</span></p>
+
+                <p class=MsoNormal style='text-indent:21.0pt'><a name=6637-1544582373691></a><span
+                        lang=EN-US>}</span></p>
+
+                <p class=MsoNormal><a name=3980-1543300457475></a><span lang=EN-US>2.</span>修改失败时：</p>
+
+                <p class=MsoNormal style='text-indent:21.0pt'><a name=2237-1543300462952></a><span
+                        lang=EN-US>{</span></p>
+
+                <p class=MsoNormal style='text-indent:21.0pt'><a name=9957-1543300617056></a><span
+                        lang=EN-US>&nbsp; &quot;msg&quot;: &quot;</span>未找到该学生<span lang=EN-US>&quot;,</span></p>
+
+                <p class=MsoNormal style='text-indent:21.0pt'><a name=1879-1543300617056></a><span
+                        lang=EN-US>&nbsp; &quot;status&quot;: &quot;Fail&quot;</span></p>
+
+                <p class=MsoNormal style='text-indent:21.0pt'><a name=5123-1543300617056></a><span
+                        lang=EN-US>}</span></p>
+
+                <p class=MsoNormal><a name=9957-1543300434096></a><span lang=EN-US>&nbsp;</span></p>
+
+                <p class=MsoNormal><a name=0081-1543125013066></a><span lang=EN-US>&nbsp;</span></p>
+
+                <p class=MsoNormal><a name=8010-1543125013219></a><span lang=EN-US>&nbsp;</span></p>
+
+                <p class=MsoNormal><a name=2950-1543125013353></a><span lang=EN-US>&nbsp;</span></p>
+
+                <p class=MsoNormal><a name=7689-1543124906782></a><span lang=EN-US>&nbsp;</span></p>
+
+            </div>
+
+
             <div class="row">
             </div>
             <!-- Page End here -->

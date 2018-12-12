@@ -66,7 +66,7 @@ public class MtUserService {
 
     public enum MtUserStatusEnum {
 
-        EXIST_USER_NAME("用户名已存在", RespStatusEnum.FAIL), SUCCESS("添加成功", RespStatusEnum.SUCCESS), UNKNOW_ERROR("未知错误", RespStatusEnum.FAIL);
+        EXIST_USER_NAME("用户名已存在", RespStatusEnum.FAIL), SUCCESS("注册成功", RespStatusEnum.SUCCESS), UNKNOW_ERROR("未知错误", RespStatusEnum.FAIL);
 
         private RespStatusEnum statusEnum;
         private String msg;

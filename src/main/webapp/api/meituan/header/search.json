@@ -1,0 +1,21 @@
+{
+    "msg": "成功",
+    "status": 0,
+    "data": {
+        "list": [{
+            "editorWord": "火锅"
+        }, {
+            "editorWord": "火炉火"
+        }, {
+            "editorWord": "火齐潮汕砂锅粥"
+        }, {
+            "editorWord": "火锅自助餐"
+        }, {
+            "editorWord": "火锅"
+        }, {
+            "editorWord": "火锅"
+        }, {
+            "editorWord": "火锅"
+        }]
+    }
+}

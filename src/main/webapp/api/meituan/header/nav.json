@@ -1,0 +1,24 @@
+{
+    "data": [{
+        "type":"food",
+        "name":"美食",
+        "children":[{
+          "title":"美食",
+          "children":["代金券","甜点饮品","火锅","自助餐","小吃快餐"]
+        }]
+      },{
+        "type":"takeout",
+        "name":"外卖",
+        "children":[{
+          "title":"外卖",
+          "children":["美团外卖"]
+        }]
+      },{
+        "type":"hotel",
+        "name":"酒店",
+        "children":[{
+          "title":"酒店星级",
+          "children":["经济型","舒适/三星","高档/四星","豪华/五星"]
+        }]
+      }]
+}

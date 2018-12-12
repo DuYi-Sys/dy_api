@@ -30,10 +30,12 @@ public class MtLoginController extends BaseController {
 
         if (!RegExUtil.match("^[a-zA-Z0-9_]{4,16}$", userName)) {
             writeResult(resp, RespStatusEnum.FAIL.getValue(), "用户名必须为4-16位的字母数字下划线组成", null);
+            return;
         }
 
         if (!RegExUtil.match("^[a-zA-Z0-9_]{6,16}$", password)) {
             writeResult(resp, RespStatusEnum.FAIL.getValue(), "密码必须为6-16位的字母数字下划线组成", null);
+            return;
         }
 
         MtUserService.MtLoginStatusEnum result = mtUserService.checkLogin(appkey, userName, password);
@@ -50,19 +52,23 @@ public class MtLoginController extends BaseController {
                          HttpServletResponse resp) throws IOException {
 
         if (!RegExUtil.match("^[a-zA-Z0-9_]{4,16}$", userName)) {
-            writeResult(resp, RespStatusEnum.FAIL.getValue(), "用户名必须为4-16位的字母数字下划线组成", null);
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "用户名必须为4-16位的字母数字或下划线组成", null);
+            return;
         }
 
         if (!RegExUtil.match("^[a-zA-Z0-9_]{6,16}$", password)) {
-            writeResult(resp, RespStatusEnum.FAIL.getValue(), "用户名必须为6-16位的字母数字下划线组成", null);
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "密码必须为6-16位的字母数字或下划线组成", null);
+            return;
         }
 
         if (!RegExUtil.match("^[a-zA-Z0-9_]{6,16}$", repeatPassword)) {
-            writeResult(resp, RespStatusEnum.FAIL.getValue(), "用户名必须为6-16位的字母数字下划线组成", null);
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "密码必须为6-16位的字母数字或下划线组成", null);
+            return;
         }
 
         if (!password.equals(repeatPassword)) {
-            writeResult(resp, RespStatusEnum.FAIL.getValue(), "两次输入的用户名不一致", null);
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "两次输入的密码不一致", null);
+            return;
         }
 
         MtUser mtUser = new MtUser();

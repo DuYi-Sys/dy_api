@@ -1,0 +1,190 @@
+[
+    {
+        "itemId": "2412338",
+        "title": "金真子纸上烤肉（双桥店）",
+        "imgUrl": "http://p1.meituan.net/w.h/deal/__26218156__8593562.jpg",
+        "score": "4.5",
+        "consumeNum": null,
+        "areaName": "双桥",
+        "lowPrice": "58.0",
+        "saleNum": null,
+        "commentNum": 16449,
+        "detailUrl": "",
+        "firstCate": [
+            1,
+            20632,
+            20426,
+            20557
+        ],
+        "avgPrice": 59
+    },
+    {
+        "itemId": "163407528",
+        "title": "犟骨头排骨饭（回龙观龙禧店）",
+        "imgUrl": "https://img.meituan.net/w.h/msmerchant/3e524667fa9dd782177526361a74232163537.jpg",
+        "score": "4.0",
+        "consumeNum": null,
+        "areaName": "回龙观",
+        "lowPrice": "21.0",
+        "saleNum": null,
+        "commentNum": 308,
+        "detailUrl": "",
+        "firstCate": [
+            1,
+            20426,
+            20557
+        ],
+        "avgPrice": 25
+    },
+    {
+        "itemId": "4947284",
+        "title": "比亚森",
+        "imgUrl": "http://p1.meituan.net/w.h/deal/f51ae5c9c83b23f0ade9ae3a285d0664405599.jpg",
+        "score": "4.6",
+        "consumeNum": null,
+        "areaName": "顺义城区",
+        "lowPrice": "59.6",
+        "saleNum": null,
+        "commentNum": 40177,
+        "detailUrl": "",
+        "firstCate": [
+            1,
+            20632,
+            20426,
+            20557
+        ],
+        "avgPrice": 58
+    },
+    {
+        "itemId": "2571323",
+        "title": "金滏山自助烤肉（劲松店）",
+        "imgUrl": "https://img.meituan.net/w.h/msmerchant/40ef2086ea2cf66310bafe4d1f34cf5e277545.jpg",
+        "score": "3.0",
+        "consumeNum": null,
+        "areaName": "劲松",
+        "lowPrice": "55.0",
+        "saleNum": null,
+        "commentNum": 17852,
+        "detailUrl": "",
+        "firstCate": [
+            1,
+            20632,
+            20426,
+            20557
+        ],
+        "avgPrice": 52
+    },
+    {
+        "itemId": "42539662",
+        "title": "丁丁洋回转自助火锅（太阳岛物美店）",
+        "imgUrl": "http://p1.meituan.net/w.h/mogu/0da0cd3be3a6a1e107ca8fe6eb639ef967394.jpg",
+        "score": "3.6",
+        "consumeNum": null,
+        "areaName": "古城/八角",
+        "lowPrice": "39.9",
+        "saleNum": null,
+        "commentNum": 6382,
+        "detailUrl": "",
+        "firstCate": [
+            1,
+            20632,
+            20426,
+            20557
+        ],
+        "avgPrice": 41
+    },
+    {
+        "itemId": "103423027",
+        "title": "胖哥俩肉蟹煲（西单大悦城店）",
+        "imgUrl": "https://img.meituan.net/w.h/msmerchant/2b460c91a42824ce668b5a10b9efb40136686.jpg",
+        "score": "3.6",
+        "consumeNum": null,
+        "areaName": "西单",
+        "lowPrice": "126.0",
+        "saleNum": null,
+        "commentNum": 212,
+        "detailUrl": "",
+        "firstCate": [
+            1,
+            20632,
+            20426,
+            20557
+        ],
+        "avgPrice": 70
+    },
+    {
+        "itemId": "178896819",
+        "title": "阿芮烤鸡爪（三里屯SOHO店）",
+        "imgUrl": "",
+        "score": "4.5",
+        "consumeNum": null,
+        "areaName": "三里屯/工体",
+        "lowPrice": "28.5",
+        "saleNum": null,
+        "commentNum": 4,
+        "detailUrl": "",
+        "firstCate": [
+            1,
+            20426,
+            20557
+        ],
+        "avgPrice": 23
+    },
+    {
+        "itemId": "77375132",
+        "title": "铁木真烤肉自助城（西三旗店）",
+        "imgUrl": "http://p1.meituan.net/w.h/poi/dd74a9b11f8ba8cbbe47fc608dd24a5271680.jpg",
+        "score": "3.0",
+        "consumeNum": null,
+        "areaName": "回龙观",
+        "lowPrice": "72.9",
+        "saleNum": null,
+        "commentNum": 606,
+        "detailUrl": "",
+        "firstCate": [
+            1,
+            20632,
+            20426,
+            20557
+        ],
+        "avgPrice": 75
+    },
+    {
+        "itemId": "6399484",
+        "title": "永远爱小海鲜自助烤肉火锅",
+        "imgUrl": "http://p0.meituan.net/w.h/shopmainpic/430f2a4a1474a1a435057cd3ce557e53246958.png",
+        "score": "3.9",
+        "consumeNum": null,
+        "areaName": "天通苑",
+        "lowPrice": "75.0",
+        "saleNum": null,
+        "commentNum": 14963,
+        "detailUrl": "",
+        "firstCate": [
+            1,
+            20632,
+            20426,
+            20557
+        ],
+        "avgPrice": 62
+    },
+    {
+        "itemId": "160565901",
+        "title": "旺顺阁鱼头泡饼（万柳店）",
+        "imgUrl": "https://img.meituan.net/w.h/msmerchant/72829755fed4a88227082bc518fbaaa4150678.jpg",
+        "score": "3.2",
+        "consumeNum": null,
+        "areaName": "万柳",
+        "lowPrice": "95.0",
+        "saleNum": null,
+        "commentNum": 24,
+        "detailUrl": "",
+        "firstCate": [
+            1,
+            20632,
+            20426,
+            20557
+        ],
+        "avgPrice": 137
+    }
+]

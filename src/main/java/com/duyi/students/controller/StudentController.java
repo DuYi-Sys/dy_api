@@ -94,7 +94,7 @@ public class StudentController extends BaseController {
         resp.setContentType("text/html;charset=utf-8");
 
         List<Student> findAll = studentService.findAll(appkey);
-        writeResult(resp,RespStatusEnum.SUCCESS.getValue(),"",findAll);//?
+        writeResult(resp,RespStatusEnum.SUCCESS.getValue(),null,findAll);//?
     }
 
     /**
