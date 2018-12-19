@@ -89,7 +89,7 @@
                 if (ajax.readyState==4 && ajax.status==200) {
                     // alert("请前往邮箱激活~");
                     var result = JSON.parse(ajax.responseText);
-                    alert(result)
+                    alert(result.msg);
                     console.log(result);
                 }
             }

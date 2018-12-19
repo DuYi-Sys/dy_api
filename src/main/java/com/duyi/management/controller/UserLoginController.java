@@ -128,7 +128,7 @@ public class UserLoginController extends BaseController {
             String subject = "渡一用户激活";
             String encryptionAccount = URLEncoder.encode(RSAEncrypt.encrypt(account));
             userLogService.sendAcctiveEmail(encryptionAccount, to, subject);
-            writeResult(resp,RespStatusEnum.SUCCESS.getValue(),"Please open your registered email for activation!",null);
+//            writeResult(resp,RespStatusEnum.SUCCESS.getValue(),"Please open your registered email for activation!",null);
 
         }
 
@@ -138,6 +138,7 @@ public class UserLoginController extends BaseController {
     @ResponseBody
     public void adminActivate(String encryptionAccount, HttpServletRequest res, HttpServletResponse resp) throws Exception {
 
+        resp.setContentType("text/html;charset=utf-8");
         String encodeAccount = RSAEncrypt.decrypt(encryptionAccount);
         UserLogService.UserActivateStatusEnum result = userLogService.updateStatus(encodeAccount);
         writeResult(resp,result.getStatusEnum().getValue(),result.getMsg(),null);
