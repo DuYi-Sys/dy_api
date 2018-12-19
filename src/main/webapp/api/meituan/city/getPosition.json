@@ -1,0 +1,32 @@
+{
+    "status": "success",
+    "msg": "成功",
+    "data": {
+        "id": 20,
+        "name": "哈尔滨",
+        "pinyin": "haerbin",
+        "acronym": "hb",
+        "rank": "H",
+        "firstChar": "h",
+        "nearCity": [
+            {
+                "id": 20000,
+                "name": "阿城区",
+                "pinyin": "achengqu",
+                "acronym": "gz"
+            },
+            {
+                "id": 300000,
+                "name": "双城",
+                "pinyin": "shuangcheng",
+                "acronym": "sc"
+            },
+            {
+                "id": 400000,
+                "name": "巴彦县",
+                "pinyin": "bayanxian",
+                "acronym": "byx"
+            }
+        ]
+    }
+}

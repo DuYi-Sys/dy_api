@@ -1,8 +1,10 @@
 {
+    "status": "success",
+    "msg": "成功",
     "data": [{
         "title": "美食",
         "type": "food",
-        "sub_list": [{
+        "subList": [{
             "name": "日本菜",
             "id": "Japan"
         }, {
@@ -15,7 +17,7 @@
     }, {
         "title": "酒店住宿",
         "type": "hotal",
-        "sub_list": [{
+        "subList": [{
             "name": "温泉酒店",
             "id": "hot_spring"
         }, {

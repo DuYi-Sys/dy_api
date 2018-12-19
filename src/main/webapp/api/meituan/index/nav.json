@@ -1,24 +1,26 @@
 {
+    "status": "success",
+    "msg": "成功",
     "data": [{
         "type":"food",
         "name":"美食",
-        "children":[{
+        "items":[{
           "title":"美食",
-          "children":["代金券","甜点饮品","火锅","自助餐","小吃快餐"]
+          "items":["代金券","甜点饮品","火锅","自助餐","小吃快餐"]
         }]
       },{
         "type":"takeout",
         "name":"外卖",
-        "children":[{
+        "items":[{
           "title":"外卖",
-          "children":["美团外卖"]
+          "items":["美团外卖"]
         }]
       },{
         "type":"hotel",
         "name":"酒店",
-        "children":[{
+        "items":[{
           "title":"酒店星级",
-          "children":["经济型","舒适/三星","高档/四星","豪华/五星"]
+          "items":["经济型","舒适/三星","高档/四星","豪华/五星"]
         }]
       }]
 }

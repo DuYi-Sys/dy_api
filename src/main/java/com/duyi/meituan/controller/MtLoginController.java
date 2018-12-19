@@ -28,6 +28,16 @@ public class MtLoginController extends BaseController {
                       @RequestParam(name = "password") String password,
                       HttpServletResponse resp) throws IOException {
 
+        if(userName == null || "".equals(userName)) {
+            writeResult(resp,RespStatusEnum.FAIL.getValue(),"请填写登录账号",null);
+            return;
+        }
+
+        if(password == null || "".equals(password)) {
+            writeResult(resp,RespStatusEnum.FAIL.getValue(),"请填写登录密码",null);
+            return;
+        }
+
         if (!RegExUtil.match("^[a-zA-Z0-9_]{4,16}$", userName)) {
             writeResult(resp, RespStatusEnum.FAIL.getValue(), "用户名必须为4-16位的字母数字下划线组成", null);
             return;
@@ -48,7 +58,7 @@ public class MtLoginController extends BaseController {
     public void register(@RequestParam(name = "appkey") String appkey,
                          @RequestParam(name = "userName") String userName,
                          @RequestParam(name = "password") String password,
-                         @RequestParam(name = "repeatPassword") String repeatPassword,
+                         @RequestParam(name = "rePassword") String rePassword,
                          HttpServletResponse resp) throws IOException {
 
         if (!RegExUtil.match("^[a-zA-Z0-9_]{4,16}$", userName)) {
@@ -61,12 +71,12 @@ public class MtLoginController extends BaseController {
             return;
         }
 
-        if (!RegExUtil.match("^[a-zA-Z0-9_]{6,16}$", repeatPassword)) {
-            writeResult(resp, RespStatusEnum.FAIL.getValue(), "密码必须为6-16位的字母数字或下划线组成", null);
-            return;
-        }
+//        if (!RegExUtil.match("^[a-zA-Z0-9_]{6,16}$", rePassword)) {
+//            writeResult(resp, RespStatusEnum.FAIL.getValue(), "密码必须为6-16位的字母数字或下划线组成", null);
+//            return;
+//        }
 
-        if (!password.equals(repeatPassword)) {
+        if (!password.equals(rePassword)) {
             writeResult(resp, RespStatusEnum.FAIL.getValue(), "两次输入的密码不一致", null);
             return;
         }

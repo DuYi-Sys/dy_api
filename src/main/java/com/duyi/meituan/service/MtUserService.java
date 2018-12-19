@@ -44,7 +44,7 @@ public class MtUserService {
 
     public enum MtLoginStatusEnum {
 
-        NOT_FOUND_USERNAME("找不到用户名", RespStatusEnum.FAIL), PASSWORD_ERROR("密码错误", RespStatusEnum.FAIL), SUCCESS("登录成功", RespStatusEnum.SUCCESS);
+        NOT_FOUND_USERNAME("找不到该用户", RespStatusEnum.FAIL), PASSWORD_ERROR("密码错误", RespStatusEnum.FAIL), SUCCESS("登录成功", RespStatusEnum.SUCCESS);
 
         private RespStatusEnum statusEnum;
         private String msg;
