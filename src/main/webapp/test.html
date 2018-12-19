@@ -6,19 +6,36 @@
     <title>test页面</title>
 
     <script>
+        function submit() {
+            var appkey = document.getElementById("appkey").value;
+            var file = document.getElementById("file").files[0];
+            var filePath = "/api/upf/uploadFile?appkey=" + appkey;
+            var form = new FormData();
+            form.append("file", file);
 
-        function dsadsadasa(data) {
+            var xhr = new XMLHttpRequest();
+            xhr.enctype = "multipart/form-data";
+            xhr.open("post", filePath, true);
 
-            alert(data);
+            xhr.onload = function () {
+                console.log("finish");
+            }
+            xhr.onprgress = function(a, b, c) {
+                console.log(a + "_" + b + "_" + c);
+            }
+            xhr.send(form);
 
         }
-
     </script>
-
-    <script src = "http://127.0.0.1:8080/adminLogin?callback=dsadsadasa" ></script>
 
 </head>
 <body>
   hello
+    <!--<form method="get" action="/api/upf/uploadFile">-->
+        <input type="file" name="file" id="file" />
+        <input type="text" name="appkey" id="appkey"/>
+        <button onclick="submit()">submit</button>
+  <img src="/api/upf/getFile?appkey=panda_1545214432912&fileName=panda_15452144329121545250068336" />
+    <!--</form>-->
 </body>
 </html>

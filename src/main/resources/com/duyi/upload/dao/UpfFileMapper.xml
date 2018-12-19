@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.duyi.upload.dao.UpfFileDao">
+
+    <insert id="addUpfFile" parameterType="com.duyi.upload.domain.UpfFile" statementType="PREPARED">
+
+        insert into upf_file (`file`, `length`, `appkey`, `file_name`, `ctime`) values (#{file,jdbcType=BLOB}, #{length}, #{appkey}, #{fileName}, #{ctime});
+
+    </insert>
+
+    <select id="getUpfFile" parameterType="java.lang.String" resultType="com.duyi.upload.domain.UpfFile">
+        select * from upf_file where file_name = #{fileName};
+    </select>
+</mapper>
