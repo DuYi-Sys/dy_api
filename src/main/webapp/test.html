@@ -18,12 +18,14 @@
             xhr.open("post", filePath, true);
 
             xhr.onload = function () {
-                console.log("finish");
+                document.getElementById("pic").src = "/api/upf/getFile?appkey=" + appkey + "&fileName="+JSON.parse(xhr.responseText).data;
+                console.log(xhr.responseText);
             }
             xhr.onprgress = function(a, b, c) {
                 console.log(a + "_" + b + "_" + c);
             }
             xhr.send(form);
+
 
         }
     </script>
@@ -35,7 +37,7 @@
         <input type="file" name="file" id="file" />
         <input type="text" name="appkey" id="appkey"/>
         <button onclick="submit()">submit</button>
-  <img src="/api/upf/getFile?appkey=panda_1545214432912&fileName=panda_15452144329121545250068336" />
+        <img src="/api/upf/getFile?appkey=panda_1545214432912&fileName=panda_15452144329121545250068336" id="pic"/>
     <!--</form>-->
 </body>
 </html>
