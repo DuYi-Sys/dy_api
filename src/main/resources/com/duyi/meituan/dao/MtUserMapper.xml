@@ -17,4 +17,10 @@
 
     </select>
 
+    <!--<select id="findByUserName" resultType="com.duyi.meituan.domain.MtUser">-->
+
+        <!--select * from mt_user where user_name = #{userName};-->
+
+    <!--</select>-->
+
 </mapper>

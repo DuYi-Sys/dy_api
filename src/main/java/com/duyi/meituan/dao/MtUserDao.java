@@ -11,4 +11,5 @@ public interface MtUserDao {
 
     MtUser queryByAppkeyAndName(@Param("appkey") String appkey, @Param("userName") String userName);
 
+//    MtUser findByUserName(@Param("userName") String userName);
 }

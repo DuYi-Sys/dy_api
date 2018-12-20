@@ -1,3 +1,6 @@
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
+import org.springframework.web.multipart.support.StandardServletMultipartResolver;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -16,6 +19,8 @@ public class test1 {
         // 字符串是否与正则表达式相匹配
         boolean rs = matcher.matches();
         System.out.println(rs);
+
+        CommonsMultipartResolver com = new CommonsMultipartResolver();
 
     }
 

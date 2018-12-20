@@ -56,4 +56,14 @@ public class MtUser {
     public void setUtime(int utime) {
         this.utime = utime;
     }
+
+    @Override
+    public String toString() {
+        return "MtUser{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", appkey='" + appkey + '\'' +
+                '}';
+    }
 }
