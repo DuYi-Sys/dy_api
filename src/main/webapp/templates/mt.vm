@@ -745,14 +745,59 @@ font-family:"微软雅黑",sans-serif'>、用户登录接口</span></h2>
                 <h3 style='margin:0cm;margin-bottom:.0001pt;line-height:normal'><a
                         name=1042-1543213506884></a><span style='font-size:12.0pt'>返回结果：</span></h3>
 
+                <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+                       style='border-collapse:collapse;border:none'>
+                    <tr style='height:30.0pt'>
+                        <td width=111 style='width:83.0pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>字段</b></p>
+                        </td>
+                        <td width=91 style='width:68.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>类型</b></p>
+                        </td>
+                        <td width=107 style='width:80.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>是否必须</b></p>
+                        </td>
+                        <td width=311 style='width:233.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>备注</b></p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=111 style='width:83.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>userName</span></p>
+                        </td>
+                        <td width=91 style='width:68.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>string</span></p>
+                        </td>
+                        <td width=107 style='width:80.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>是</p>
+                        </td>
+                        <td width=311 style='width:233.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span
+                                    style='font-family:"Tahoma",sans-serif'>唯一确定用户的<span lang=EN-US>appkey</span>值（在渡一开放平台注册）</span></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
                 <p class=MsoNormal><a name=3722-1543213567134></a>登录成功返回：</p>
 
-                <p class=MsoNormal><a name=2799-1545055295717></a><span lang=EN-US
-                                                                        style='color:#393939;background:white'>{</span></p>
+                <p class=MsoNormal><a name=2799-1545055295717></a><a name=2891-1543213597370></a><span
+                        lang=EN-US style='color:#393939;background:white'>{</span></p>
 
-                <p class=MsoNormal style='margin-left:21.0pt'><a name=8964-1545055298289></a><a
-                        name=6870-1545055305822></a><span lang=EN-US style='color:#393939;background:
-white'>&quot;status&quot;:&quot;fail&quot;</span></p>
+                <p class=MsoNormal style='margin-left:21.0pt'><span lang=EN-US
+                                                                    style='color:#393939;background:white'>&quot;status&quot;:&quot;fail&quot;</span></p>
 
                 <p class=MsoNormal style='margin-left:21.0pt'><span lang=EN-US
                                                                     style='color:#393939;background:white'>&quot;msg&quot;:&quot;</span><span
@@ -763,8 +808,7 @@ white'>&quot;status&quot;:&quot;fail&quot;</span></p>
 
                 <p class=MsoNormal><span lang=EN-US style='color:#393939;background:white'>}</span></p>
 
-                <p class=MsoNormal><a name=2891-1543213597370></a><span style='color:#393939;
-background:white'>登录失败返回情况：</span></p>
+                <p class=MsoNormal><span style='color:#393939;background:white'>登录失败返回情况：</span></p>
 
                 <p class=MsoNormal><a name=6846-1543213608180></a><span lang=EN-US
                                                                         style='color:#393939;background:white'>1. </span><span style='color:#393939;
@@ -2304,8 +2348,9 @@ color:#262626;background:white'>崇文门新世界店<span lang=EN-US>&quot;,</s
 color:#262626;background:white'>木北造型（崇文门新世界店）<span lang=EN-US>&quot;,</span></span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=1889-1544085054239></a><span
-                        lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&quot;price&quot;: 398</span></p>
+                        lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;price&quot;:
+398</span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=3028-1544085054239></a><span
                         lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -5151,8 +5196,8 @@ color:#262626;background:white'>温泉酒店<span lang=EN-US>&quot;,</span></spa
 &quot;id&quot;: &quot;hot_spring&quot;</span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=5538-1544426819695></a><span
-                        lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-}] </span></p>
+                        lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;}] </span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=1693-1544426819695></a><span
                         lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;
@@ -5867,8 +5912,8 @@ color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                 <p class=MsoNormal style='margin-left:42.0pt;line-height:90%'><a
                         name=9692-1545036527979></a><span lang=EN-US style='font-family:"Courier New";
-color:#262626;background:white'>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&quot;acronym&quot;:
-&quot;sc&quot;,</span></p>
+color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&quot;acronym&quot;: &quot;sc&quot;,</span></p>
 
                 <p class=MsoNormal style='margin-left:42.0pt;line-height:90%'><a
                         name=2770-1545036527979></a><span lang=EN-US style='font-family:"Courier New";
@@ -6625,8 +6670,8 @@ color:#262626;background:white'>匿名用户<span lang=EN-US>&quot;,</span></spa
 &quot;rate&quot;: 5,</span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=9921-1545101519944></a><span
-                        lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&quot;pics&quot;: [</span></p>
+                        lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&quot;pics&quot;: [</span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=7692-1545101519944></a><span
                         lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -6746,10 +6791,9 @@ color:#262626;background:white'>元代金券<span lang=EN-US>1</span>张<span la
 &quot;saleNum&quot;: 3409,</span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=7548-1545101519944></a><span
-                        lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;priceType&quot;:
-&quot;</span><span style='font-family:"Courier New";color:#262626;background:
-white'>元<span lang=EN-US>&quot;</span></span></p>
+                        lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&quot;priceType&quot;: &quot;</span><span style='font-family:"Courier New";
+color:#262626;background:white'>元<span lang=EN-US>&quot;</span></span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=1213-1545101519944></a><span
                         lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -6804,9 +6848,6 @@ white'>元<span lang=EN-US>&quot;</span></span></p>
                         lang=EN-US>}</span></p>
 
             </div>
-
-
-
 
 
             <div class="row">

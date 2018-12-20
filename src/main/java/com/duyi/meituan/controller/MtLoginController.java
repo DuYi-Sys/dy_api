@@ -50,7 +50,7 @@ public class MtLoginController extends BaseController {
 
         MtUserService.MtLoginStatusEnum result = mtUserService.checkLogin(appkey, userName, password);
 
-        writeResult(resp, result.getStatusEnum().getValue(), result.getMsg(), null);
+        writeResult(resp, result.getStatusEnum().getValue(), result.getMsg(), userName);
 
     }
 
