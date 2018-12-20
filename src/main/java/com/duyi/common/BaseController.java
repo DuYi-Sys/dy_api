@@ -32,7 +32,7 @@ public class BaseController {
 
         result.put("status", status);
         result.put("msg", msg);
-        result.put("username", userName);
+        result.put("userName", userName);
 
         resp.getWriter().write(result.toJSONString());
     }
