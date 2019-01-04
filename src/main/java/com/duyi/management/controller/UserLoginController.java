@@ -132,6 +132,7 @@ public class UserLoginController extends BaseController {
 
         }
 
+
     }
 
     @RequestMapping(value = "/userActivate", method = RequestMethod.GET)
@@ -144,5 +145,7 @@ public class UserLoginController extends BaseController {
         writeResult(resp,result.getStatusEnum().getValue(),result.getMsg(),null);
 
     }
+
+
 
 }

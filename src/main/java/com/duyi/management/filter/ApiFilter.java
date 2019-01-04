@@ -4,6 +4,8 @@ import com.duyi.common.BaseController;
 import com.duyi.management.domain.User;
 import com.duyi.management.service.UserLogService;
 import com.duyi.management.service.UserService;
+import com.duyi.statistics.service.StatisticsService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 import javax.servlet.*;
@@ -15,10 +17,11 @@ public class ApiFilter extends BaseController implements Filter {
 
     private static ApplicationContext ac;
     private static UserLogService userLogService;
-
+    private static StatisticsService statisticsService;
     static {
         ac = new FileSystemXmlApplicationContext("classpath:applicationContext.xml");
         userLogService = (UserLogService) ac.getBean("userLogService");
+        statisticsService = (StatisticsService) ac.getBean("statisticsService");
     }
 
     @Override
@@ -28,6 +31,7 @@ public class ApiFilter extends BaseController implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+
 
         HttpServletRequest request = (HttpServletRequest) servletRequest;
 
@@ -51,6 +55,9 @@ public class ApiFilter extends BaseController implements Filter {
             return;
         }
 
+        String path = request.getRequestURI();
+        System.out.println(path);
+        statisticsService.addCount(appkey,path);
         filterChain.doFilter(servletRequest, servletResponse);
 
     }
