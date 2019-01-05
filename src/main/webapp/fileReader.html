@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="bt" onclick="haha()" value="上传文件">
+    <input type="text" name="appkey" id="appkey"/>
+    <script src='./jquery.min.js'></script>
+    <script>
+            function haha() {
+                console.log("asdads");
+                var file = document.createElement("input");
+                file.setAttribute("type","file");
+                file.setAttribute("multiple",true);
+                file.click();
+                file.onchange = function () {
+                    var reader = new FileReader();
+                    reader.readAsBinaryString(this.files[0]);
+                    console.log(typeof this.files[0]);
+                    console.log(this.files[0]);
+                    reader.onload = function () {
+                        var data = this.result;
+                        console.log(file.type);
+                        var blob = new Blob([data],{type:file.type});
+                        var appkey = document.getElementById("appkey").value;
+                        var filePath = "/api/upf/uploadFile?appkey=" + appkey;
+                        var form = new FormData();
+                        form.append("file", blob);
+                        var xhr = new XMLHttpRequest();
+                        xhr.enctype = "multipart/form-data";
+                        xhr.open("post", filePath, true);
+                        xhr.onload = function () {
+                            document.getElementById("pic").src = "/api/upf/getFile?appkey=" + appkey + "&fileName="+JSON.parse(xhr.responseText).data;
+                            console.log(xhr.responseText);
+                        }
+                        xhr.send(form);
+                    };
+                };
+            };
+
+    </script>
+</body>
+</html>
