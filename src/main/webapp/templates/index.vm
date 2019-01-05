@@ -39,6 +39,130 @@
         <link rel="icon" href="assets/img/ico/favicon.ico" type="image/png">
         <!-- Windows8 touch icon ( http://www.buildmypinnedsite.com/ )-->
         <meta name="msapplication-TileColor" content="#3399cc" />
+        <script src="/management/assets/js/echarts.common.min.js"></script>
+        <style>
+            .day_chart {
+                width: 100%;
+                height: 400px;
+            }
+        </style>
+        <script>
+            var myChart = null;
+            var option = null;
+            window.onload = function() {
+                $.ajax({
+                    type:"GET",
+                    url:"/management/getDayCount",
+                    success:function (res) {
+                        var data= JSON.parse(res);
+                        var arr1 = [];
+                        var arr2 = [];
+                        var maxValue = 0;
+                        for(var i=0;i<data.data.length; i++) {
+                            arr1.push(data.data[i].sum);
+                            arr2.push(data.data[i].date);
+                            if (data.data[i].sum > maxValue) {
+                                maxValue = data.data[i].sum;
+                            }
+                        }
+                        myChart = echarts.init(document.getElementById("day_chart"));
+                        option = {
+                            title: {
+                                text: '数据统计',
+                                subtext: '近七日访问量'
+                            },
+                            tooltip: {
+                                trigger: 'axis',
+                                axisPointer: {
+                                    type: 'cross',
+                                    label: {
+                                        backgroundColor: '#283b56'
+                                    }
+                                }
+                            },
+                            legend: {
+                                data:['访问次数趋势', '访问次数']
+                            },
+                            toolbox: {
+                                show: true,
+                                feature: {
+                                    dataView: {readOnly: false},
+                                    restore: {},
+                                    saveAsImage: {}
+                                }
+                            },
+                            dataZoom: {
+                                show: false,
+                                start: 0,
+                                end: 100
+                            },
+                            xAxis: [
+                                {
+                                    type: 'category',
+                                    boundaryGap: true,
+                                    data: (function (){
+                                        var now = new Date();
+                                        var res = arr2;
+                                        var len = 7;
+                                        return res;
+                                    })()
+                                },
+                                {
+                                    type: 'category',
+                                    boundaryGap: true,
+                                    data: (function (){
+                                        var res = arr2;
+                                        var len = 7;
+                                        return res;
+                                    })()
+                                }
+                            ],
+                            yAxis: [
+                                {
+                                    type: 'value',
+                                    scale: true,
+                                    name: '访问次数趋势',
+                                    max: maxValue,
+                                    min: 0,
+                                    boundaryGap: [0.2, 0.2]
+                                },
+                                {
+                                    type: 'value',
+                                    scale: true,
+                                    name: '访问次数',
+                                    max: maxValue,
+                                    min: 0,
+                                    boundaryGap: [0.2, 0.2]
+                                }
+                            ],
+                            series: [
+                                {
+                                    name:'访问次数',
+                                    type:'bar',
+                                    xAxisIndex: 1,
+                                    yAxisIndex: 1,
+                                    data:(function (){
+                                        var res = arr1;
+                                        var len = 7;
+                                        return res;
+                                    })()
+                                },
+                                {
+                                    name:'访问次数趋势',
+                                    type:'line',
+                                    data:(function (){
+                                        var res = arr1;
+                                        var len = 0;
+                                        return res;
+                                    })()
+                                }
+                            ]
+                        };
+                        myChart.setOption(option);
+                    }
+                });
+            }
+        </script>
     </head>
     <body>
         <!-- Start #header -->
@@ -326,7 +450,7 @@
                                                 <i class="im-pencil s64"></i>
                                             </div>
                                             <div class="tile-content">
-                                                <div class="number">0</div>
+                                                <div class="number">${sum1}</div>
                                                 <h3>今日使用次数</h3>
                                             </div>
                                         </div>
@@ -356,7 +480,7 @@
                                                 <i class="im-clock s64"></i>
                                             </div>
                                             <div class="tile-content">
-                                                <div class="number">0</div>
+                                                <div class="number">${sum3}</div>
                                                 <h3>近三日使用次数</h3>
                                             </div>
                                         </div>
@@ -386,7 +510,7 @@
                                                 <i class="im-quill s64"></i>
                                             </div>
                                             <div class="tile-content">
-                                                <div class="number">0</div>
+                                                <div class="number">${sum7}</div>
                                                 <h3>近七日使用次数</h3>
                                             </div>
                                         </div>
@@ -417,7 +541,7 @@
                                                 <i class="im-star3 s64"></i>
                                             </div>
                                             <div class="tile-content">
-                                                <div class="number">0</div>
+                                                <div class="number">${sumTotal}</div>
                                                 <h3>总使用次数</h3>
                                             </div>
                                         </div>
@@ -441,14 +565,7 @@
                     </div>
                     <!-- End .row -->
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 sortable-layout">
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                您的appkey是：
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                ${user.getAppkey()}
-                            </div>
-                        </div>
+                        <div id="day_chart" class="day_chart"></div>
                     </div>
 ##                    <div class="row">
 ##                        <!-- Start .row -->

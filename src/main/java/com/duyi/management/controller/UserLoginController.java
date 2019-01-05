@@ -14,10 +14,7 @@ import com.duyi.util.RegExUtil;
 import com.duyi.util.TimeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -137,13 +134,24 @@ public class UserLoginController extends BaseController {
 
     @RequestMapping(value = "/userActivate", method = RequestMethod.GET)
     @ResponseBody
-    public void adminActivate(String encryptionAccount, HttpServletRequest res, HttpServletResponse resp) throws Exception {
+    public void adminActivate(@RequestParam("encryptionAccount") String encryptionAccount, HttpServletRequest res, HttpServletResponse resp) throws Exception {
 
         resp.setContentType("text/html;charset=utf-8");
         String encodeAccount = RSAEncrypt.decrypt(encryptionAccount);
         UserLogService.UserActivateStatusEnum result = userLogService.updateStatus(encodeAccount);
         writeResult(resp,result.getStatusEnum().getValue(),result.getMsg(),null);
 
+    }
+
+    @RequestMapping(value = "/getUserInfo", method = RequestMethod.GET)
+    @ResponseBody
+    public void getUserInfo(@RequestParam("encryptionAccount") String encryptionAccount,
+                            @CookieValue(name = "uid") String uid,
+                            HttpServletResponse resp) throws Exception {
+        resp.setContentType("text/html;charset=utf-8");
+        String account = RSAEncrypt.decrypt(uid);
+        User user = userLogService.findByAccount(account);
+        writeResult(resp,RespStatusEnum.SUCCESS.getValue(),"查询成功",user);
     }
 
 

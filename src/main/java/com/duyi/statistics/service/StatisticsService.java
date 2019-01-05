@@ -29,7 +29,7 @@ public class StatisticsService {
      * @param appkey
      * @return
      */
-    public int getPvCount(String appkey,int begin,int end) {
+    public Integer getPvCount(String appkey,int begin,int end) {
         return countDao.getPvCount(appkey,begin,end);
     }
 

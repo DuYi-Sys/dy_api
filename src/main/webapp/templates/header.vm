@@ -162,6 +162,7 @@
                         <a href="#" data-toggle="dropdown">
 ##                            <img class="user-avatar" src="assets/img/avatars/48.jpg" alt="SuggeElson">
                             ${user.getAccount()}
+
                         </a>
 ##                        <ul class="dropdown-menu right" role="menu">
 ##                            <li><a href="profile.html"><i class="st-user"></i> Profile</a>
