@@ -527,6 +527,7 @@
             <!-- Start .outlet -->
             <!-- Page start here ( usual with .row ) -->
 
+
             <div class=WordSection1 style='layout-grid:15.6pt'>
 
                 <h1 style='margin:0cm;margin-bottom:.0001pt;line-height:normal'><a
@@ -744,26 +745,70 @@ font-family:"微软雅黑",sans-serif'>、用户登录接口</span></h2>
                 <h3 style='margin:0cm;margin-bottom:.0001pt;line-height:normal'><a
                         name=1042-1543213506884></a><span style='font-size:12.0pt'>返回结果：</span></h3>
 
+                <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+                       style='border-collapse:collapse;border:none'>
+                    <tr style='height:30.0pt'>
+                        <td width=111 style='width:83.0pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>字段</b></p>
+                        </td>
+                        <td width=91 style='width:68.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>类型</b></p>
+                        </td>
+                        <td width=107 style='width:80.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>是否必须</b></p>
+                        </td>
+                        <td width=311 style='width:233.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>备注</b></p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=111 style='width:83.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>userName</span></p>
+                        </td>
+                        <td width=91 style='width:68.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>string</span></p>
+                        </td>
+                        <td width=107 style='width:80.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>是</p>
+                        </td>
+                        <td width=311 style='width:233.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span
+                                    style='font-family:"Tahoma",sans-serif'>唯一确定用户的<span lang=EN-US>appkey</span>值（在渡一开放平台注册）</span></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
                 <p class=MsoNormal><a name=3722-1543213567134></a>登录成功返回：</p>
 
-                <p class=MsoNormal><a name=2799-1545055295717></a><span lang=EN-US
-                                                                        style='color:#393939;background:white'>{</span></p>
+                <p class=MsoNormal><a name=2799-1545055295717></a><a name=2891-1543213597370></a><span
+                        lang=EN-US style='color:#393939;background:white'>{</span></p>
 
-                <p class=MsoNormal style='text-indent:21.0pt'><a name=8964-1545055298289></a><span
-                        lang=EN-US style='color:#393939;background:white'>“status”: “success”</span><span
-                        style='color:#393939;background:white'>，</span></p>
+                <p class=MsoNormal style='margin-left:21.0pt'><span lang=EN-US
+                                                                    style='color:#393939;background:white'>&quot;status&quot;:&quot;fail&quot;</span></p>
 
-                <p class=MsoNormal style='text-indent:21.0pt'><a name=2660-1545055304526></a><span
-                        lang=EN-US>“msg”: &quot;</span>登录成功<span lang=EN-US>&quot;,</span></p>
+                <p class=MsoNormal style='margin-left:21.0pt'><span lang=EN-US
+                                                                    style='color:#393939;background:white'>&quot;msg&quot;:&quot;</span><span
+                        style='color:#393939;background:white'>登录成功<span lang=EN-US>&quot;,</span></span></p>
 
-                <p class=MsoNormal style='text-indent:26.25pt'><a name=8274-1545055321674></a><span
-                        lang=EN-US>&quot;data&quot;: {}</span></p>
+                <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+                                                                    style='color:#393939;background:white'>&quot;data&quot;:{}</span></p>
 
-                <p class=MsoNormal><a name=6870-1545055305822></a><span lang=EN-US
-                                                                        style='color:#393939;background:white'>}</span></p>
+                <p class=MsoNormal><span lang=EN-US style='color:#393939;background:white'>}</span></p>
 
-                <p class=MsoNormal><a name=2891-1543213597370></a><span style='color:#393939;
-background:white'>登录失败返回情况：</span></p>
+                <p class=MsoNormal><span style='color:#393939;background:white'>登录失败返回情况：</span></p>
 
                 <p class=MsoNormal><a name=6846-1543213608180></a><span lang=EN-US
                                                                         style='color:#393939;background:white'>1. </span><span style='color:#393939;
@@ -772,18 +817,18 @@ background:white'>用户名为空登录失败返回值：</span></p>
                 <p class=MsoNormal><a name=8478-1545055352775></a><span lang=EN-US
                                                                         style='color:#393939;background:white'>{</span></p>
 
-                <p class=MsoNormal style='text-indent:21.0pt'><a name=5314-1545055356036></a><span
-                        lang=EN-US style='color:#393939;background:white'>“status”: “fail”,</span></p>
+                <p class=MsoNormal style='margin-left:21.0pt'><a name=5314-1545055356036></a><a
+                        name=1875-1545055359388></a><span lang=EN-US style='color:#393939;background:
+white'>&quot;status&quot;:&quot;fail&quot;</span></p>
 
-                <p class=MsoNormal style='text-indent:26.25pt'><a name=1869-1545055361609></a><span
-                        lang=EN-US style='color:#393939;background:white'>&quot;msg&quot;: &quot;</span><span
-                        style='color:#393939;background:white'>请填写登录账号<span lang=EN-US>&quot;</span></span></p>
+                <p class=MsoNormal style='margin-left:21.0pt'><span lang=EN-US
+                                                                    style='color:#393939;background:white'>&quot;msg&quot;:&quot;</span><span
+                        style='color:#393939;background:white'>请填写登录账号<span lang=EN-US>&quot;,</span></span></p>
 
-                <p class=MsoNormal style='text-indent:26.25pt'><a name=9316-1545190367918></a><span
-                        lang=EN-US style='color:#393939;background:white'>&quot;data&quot;:{}</span></p>
+                <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+                                                                    style='color:#393939;background:white'>&quot;data&quot;:{}</span></p>
 
-                <p class=MsoNormal><a name=1875-1545055359388></a><span lang=EN-US
-                                                                        style='color:#393939;background:white'>}</span></p>
+                <p class=MsoNormal><span lang=EN-US style='color:#393939;background:white'>}</span></p>
 
                 <p class=MsoNormal><a name=7943-1543213720373></a><span lang=EN-US
                                                                         style='color:#393939;background:white'>2. </span><span style='color:#393939;
@@ -792,19 +837,18 @@ background:white'>密码为空登录失败返回值：</span></p>
                 <p class=MsoNormal><a name=6053-1545055392665></a><span lang=EN-US
                                                                         style='color:#393939;background:white'>{</span></p>
 
-                <p class=MsoNormal style='text-indent:21.0pt'><a name=5248-1545055396372></a><span
-                        lang=EN-US style='color:#393939;background:white'>“status”: “fail”,</span></p>
+                <p class=MsoNormal style='margin-left:21.0pt'><a name=5248-1545055396372></a><a
+                        name=5549-1545055399265></a><span lang=EN-US style='color:#393939;background:
+white'>&quot;status&quot;:&quot;fail&quot;</span></p>
 
-                <p class=MsoNormal style='margin-left:21.0pt;text-indent:5.25pt'><a
-                        name=5890-1545055401131></a><span lang=EN-US style='color:#393939;background:
-white'>&quot;msg&quot;: &quot;</span><span style='color:#393939;background:
-white'>请填写登录密码<span lang=EN-US>&quot;</span></span></p>
+                <p class=MsoNormal style='margin-left:21.0pt'><span lang=EN-US
+                                                                    style='color:#393939;background:white'>&quot;msg&quot;:&quot;</span><span
+                        style='color:#393939;background:white'>请填写登录密码<span lang=EN-US>&quot;,</span></span></p>
 
-                <p class=MsoNormal style='text-indent:26.25pt'><a name=9052-1545190527838></a><span
-                        lang=EN-US style='color:#393939;background:white'>&quot;data&quot;:{}</span></p>
+                <p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US
+                                                                    style='color:#393939;background:white'>&quot;data&quot;:{}</span></p>
 
-                <p class=MsoNormal><a name=5549-1545055399265></a><span lang=EN-US
-                                                                        style='color:#393939;background:white'>} </span></p>
+                <p class=MsoNormal><span lang=EN-US style='color:#393939;background:white'>} </span></p>
 
                 <p class=MsoNormal><a name=4537-1545190560234></a><span lang=EN-US
                                                                         style='color:#393939;background:white'>3.</span><span style='color:#393939;
@@ -1016,23 +1060,70 @@ white'>、用户注册接口</span></h2>
                 <h3 style='margin:0cm;margin-bottom:.0001pt;line-height:normal'><a
                         name=4034-1543216361102></a><span style='font-size:12.0pt'>返回结果：</span></h3>
 
-                <p class=MsoNormal><a name=9340-1543215141271></a>注册成功返回：</p>
+                <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+                       style='border-collapse:collapse;border:none'>
+                    <tr style='height:30.0pt'>
+                        <td width=111 style='width:83.0pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>字段</b></p>
+                        </td>
+                        <td width=91 style='width:68.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>类型</b></p>
+                        </td>
+                        <td width=107 style='width:80.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>是否必须</b></p>
+                        </td>
+                        <td width=311 style='width:233.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><b>备注</b></p>
+                        </td>
+                    </tr>
+                    <tr style='height:30.0pt'>
+                        <td width=111 style='width:83.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><a
+                                    name=9340-1543215141271></a><span lang=EN-US>userName</span></p>
+                        </td>
+                        <td width=91 style='width:68.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>string</span></p>
+                        </td>
+                        <td width=107 style='width:80.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'>是</p>
+                        </td>
+                        <td width=311 style='width:233.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
+                            <p class=MsoNormal align=center style='text-align:center'><span
+                                    style='font-family:"Tahoma",sans-serif'>唯一确定用户的<span lang=EN-US>appkey</span>值（在渡一开放平台注册）</span></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+                <p class=MsoNormal>注册成功返回：</p>
 
                 <p class=MsoNormal><a name=5994-1545056852815></a><span lang=EN-US
                                                                         style='color:#393939;background:white'>{</span></p>
 
-                <p class=MsoNormal style='text-indent:21.0pt'><a name=4932-1545056852815></a><span
-                        lang=EN-US style='color:#393939;background:white'>“status”: “success”</span><span
-                        style='color:#393939;background:white'>，</span></p>
+                <p class=MsoNormal style='margin-left:21.0pt'><a name=4932-1545056852815></a><a
+                        name=1129-1545056852815></a><span lang=EN-US style='color:#393939;background:
+white'>&quot;status&quot;:&quot;fail&quot;</span><span style='color:#393939;
+background:white'>，</span></p>
 
-                <p class=MsoNormal style='text-indent:21.0pt'><a name=2914-1545056852815></a><span
-                        lang=EN-US>“msg”: &quot;</span>注册成功<span lang=EN-US>&quot;,</span></p>
+                <p class=MsoNormal style='margin-left:21.0pt'><span lang=EN-US
+                                                                    style='color:#393939;background:white'>&quot;msg&quot;:&quot;</span><span
+                        style='color:#393939;background:white'>注册成功<span lang=EN-US>&quot;,</span></span></p>
 
-                <p class=MsoNormal style='text-indent:26.25pt'><a name=1370-1545056852815></a><span
-                        lang=EN-US>&quot;data&quot;: {}</span></p>
+                <p class=MsoNormal style='margin-left:21.0pt'><span lang=EN-US>&quot;userName&quot;:“xxxxx”</span></p>
 
-                <p class=MsoNormal><a name=1129-1545056852815></a><span lang=EN-US
-                                                                        style='color:#393939;background:white'>}</span></p>
+                <p class=MsoNormal><span lang=EN-US style='color:#393939;background:white'>}</span></p>
 
                 <p class=MsoNormal><a name=3146-1545056887467></a><span style='color:#393939;
 background:white'>注册失败返回情况：</span></p>
@@ -1090,11 +1181,11 @@ background:white'>两次密码输入不同时注册失败回值：</span></p>
                 <p class=MsoNormal style='text-indent:21.0pt'><a name=0000-1545056961705></a><span
                         lang=EN-US style='color:#393939;background:white'>“status”: “fail”,</span></p>
 
-                <p class=MsoNormal style='text-indent:26.25pt'><a name=8419-1545056961705></a><span
+                <p class=MsoNormal style='text-indent:21.0pt'><a name=8419-1545056961705></a><span
                         lang=EN-US style='color:#393939;background:white'>&quot;msg&quot;: &quot;</span><span
                         style='color:#393939;background:white'>两次输入的密码不一致<span lang=EN-US>&quot;,</span></span></p>
 
-                <p class=MsoNormal style='text-indent:26.25pt'><a name=6351-1545192381492></a><span
+                <p class=MsoNormal style='text-indent:21.0pt'><a name=6351-1545192381492></a><span
                         lang=EN-US style='color:#393939;background:white'>”data“:{}</span></p>
 
                 <p class=MsoNormal><a name=6745-1545056961705></a><span lang=EN-US
@@ -1152,7 +1243,7 @@ white'>搜索框列表数据获取</span></h2>
                 <p class=MsoNormal><a name=2310-1543219354265></a><span lang=EN-US>&nbsp;</span></p>
 
                 <p class=MsoNormal><a name=9466-1543219354412></a><span lang=EN-US>url</span>：<span
-                        lang=EN-US>/meituan<span style='color:#393939'>/header/search.json</span></span></p>
+                        lang=EN-US>/api/meituan<span style='color:#393939'>/header/search.json</span></span></p>
 
                 <p class=MsoNormal><a name=1492-1543215141529></a><span lang=EN-US>method</span>：<span
                         lang=EN-US>get</span></p>
@@ -1354,7 +1445,7 @@ font-family:"微软雅黑",sans-serif'>查询最近热门搜索</span></h2>
                 <p class=MsoNormal><a name=5071-1543273202372></a><span lang=EN-US>&nbsp;</span></p>
 
                 <p class=MsoNormal><a name=7995-1543273204030></a><span lang=EN-US>url</span>：<span
-                        lang=EN-US>/meituan/header/searchHotWords.json</span></p>
+                        lang=EN-US>/api/meituan/header/searchHotWords.json</span></p>
 
                 <p class=MsoNormal><a name=8074-1543273227327></a><span lang=EN-US>method</span>：<span
                         lang=EN-US>get</span></p>
@@ -1521,7 +1612,7 @@ font-family:"微软雅黑",sans-serif'>5.</span><span style='font-size:15.0pt;
 font-family:"微软雅黑",sans-serif'>首页左侧导航条 导航数据</span></h2>
 
                 <p class=MsoNormal><a name=6400-1543215142172></a><span lang=EN-US>url</span>：<span
-                        lang=EN-US>/meituan/index/nav.json</span></p>
+                        lang=EN-US>/api/meituan/index/nav.json</span></p>
 
                 <p class=MsoNormal><a name=2714-1543273432091></a><span lang=EN-US>method</span>：<span
                         lang=EN-US>get</span></p>
@@ -1860,7 +1951,7 @@ font-family:"微软雅黑",sans-serif'>首页下方（有格调内容区数据�
                 <p class=MsoNormal><a name=6250-1543273646579></a><span lang=EN-US>&nbsp;</span></p>
 
                 <p class=MsoNormal><a name=2494-1543215142295></a><span lang=EN-US>url</span>：<span
-                        lang=EN-US>/meituan/index/resultsByKeywords.json</span></p>
+                        lang=EN-US>/api/meituan/index/resultsByKeywords.json</span></p>
 
                 <p class=MsoNormal><a name=5192-1543273752036></a><span lang=EN-US>method</span>：<span
                         lang=EN-US>get</span></p>
@@ -2257,8 +2348,9 @@ color:#262626;background:white'>崇文门新世界店<span lang=EN-US>&quot;,</s
 color:#262626;background:white'>木北造型（崇文门新世界店）<span lang=EN-US>&quot;,</span></span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=1889-1544085054239></a><span
-                        lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&quot;price&quot;: 398</span></p>
+                        lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;price&quot;:
+398</span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=3028-1544085054239></a><span
                         lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -2326,7 +2418,7 @@ font-family:"微软雅黑",sans-serif'>获取城市列表接口</span></h2>
                 <p class=MsoNormal><a name=8970-1543274110403></a><span lang=EN-US>&nbsp;</span></p>
 
                 <p class=MsoNormal><a name=3380-1543274118810></a><span lang=EN-US>url</span>：<span
-                        lang=EN-US>/meituan/city/cityList.json</span></p>
+                        lang=EN-US>/api/meituan/city/cityList.json</span></p>
 
                 <p class=MsoNormal><a name=1911-1543274119018></a><span lang=EN-US>method</span>：<span
                         lang=EN-US>get</span></p>
@@ -2723,7 +2815,7 @@ font-family:"微软雅黑",sans-serif'>获取热门城市</span></h2>
                 <p class=MsoNormal><a name=5470-1545033295277></a><span lang=EN-US>&nbsp;</span></p>
 
                 <p class=MsoNormal><a name=7071-1543274474227></a><span lang=EN-US>url</span>：<span
-                        lang=EN-US>/meituan/city/hot.json</span></p>
+                        lang=EN-US>/api/meituan/city/hot.json</span></p>
 
                 <p class=MsoNormal><a name=5636-1543274589055></a><span lang=EN-US>method</span>：<span
                         lang=EN-US>get</span></p>
@@ -3065,7 +3157,7 @@ font-family:"微软雅黑",sans-serif'>9. </span><span style='font-size:15.0pt;
 font-family:"微软雅黑",sans-serif'>获取省份列表</span></h2>
 
                 <p class=MsoNormal><a name=5539-1543274702904></a><span lang=EN-US>url</span>：<span
-                        lang=EN-US>/meituan/city/province.json</span></p>
+                        lang=EN-US>/api/meituan/city/province.json</span></p>
 
                 <p class=MsoNormal><a name=9492-1543274721936></a><span lang=EN-US>method</span>：<span
                         lang=EN-US>get</span></p>
@@ -3471,7 +3563,7 @@ font-family:"微软雅黑",sans-serif'>10. </span><span style='font-size:15.0pt;
 font-family:"微软雅黑",sans-serif'>最近搜索城市</span></h2>
 
                 <p class=MsoNormal><a name=2653-1545033675829></a><span lang=EN-US>url</span>：<span
-                        lang=EN-US>/meituan/city/recents.json</span></p>
+                        lang=EN-US>/api/meituan/city/recents.json</span></p>
 
                 <p class=MsoNormal><a name=4586-1545033739857></a><span lang=EN-US>method</span>：<span
                         lang=EN-US>get</span></p>
@@ -3808,7 +3900,7 @@ font-family:"微软雅黑",sans-serif'>产品展示列表数据获取</span></h2
                 <p class=MsoNormal><a name=1030-1545034315619></a><span lang=EN-US>&nbsp;</span></p>
 
                 <p class=MsoNormal><a name=5710-1544423387873></a><span lang=EN-US>url</span>：<span
-                        lang=EN-US>/meituan/list/goodsList.json</span></p>
+                        lang=EN-US>/api/meituan/list/goodsList.json</span></p>
 
                 <p class=MsoNormal><a name=1139-1544424416320></a><span lang=EN-US>type</span>：<span
                         lang=EN-US>get</span></p>
@@ -4356,7 +4448,7 @@ line-height:90%;font-family:"微软雅黑",sans-serif'>12.</span><span
                 <p class=MsoNormal><a name=9177-1545034480096></a><span lang=EN-US>&nbsp;</span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=2322-1544426717160></a><span
-                        lang=EN-US>url</span>：<span lang=EN-US>/meituan/list/recommend.json</span></p>
+                        lang=EN-US>url</span>：<span lang=EN-US>/api/meituan/list/recommend.json</span></p>
 
                 <p class=MsoNormal><a name=6861-1545034573526></a><span lang=EN-US>type</span>：<span
                         lang=EN-US>get</span></p>
@@ -4714,7 +4806,7 @@ line-height:90%;font-family:"微软雅黑",sans-serif'>12.</span><span
                         <td width=199 style='width:149.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
-                            <p class=MsoNormal>产品详情</p>
+                            <p class=MsoNormal align=center style='text-align:center'>产品详情</p>
                         </td>
                     </tr>
                 </table>
@@ -4810,8 +4902,8 @@ color:#262626;background:white'>双桥<span lang=EN-US>&quot;,</span></span></p>
 ],</span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=9755-1545200938824></a><span
-                        lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;avgPrice&quot;: 59</span></p>
+                        lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&quot;avgPrice&quot;: 59</span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=3867-1545200938824></a><span
                         lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -4872,7 +4964,7 @@ line-height:90%;font-family:"微软雅黑",sans-serif'>13. </span><span
                 <p class=MsoNormal><a name=1633-1545034860509></a><span lang=EN-US>&nbsp;</span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=7067-1544427007731></a><span
-                        lang=EN-US>url</span>：<span lang=EN-US> /meituan/list/classify.json</span></p>
+                        lang=EN-US>url</span>：<span lang=EN-US> /api/meituan/list/classify.json</span></p>
 
                 <p class=MsoNormal><a name=3271-1545034884190></a><span lang=EN-US>type</span>：<span
                         lang=EN-US>get</span></p>
@@ -5104,8 +5196,8 @@ color:#262626;background:white'>温泉酒店<span lang=EN-US>&quot;,</span></spa
 &quot;id&quot;: &quot;hot_spring&quot;</span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=5538-1544426819695></a><span
-                        lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-}] </span></p>
+                        lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;}] </span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=1693-1544426819695></a><span
                         lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;
@@ -5162,7 +5254,7 @@ line-height:90%;font-family:"微软雅黑",sans-serif'>14.</span><span
                 <p class=MsoNormal><a name=0013-1545035157425></a><span lang=EN-US>&nbsp;</span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=1069-1544427170512></a><span
-                        lang=EN-US>url</span>： <span lang=EN-US>/meituan/list/areaList.json</span></p>
+                        lang=EN-US>url</span>：<span lang=EN-US> /api/meituan/list/areaList.json</span></p>
 
                 <p class=MsoNormal><a name=1412-1545035165510></a><span lang=EN-US>type</span>：<span
                         lang=EN-US>get</span></p>
@@ -5429,7 +5521,7 @@ line-height:90%;font-family:"微软雅黑",sans-serif'>15.</span><span
                 <p class=MsoNormal><a name=4895-1545035731154></a><span lang=EN-US>&nbsp;</span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=1674-1545035731154></a><span
-                        lang=EN-US>url</span>：<span lang=EN-US> /meituan/city/getPosition.json</span></p>
+                        lang=EN-US>url</span>：<span lang=EN-US> /api/meituan/city/getPosition.json</span></p>
 
                 <p class=MsoNormal><a name=2621-1545035731154></a><span lang=EN-US>type</span>：<span
                         lang=EN-US>get</span></p>
@@ -5910,7 +6002,7 @@ line-height:90%;font-family:"微软雅黑",sans-serif'>15.</span><span
                 <p class=MsoNormal><a name=7058-1545101619525></a><span lang=EN-US>&nbsp;</span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=3056-1545101619525></a><span
-                        lang=EN-US>url</span>：<span lang=EN-US> /meituan/product/detail.json</span></p>
+                        lang=EN-US>url</span>：<span lang=EN-US> /api/meituan/product/detail.json</span></p>
 
                 <p class=MsoNormal><a name=1021-1545101619525></a><span lang=EN-US>type</span>：<span
                         lang=EN-US>get</span></p>
@@ -6578,8 +6670,8 @@ color:#262626;background:white'>匿名用户<span lang=EN-US>&quot;,</span></spa
 &quot;rate&quot;: 5,</span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=9921-1545101519944></a><span
-                        lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&quot;pics&quot;: [</span></p>
+                        lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&quot;pics&quot;: [</span></p>
 
                 <p class=MsoNormal style='line-height:90%'><a name=7692-1545101519944></a><span
                         lang=EN-US style='font-family:"Courier New";color:#262626;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -6756,8 +6848,6 @@ color:#262626;background:white'>元<span lang=EN-US>&quot;</span></span></p>
                         lang=EN-US>}</span></p>
 
             </div>
-
-
 
 
             <div class="row">

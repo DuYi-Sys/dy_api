@@ -1,19 +1,42 @@
-import com.duyi.management.domain.User;
-import com.duyi.management.service.UserLogService;
-import com.duyi.management.service.UserService;
-import com.duyi.util.RSAEncrypt;
-import com.duyi.util.RegExUtil;
-import org.apache.commons.collections.bag.SynchronizedSortedBag;
+import com.alibaba.fastjson.JSONObject;
+import com.duyi.tuling.controller.TulingController;
+import com.duyi.tuling.service.TulingService;
+import com.duyi.util.TimeUtil;
+import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonObjectFormatVisitor;
 
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class test3 {
     public static void main(String[] args) throws Exception {
+//        TulingService ts = new TulingService();
+//        String rs = ts.createConnection("你好");
+//        JSONObject json1 = JSONObject.parseObject(rs);
+//        String rs1 = json1.getString("results");
+//        String rs2 = rs1.substring(1,rs1.length() - 1);
+//        System.out.println(rs);
+//        JSONObject json2 = JSONObject.parseObject(rs2);
+//        String str2 = json2.getString("values");
+//        JSONObject json = JSONObject.parseObject(str2);
+//        System.out.println(str2);
+//        Calendar calendar = Calendar.getInstance();
+////        System.out.println(calendar);
+//        int year = calendar.get(Calendar.YEAR);
+//        System.out.println(year);
+//        long millis = calendar.getTimeInMillis();
+//
+//        System.out.println(millis);
+//        int month = calendar.get(Calendar.MONTH);
+//        System.out.println(month);
+//
+//        int date = calendar.get(Calendar.DATE);
+//        System.out.println(date);
 
-        System.out.println(RegExUtil.match("^[a-zA-Z0-9_]{4,16}$", "ab_A0*cd"));
-        UserLogService userLogService = new UserLogService();
-        User user = userLogService.findByAccount("demo13");
-        System.out.println(user);
+//        int pre = TimeUtil.getPreDate(10);
+//        System.out.println(pre);
+
     }
+
 
 }

@@ -50,7 +50,7 @@ public class MtLoginController extends BaseController {
 
         MtUserService.MtLoginStatusEnum result = mtUserService.checkLogin(appkey, userName, password);
 
-        writeResult(resp, result.getStatusEnum().getValue(), result.getMsg(), null);
+        writeResult(resp, result.getStatusEnum().getValue(), result.getMsg(), userName);
 
     }
 
@@ -89,8 +89,13 @@ public class MtLoginController extends BaseController {
         mtUser.setUtime(TimeUtil.getNow());
 
         MtUserService.MtUserStatusEnum result = mtUserService.addUser(mtUser);
+        if(result.getStatusEnum() == RespStatusEnum.SUCCESS) {
+//            MtUser mtUser1 = mtUserService.findByUserName(userName);
+            writeResult(resp,result.getStatusEnum().getValue(),result.getMsg(),userName);
+        } else {
+            writeResult(resp, result.getStatusEnum().getValue(), result.getMsg(), null);
+        }
 
-        writeResult(resp, result.getStatusEnum().getValue(), result.getMsg(), null);
 
     }
 }
