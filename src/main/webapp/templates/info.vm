@@ -1,0 +1,29 @@
+<html>
+    #parse("head.vm")
+
+    <body>
+        <div>
+            <div>
+                <span>帐号：</span>
+                <span>panda</span>
+            </div>
+            <div>
+                <span>密码：</span>
+                <span>********</span>
+            </div>
+            <div>
+                <span>邮箱：</span>
+                <span>123456789@qq.com</span>
+            </div>
+            <div>
+                <span>是否激活：</span>
+                <span>已激活</span>
+                <a href="#">点此激活</a>
+            </div>
+            <div>
+                <span>您的appkey：</span>
+                <span>asdasd_123456789</span>
+            </div>
+        </div>
+    </body>
+</html>

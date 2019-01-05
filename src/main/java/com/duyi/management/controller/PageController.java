@@ -158,5 +158,17 @@ public class PageController extends BaseController {
         writeResult(resp, "success", "成功", result);
     }
 
+    @RequestMapping(value = "/info", method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView infoPage(Model model,
+                               @CookieValue(name = "uid") String uid) throws Exception {
+
+        String encodeSno = RSAEncrypt.decrypt(uid);
+        User user = userService.findByAccount(encodeSno);
+        Map<String, Object> result = new HashMap<>();
+        result.put("user", user);
+        model.addAllAttributes(result);
+        return new ModelAndView("/info");
+    }
 
 }
