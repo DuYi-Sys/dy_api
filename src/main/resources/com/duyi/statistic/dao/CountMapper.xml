@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.duyi.statistics.dao.CountDao">
+
+    <insert id="insertCount" parameterType="com.duyi.statistics.domain.Count" statementType="PREPARED">
+
+        insert into sys_statistic (appkey, path, pv, date, ctime) values (#{appkey}, #{path}, #{pv}, #{date}, #{ctime})
+            on duplicate key update recode = recode + 1 ;
+
+    </insert>
+
+
+    <select id="getPvCount" resultType="integer">
+
+        select sum(pv) from sys_statistic where appkey = #{appkey} and
+        ctime between #{begin} and #{end} ;
+
+    </select>
+
+    <select id="getDayCount" resultType="com.duyi.statistics.domain.DateSum">
+
+        select date, sum(pv) as sum from sys_statistic where appkey = #{appkey} and
+        ctime between #{begin} and #{end} group by date;
+
+    </select>
+
+
+</mapper>
