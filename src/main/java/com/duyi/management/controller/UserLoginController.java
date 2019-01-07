@@ -145,8 +145,7 @@ public class UserLoginController extends BaseController {
 
     @RequestMapping(value = "/getUserInfo", method = RequestMethod.GET)
     @ResponseBody
-    public void getUserInfo(@RequestParam("encryptionAccount") String encryptionAccount,
-                            @CookieValue(name = "uid") String uid,
+    public void getUserInfo( @CookieValue(name = "uid") String uid,
                             HttpServletResponse resp) throws Exception {
         resp.setContentType("text/html;charset=utf-8");
         String account = RSAEncrypt.decrypt(uid);
