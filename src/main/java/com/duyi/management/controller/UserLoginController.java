@@ -1,13 +1,10 @@
 package com.duyi.management.controller;
 
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.duyi.common.BaseController;
 import com.duyi.common.RespStatusEnum;
 import com.duyi.management.domain.User;
-import com.duyi.management.service.UserLogService;
-import com.duyi.students.domain.RespModel;
+import com.duyi.management.service.UserService;
 import com.duyi.util.MD5Util;
 import com.duyi.util.RSAEncrypt;
 import com.duyi.util.RegExUtil;
@@ -24,7 +21,7 @@ import java.net.URLEncoder;
 @Controller
 public class UserLoginController extends BaseController {
     @Autowired
-    UserLogService userLogService;
+    UserService userService;
 
     /**
      * 用户登录接口
@@ -51,7 +48,7 @@ public class UserLoginController extends BaseController {
             return;
         }
 
-        UserLogService.UserLoginStatusEnum result =  userLogService.login(account, password);
+        UserService.UserLoginStatusEnum result =  userService.login(account, password);
 
         if (result.getStatusEnum() == RespStatusEnum.SUCCESS) {
 
@@ -115,7 +112,7 @@ public class UserLoginController extends BaseController {
         user.setCtime(TimeUtil.getNow());
         user.setUtime(TimeUtil.getNow());
 
-        UserLogService.UserStatusEnum result =  userLogService.addUser(user);
+        UserService.UserStatusEnum result =  userService.addUser(user);
         writeResult(resp,result.getStatusEnum().getValue(),result.getMsg(),null);
 
         if (result.getStatusEnum() == RespStatusEnum.SUCCESS) {
@@ -124,7 +121,7 @@ public class UserLoginController extends BaseController {
             String to = email;// 收件人
             String subject = "渡一用户激活";
             String encryptionAccount = URLEncoder.encode(RSAEncrypt.encrypt(account));
-            userLogService.sendAcctiveEmail(encryptionAccount, to, subject);
+            userService.sendAcctiveEmail(encryptionAccount, to, subject);
 //            writeResult(resp,RespStatusEnum.SUCCESS.getValue(),"Please open your registered email for activation!",null);
 
         }
@@ -138,7 +135,7 @@ public class UserLoginController extends BaseController {
 
         resp.setContentType("text/html;charset=utf-8");
         String encodeAccount = RSAEncrypt.decrypt(encryptionAccount);
-        UserLogService.UserActivateStatusEnum result = userLogService.updateStatus(encodeAccount);
+        UserService.UserActivateStatusEnum result = userService.updateStatus(encodeAccount);
         writeResult(resp,result.getStatusEnum().getValue(),result.getMsg(),null);
 
     }
@@ -149,7 +146,7 @@ public class UserLoginController extends BaseController {
                             HttpServletResponse resp) throws Exception {
         resp.setContentType("text/html;charset=utf-8");
         String account = RSAEncrypt.decrypt(uid);
-        User user = userLogService.findByAccount(account);
+        User user = userService.findByAccount(account);
         writeResult(resp,RespStatusEnum.SUCCESS.getValue(),"查询成功",user);
     }
 

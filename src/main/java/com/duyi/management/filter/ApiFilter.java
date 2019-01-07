@@ -2,10 +2,8 @@ package com.duyi.management.filter;
 
 import com.duyi.common.BaseController;
 import com.duyi.management.domain.User;
-import com.duyi.management.service.UserLogService;
 import com.duyi.management.service.UserService;
 import com.duyi.statistics.service.StatisticsService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 import javax.servlet.*;
@@ -16,11 +14,11 @@ import java.io.IOException;
 public class ApiFilter extends BaseController implements Filter {
 
     private static ApplicationContext ac;
-    private static UserLogService userLogService;
+    private static UserService userService;
     private static StatisticsService statisticsService;
     static {
         ac = new FileSystemXmlApplicationContext("classpath:applicationContext.xml");
-        userLogService = (UserLogService) ac.getBean("userLogService");
+        userService = (UserService) ac.getBean("userService");
         statisticsService = (StatisticsService) ac.getBean("statisticsService");
     }
 
@@ -48,7 +46,7 @@ public class ApiFilter extends BaseController implements Filter {
             return;
         }
         
-        User user = userLogService.queryByAppkey(appkey);
+        User user = userService.queryByAppkey(appkey);
 
         if (user == null) {
             writeResult(response, "fail", "appkey不正确", null);
