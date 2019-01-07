@@ -182,7 +182,7 @@ public class PageController extends BaseController {
                                @CookieValue(name = "uid") String uid) throws Exception {
 
         String encodeSno = RSAEncrypt.decrypt(uid);
-        User user = userService.findByAccount(encodeSno);
+        User user = userLogService.findByAccount(encodeSno);
         Map<String, Object> result = new HashMap<>();
         result.put("user", user);
         model.addAllAttributes(result);

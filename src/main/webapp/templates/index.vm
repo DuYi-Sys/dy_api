@@ -3,47 +3,34 @@
     <head>
         <meta charset="utf-8">
         <title>Dashboard</title>
-        <!-- Mobile specific metas -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <!-- Force IE9 to render in normal mode -->
-        <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
-        <meta name="author" content="SuggeElson" />
-        <meta name="description" content=""
-        />
-        <meta name="keywords" content=""
-        />
-        <meta name="application-name" content="sprFlat admin template" />
-        <!-- Import google fonts - Heading first/ text second -->
         <link rel='stylesheet' type='text/css' >
-        <!--[if lt IE 9]>
-
-<![endif]-->
-        <!-- Css files -->
-        <!-- Icons -->
-        <link href="assets/css/icons.css" rel="stylesheet" />
-        <!-- jQueryUI -->
-        <link href="assets/css/sprflat-theme/jquery.ui.all.css" rel="stylesheet" />
-        <!-- Bootstrap stylesheets (included template modifications) -->
-        <link href="assets/css/bootstrap.css" rel="stylesheet" />
-        <!-- Plugins stylesheets (all plugin custom css) -->
-        <link href="assets/css/plugins.css" rel="stylesheet" />
-        <!-- Main stylesheets (template main css file) -->
-        <link href="assets/css/main.css" rel="stylesheet" />
-        <!-- Custom stylesheets ( Put your own changes here ) -->
-        <link href="assets/css/custom.css" rel="stylesheet" />
-        <!-- Fav and touch icons -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="assets/img/ico/apple-touch-icon-57-precomposed.png">
-        <link rel="icon" href="assets/img/ico/favicon.ico" type="image/png">
-        <!-- Windows8 touch icon ( http://www.buildmypinnedsite.com/ )-->
-        <meta name="msapplication-TileColor" content="#3399cc" />
+##        <meta name="msapplication-TileColor" content="#3399cc" />
         <script src="/management/assets/js/echarts.common.min.js"></script>
         <style>
             .day_chart {
+                margin-top: 15px;
                 width: 100%;
                 height: 400px;
+            }
+             .main_part {
+                 width: 90%;
+                 height: 400px;
+                 border-right: 2px dotted gray;
+             }
+
+            .main_part > div {
+                display: block;
+                position: relative;
+                height: 50px;
+                width: 100%;
+            }
+
+            .main_part > div > span {
+                height: 100%;
+                width: 100%;
+                line-height: 50px;
+                padding-left: 20px;
+                font-size: 16px;
             }
         </style>
         <script>
@@ -565,7 +552,40 @@
                     </div>
                     <!-- End .row -->
                     <div class="row">
-                        <div id="day_chart" class="day_chart"></div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="main_part">
+                                <h2>个人信息：</h2>
+                                <div>
+                                    <span>帐号：</span>
+                                    <span>${user.getAccount()}</span>
+                                </div>
+                                <div>
+                                    <span>密码：</span>
+                                    <span>********</span>
+                                </div>
+                                <div>
+                                    <span>邮箱：</span>
+                                    <span>${user.getEmail()}</span>
+                                </div>
+                                <div>
+                                    <span>是否激活：</span>
+                                    #if(${user.getStatus()} == 1)
+                                        <span style="color: green">已激活</span>
+                                    #else
+                                        <span style="color: red">未激活</span>
+                                        <a href="#">点此激活</a>
+                                    #end
+                                </div>
+                                <div>
+                                    <span>您的appkey：</span>
+                                    <span>${user.getAppkey()}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                            <div id="day_chart" class="day_chart"></div>
+                        </div>
+
                     </div>
 ##                    <div class="row">
 ##                        <!-- Start .row -->

@@ -1,29 +1,37 @@
-<html>
-    #parse("head.vm")
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <link rel='stylesheet' type='text/css' >
 
-    <body>
-        <div>
-            <div>
-                <span>帐号：</span>
-                <span>panda</span>
+</head>
+<body>
+<!-- Start #header -->
+    #parse("header.vm")
+<!-- End #header -->
+<!-- Start #sidebar -->
+    #parse("menu.vm")
+<div id="content">
+    <!-- Start .content-wrapper -->
+    <div class="content-wrapper">
+        <div class="row">
+            <!-- Start .row -->
+            <!-- Start .page-header -->
+            <div class="col-lg-12 heading">
+                <h1 class="page-header"><i class="im-screen"></i> 个人信息</h1>
             </div>
-            <div>
-                <span>密码：</span>
-                <span>********</span>
-            </div>
-            <div>
-                <span>邮箱：</span>
-                <span>123456789@qq.com</span>
-            </div>
-            <div>
-                <span>是否激活：</span>
-                <span>已激活</span>
-                <a href="#">点此激活</a>
-            </div>
-            <div>
-                <span>您的appkey：</span>
-                <span>asdasd_123456789</span>
+            <!-- End .page-header -->
+        </div>
+        <!-- End .row -->
+        <div class="outlet">
+            <div class="row">
+
             </div>
         </div>
-    </body>
+    </div>
+    <div class="clearfix"></div>
+</div>
+    #parse("head.vm")
+</body>
 </html>
