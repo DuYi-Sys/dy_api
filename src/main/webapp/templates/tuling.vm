@@ -411,7 +411,7 @@
             <!-- Start .row -->
             <!-- Start .page-header -->
             <div class="col-lg-12 heading">
-                <h1 class="page-header"><i class="im-screen"></i> Blank page</h1>
+                <h1 class="page-header"><i class="im-github2"></i> 聊天机器人系统</h1>
                 <!-- Start .bredcrumb -->
                 <ul id="crumb" class="breadcrumb">
                 </ul>

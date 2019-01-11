@@ -55,6 +55,7 @@ public class PageController extends BaseController {
         User user = userService.findByAccount(encodeSno);
         String appkey = user.getAppkey();
         Integer sum1 = statisticsService.getPvCount(appkey,TimeUtil.getPreDate(0, TimeUtil.MomentEnum.FIRST_SECOND),TimeUtil.getPreDate(0, TimeUtil.MomentEnum.LAST_SECOND));
+        System.out.println("sum1" + sum1);
         Integer sum3 = statisticsService.getPvCount(appkey,TimeUtil.getPreDate(2, TimeUtil.MomentEnum.FIRST_SECOND),TimeUtil.getPreDate(0, TimeUtil.MomentEnum.LAST_SECOND));
         Integer sum7 = statisticsService.getPvCount(appkey,TimeUtil.getPreDate(6, TimeUtil.MomentEnum.FIRST_SECOND),TimeUtil.getPreDate(0, TimeUtil.MomentEnum.LAST_SECOND));
         Integer sumTotal = statisticsService.getPvCount(appkey,TimeUtil.getPreDate(10000, TimeUtil.MomentEnum.FIRST_SECOND),TimeUtil.getPreDate(0, TimeUtil.MomentEnum.LAST_SECOND));

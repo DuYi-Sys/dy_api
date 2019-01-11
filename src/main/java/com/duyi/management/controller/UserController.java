@@ -16,10 +16,11 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sound.midi.Soundbank;
 import java.net.URLEncoder;
 
 @Controller
-public class UserLoginController extends BaseController {
+public class UserController extends BaseController {
     @Autowired
     UserService userService;
 
@@ -120,8 +121,9 @@ public class UserLoginController extends BaseController {
             //发送激活邮件
             String to = email;// 收件人
             String subject = "渡一用户激活";
-            String encryptionAccount = URLEncoder.encode(RSAEncrypt.encrypt(account));
-            userService.sendAcctiveEmail(encryptionAccount, to, subject);
+//            String encryptionAccount = URLEncoder.encode(RSAEncrypt.encrypt(account));
+//            userService.sendAcctiveEmail(encryptionAccount, to, subject);
+            userService.sendAcctiveEmail(account, to, subject);
 //            writeResult(resp,RespStatusEnum.SUCCESS.getValue(),"Please open your registered email for activation!",null);
 
         }
@@ -131,13 +133,30 @@ public class UserLoginController extends BaseController {
 
     @RequestMapping(value = "/userActivate", method = RequestMethod.GET)
     @ResponseBody
-    public void adminActivate(@RequestParam("encryptionAccount") String encryptionAccount, HttpServletRequest res, HttpServletResponse resp) throws Exception {
+    public void adminActivate(@RequestParam("encryptionAccount") String encryptionAccount,
+                              HttpServletRequest req,
+                              HttpServletResponse resp) throws Exception {
 
         resp.setContentType("text/html;charset=utf-8");
         String encodeAccount = RSAEncrypt.decrypt(encryptionAccount);
         UserService.UserActivateStatusEnum result = userService.updateStatus(encodeAccount);
-        writeResult(resp,result.getStatusEnum().getValue(),result.getMsg(),null);
+//        writeResult(resp,result.getStatusEnum().getValue(),result.getMsg(),null);
+        System.out.println(result.getStatusEnum());
+        if (result.getStatusEnum() == RespStatusEnum.SUCCESS) {
+//           req.getRequestDispatcher("/activate.html").forward(req,resp);
+            resp.sendRedirect("/activate.html");
+        }
+    }
 
+    @RequestMapping(value = "/sendEmail", method = RequestMethod.GET)
+    @ResponseBody
+    public void sendEmail(@RequestParam("account") String account,
+                          @RequestParam("email") String email,
+                          HttpServletResponse resp) throws Exception {
+        resp.setContentType("text/html;charset=utf-8");
+        String to = email;// 收件人
+        String subject = "渡一用户激活";
+        userService.sendAcctiveEmail(account, to, subject);
     }
 
     @RequestMapping(value = "/getUserInfo", method = RequestMethod.GET)
