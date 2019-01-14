@@ -26,12 +26,13 @@ public class UserController extends BaseController {
 
     /**
      * 用户登录接口
-     * @param account 账号
+     *
+     * @param account  账号
      * @param password 密码
      * @param resp
      * @throws Exception
      */
-    @RequestMapping(value = "/userLogin",method = RequestMethod.POST)
+    @RequestMapping(value = "/userLogin", method = RequestMethod.POST)
     @ResponseBody
     public void userLogin(@RequestParam("account") String account,
                           @RequestParam("password") String password,
@@ -49,7 +50,7 @@ public class UserController extends BaseController {
             return;
         }
 
-        UserService.UserLoginStatusEnum result =  userService.login(account, password);
+        UserService.UserLoginStatusEnum result = userService.login(account, password);
 
         if (result.getStatusEnum() == RespStatusEnum.SUCCESS) {
 
@@ -57,16 +58,17 @@ public class UserController extends BaseController {
             Cookie cookie = new Cookie("uid", str);
             resp.addCookie(cookie);
         }
-        writeResult(resp,result.getStatusEnum().getValue(),result.getMsg(),null);
+        writeResult(resp, result.getStatusEnum().getValue(), result.getMsg(), null);
 
     }
 
     /**
      * 用户注册
-     * @param account 账号
-     * @param password 密码
+     *
+     * @param account    账号
+     * @param password   密码
      * @param rePassword 确认密码
-     * @param email 邮箱
+     * @param email      邮箱
      * @param resp
      * @throws Exception
      */
@@ -92,13 +94,19 @@ public class UserController extends BaseController {
             return;
         }
 
-        if(!rePassword.equals(password)) {
+        if (!rePassword.equals(password)) {
             writeResult(resp, RespStatusEnum.FAIL.getValue(), "两次密码输入不一致", null);
             return;
         }
 
-        if(!RegExUtil.match("^[A-Za-z\\d]+([-_.][A-Za-z\\d]+)*@([A-Za-z\\d]+[-.])+[A-Za-z\\d]{2,5}$",email)) {
+        if (!RegExUtil.match("^[A-Za-z\\d]+([-_.][A-Za-z\\d]+)*@([A-Za-z\\d]+[-.])+[A-Za-z\\d]{2,5}$", email)) {
             writeResult(resp, RespStatusEnum.FAIL.getValue(), "邮箱格式不正确", null);
+            return;
+        }
+
+        boolean b = userService.checkEmail(email.trim());
+        if (b) {
+            writeResult(resp, RespStatusEnum.FAIL.getValue(), "此邮箱已被注册", null);
             return;
         }
 
@@ -108,16 +116,17 @@ public class UserController extends BaseController {
         user.setAccount(account);
         user.setAccount(account);
         user.setPassword(MD5Util.MD5Encode(password, "utf8"));
-        user.setEmail(email);
+        user.setEmail(email.trim());
         user.setAppkey(appkey);
         user.setCtime(TimeUtil.getNow());
         user.setUtime(TimeUtil.getNow());
 
-        UserService.UserStatusEnum result =  userService.addUser(user);
-        writeResult(resp,result.getStatusEnum().getValue(),result.getMsg(),null);
+
+
+        UserService.UserStatusEnum result = userService.addUser(user);
 
         if (result.getStatusEnum() == RespStatusEnum.SUCCESS) {
-
+            writeResult(resp, result.getStatusEnum().getValue(), result.getMsg(), null);
             //发送激活邮件
             String to = email;// 收件人
             String subject = "渡一用户激活";
@@ -125,7 +134,6 @@ public class UserController extends BaseController {
 //            userService.sendAcctiveEmail(encryptionAccount, to, subject);
             userService.sendAcctiveEmail(account, to, subject);
 //            writeResult(resp,RespStatusEnum.SUCCESS.getValue(),"Please open your registered email for activation!",null);
-
         }
 
 
@@ -161,14 +169,13 @@ public class UserController extends BaseController {
 
     @RequestMapping(value = "/getUserInfo", method = RequestMethod.GET)
     @ResponseBody
-    public void getUserInfo( @CookieValue(name = "uid") String uid,
+    public void getUserInfo(@CookieValue(name = "uid") String uid,
                             HttpServletResponse resp) throws Exception {
         resp.setContentType("text/html;charset=utf-8");
         String account = RSAEncrypt.decrypt(uid);
         User user = userService.findByAccount(account);
-        writeResult(resp,RespStatusEnum.SUCCESS.getValue(),"查询成功",user);
+        writeResult(resp, RespStatusEnum.SUCCESS.getValue(), "查询成功", user);
     }
-
 
 
 }
