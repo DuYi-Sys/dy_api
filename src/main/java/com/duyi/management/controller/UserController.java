@@ -125,8 +125,8 @@ public class UserController extends BaseController {
 
         UserService.UserStatusEnum result = userService.addUser(user);
 
+        writeResult(resp, result.getStatusEnum().getValue(), result.getMsg(), null);
         if (result.getStatusEnum() == RespStatusEnum.SUCCESS) {
-            writeResult(resp, result.getStatusEnum().getValue(), result.getMsg(), null);
             //发送激活邮件
             String to = email;// 收件人
             String subject = "渡一用户激活";

@@ -91,6 +91,9 @@
                     var result = JSON.parse(ajax.responseText);
                     alert(result.msg);
                     console.log(result);
+                    if(result.status == "success") {
+                        location.href = 'login.html';
+                    }
                 }
             }
         }
