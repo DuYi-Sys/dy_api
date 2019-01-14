@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Dashboard</title>
+    <title>渡一API开放平台</title>
     <link rel='stylesheet' type='text/css'>
 ##        <meta name="msapplication-TileColor" content="#3399cc" />
     <script src="/management/assets/js/echarts.common.min.js"></script>

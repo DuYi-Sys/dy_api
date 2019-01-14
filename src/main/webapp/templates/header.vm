@@ -3,7 +3,7 @@
         <div class="navbar">
             <div class="navbar-header">
                 <a class="navbar-brand" href="/" style="width: 350px;">
-                    <i class="im-windows8 text-logo-element animated bounceIn"></i><span class="text-logo"></span><span class="text-slogan">渡一教学API开放平台</span>
+                    <img src="/icon/duyi_icon.png" style="width: 45px; margin: -2px 0px 10px 10px; padding: 0px"><span class="text-logo"></span><span class="text-slogan">渡一教学API开放平台</span>
                 </a>
             </div>
             <nav class="top-nav" role="navigation">
