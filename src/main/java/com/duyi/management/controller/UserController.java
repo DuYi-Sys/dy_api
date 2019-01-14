@@ -56,6 +56,7 @@ public class UserController extends BaseController {
 
             String str = RSAEncrypt.encrypt(account);
             Cookie cookie = new Cookie("uid", str);
+            cookie.setMaxAge(86400 * 3);
             resp.addCookie(cookie);
         }
         writeResult(resp, result.getStatusEnum().getValue(), result.getMsg(), null);
