@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Controller
-@RequestMapping(value = "/api/tuling")
+@RequestMapping(value = "/api/chat")
 public class TulingController extends BaseController {
     @Autowired
     TulingService tulingService;
