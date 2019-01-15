@@ -43,6 +43,7 @@ public class StudentController extends BaseController {
         resp.setContentType("text/html;charset=utf-8");
 
         logger.debug("student name:" + name);
+        logger.debug("student name:" + new String(name.getBytes(), "utf-8"));
 
         if (!RegExUtil.match("^[0-9]{4,16}$", sNo)) {
             writeResult(resp, RespStatusEnum.FAIL.getValue(), "学号必须为4-16位的数字组成", null);
