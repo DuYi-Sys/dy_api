@@ -8,8 +8,17 @@ public class User {
     private String email;
     private String appkey;
     private int status;
+    private int type;
     private int ctime;
     private int utime;
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
 
     public int getUtime() {
         return utime;
@@ -26,7 +35,6 @@ public class User {
     public void setAppkey(String appkey) {
         this.appkey = appkey;
     }
-
 
     public long getId() {
         return id;

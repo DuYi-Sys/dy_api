@@ -10,6 +10,8 @@
     <context:component-scan base-package="com.duyi"/>
     <mvc:annotation-driven/>
     <mvc:default-servlet-handler/>
+    <!--<mvc:resources location="/" mapping="/management/**/*.css" />-->
+    <!--<mvc:resources location="/" mapping="/management/**/*.js" />-->
 
     <!--<bean id="cookieFilter"  class="com.duyi.students.filter.CookieFilter"></bean>-->
 

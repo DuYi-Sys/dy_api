@@ -1,7 +1,6 @@
 package com.duyi.management.filter;
 
 import com.duyi.management.domain.User;
-import com.duyi.management.service.UserLogService;
 import com.duyi.management.service.UserService;
 import com.duyi.util.RSAEncrypt;
 import org.springframework.context.ApplicationContext;
@@ -16,12 +15,12 @@ import java.io.IOException;
 public class LoginFilter implements Filter {
 
     private static ApplicationContext ac;
-    private static UserLogService userLogService;
+    private static UserService userService;
 
     static {
         ac = new FileSystemXmlApplicationContext("classpath:applicationContext.xml");
 //        userService = (UserService) ac.getBean("userService");
-        userLogService = (UserLogService)ac.getBean("userLogService");
+        userService = (UserService)ac.getBean("userService");
     }
 
     @Override
@@ -45,7 +44,7 @@ public class LoginFilter implements Filter {
             if ("uid".equals(cookie.getName())) {
                 try {
                     String encodeSno = RSAEncrypt.decrypt(cookie.getValue());
-                    User user = userLogService.findByAccount(encodeSno);
+                    User user = userService.findByAccount(encodeSno);
                     if (user != null) {
                         filterChain.doFilter(servletRequest, servletResponse);
                         return;

@@ -13,6 +13,7 @@
             <li><a href="/management/index">主面板 <i class="im-screen"></i></a></li>
             <li><a href="/management/stu">学生信息管理系统 <i class="im-table2"></i></a></li>
             <li><a href="/management/mt">美团外卖系统 <i class="st-chart"></i></a></li>
+            <li><a href="/management/tuling">聊天机器人系统 <i class="im-github2"></i></a></li>
 
 ##            <li>
 ##                <a href="#"> Forms <i class="im-paragraph-justify"></i></a>
