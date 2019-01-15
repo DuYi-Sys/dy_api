@@ -72,20 +72,12 @@ public class StudentController extends BaseController {
 
         Student student = new Student();
         student.setsNo(sNo);
-        if(RegExUtil.match("[\\\\u4e00-\\\\u9fa5]+",URLDecoder.decode(name))) {
-            student.setName(URLDecoder.decode(name));
-        } else {
-            student.setName(name);
-        }
+        student.setName(URLDecoder.decode(name).trim());
         student.setEmail(email);
         student.setSex(sex);
         student.setBirth(birth);
         student.setPhone(phone);
-        if(RegExUtil.match("[\\\\u4e00-\\\\u9fa5]+",URLDecoder.decode(address))) {
-            student.setAddress(URLDecoder.decode(address));
-        } else {
-            student.setAddress(address);
-        }
+        student.setAddress(URLDecoder.decode(address));
         student.setAppkey(appkey);
         student.setCtime(TimeUtil.getNow());
         student.setUtime(TimeUtil.getNow());
