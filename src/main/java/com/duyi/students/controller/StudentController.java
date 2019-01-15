@@ -42,8 +42,8 @@ public class StudentController extends BaseController {
 
         resp.setContentType("text/html;charset=utf-8");
 
-        logger.debug("student name:" + name);
-        logger.debug("student name:" + new String(name.getBytes("ISO-8859-1"), "UTF-8"));
+        name = new String(name.getBytes("ISO-8859-1"), "UTF-8");
+        address = new String(address.getBytes("ISO-8859-1"), "UTF-8");
 
         if (!RegExUtil.match("^[0-9]{4,16}$", sNo)) {
             writeResult(resp, RespStatusEnum.FAIL.getValue(), "学号必须为4-16位的数字组成", null);
@@ -167,6 +167,9 @@ public class StudentController extends BaseController {
                        HttpServletResponse resp) throws IOException {
 
         resp.setContentType("text/html;charset=utf-8");
+
+        name = new String(name.getBytes("ISO-8859-1"), "UTF-8");
+        address = new String(address.getBytes("ISO-8859-1"), "UTF-8");
 
         if (!RegExUtil.match("^[0-9]{4,16}$", sNo)) {
             writeResult(resp, RespStatusEnum.FAIL.getValue(), "学号必须为4-16位的数字组成", null);
