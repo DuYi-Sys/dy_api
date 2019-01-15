@@ -33,8 +33,9 @@ public class StudentController extends BaseController {
                            @RequestParam(name = "birth") Integer birth,
                            @RequestParam(name = "phone") String phone,
                            @RequestParam(name="address") String address,
+                           HttpServletRequest req,
                            HttpServletResponse resp) throws Exception {
-
+        req.setCharacterEncoding("UTF-8");
         resp.setContentType("text/html;charset=utf-8");
 
         if (!RegExUtil.match("^[0-9]{4,16}$", sNo)) {
