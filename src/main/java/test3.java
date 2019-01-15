@@ -4,6 +4,7 @@ import com.duyi.tuling.service.TulingService;
 import com.duyi.util.TimeUtil;
 import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonObjectFormatVisitor;
 
+import java.net.URLDecoder;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -35,6 +36,8 @@ public class test3 {
 
 //        int pre = TimeUtil.getPreDate(10);
 //        System.out.println(pre);
+
+        System.out.println(URLDecoder.decode("%E5%BC%A0%E4%B8%89"));
 
     }
 
