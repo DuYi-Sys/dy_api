@@ -41,6 +41,7 @@ public class LoginFilter implements Filter {
 
         if (cookies == null) {
             response.sendRedirect("/login.html");
+            return;
         }
 
         for (Cookie cookie : cookies) {
