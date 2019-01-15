@@ -39,6 +39,10 @@ public class LoginFilter implements Filter {
 
         Cookie[] cookies = ((HttpServletRequest) servletRequest).getCookies();
 
+        if (cookies == null) {
+            response.sendRedirect("/login.html");
+        }
+
         for (Cookie cookie : cookies) {
 
             if ("uid".equals(cookie.getName())) {
