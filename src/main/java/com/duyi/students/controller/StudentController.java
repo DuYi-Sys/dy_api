@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.net.URLDecoder;
 import java.util.List;
 
 @Controller
@@ -66,15 +67,25 @@ public class StudentController extends BaseController {
             writeResult(resp, RespStatusEnum.FAIL.getValue(), "请填写住址", null);
             return;
         }
+        //[\\u4e00-\\u9fa5]+
+
 
         Student student = new Student();
         student.setsNo(sNo);
-        student.setName(name);
+        if(RegExUtil.match("[\\\\u4e00-\\\\u9fa5]+",URLDecoder.decode(name))) {
+            student.setName(URLDecoder.decode(name));
+        } else {
+            student.setName(name);
+        }
         student.setEmail(email);
         student.setSex(sex);
         student.setBirth(birth);
         student.setPhone(phone);
-        student.setAddress(address);
+        if(RegExUtil.match("[\\\\u4e00-\\\\u9fa5]+",URLDecoder.decode(address))) {
+            student.setAddress(URLDecoder.decode(address));
+        } else {
+            student.setAddress(address);
+        }
         student.setAppkey(appkey);
         student.setCtime(TimeUtil.getNow());
         student.setUtime(TimeUtil.getNow());
@@ -189,12 +200,20 @@ public class StudentController extends BaseController {
 
         Student student = new Student();
         student.setsNo(sNo);
-        student.setName(name);
+        if(RegExUtil.match("[\\\\u4e00-\\\\u9fa5]+",URLDecoder.decode(name))) {
+            student.setName(URLDecoder.decode(name));
+        } else {
+            student.setName(name);
+        }
         student.setEmail(email);
         student.setSex(sex);
         student.setBirth(birth);
         student.setPhone(phone);
-        student.setAddress(address);
+        if(RegExUtil.match("[\\\\u4e00-\\\\u9fa5]+",URLDecoder.decode(address))) {
+            student.setAddress(URLDecoder.decode(address));
+        } else {
+            student.setAddress(address);
+        }
         student.setUtime(TimeUtil.getNow());
         StudentService.updateStudentStatusEnum result = studentService.updateStudent(student);
         writeResult(resp,result.getStatusEnum().getValue(),result.getMsg(),null);
