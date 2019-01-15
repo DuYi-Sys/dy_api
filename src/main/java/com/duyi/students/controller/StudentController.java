@@ -6,6 +6,8 @@ import com.duyi.students.domain.Student;
 import com.duyi.students.service.StudentService;
 import com.duyi.util.RegExUtil;
 import com.duyi.util.TimeUtil;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +24,8 @@ import java.util.List;
 @RequestMapping(value = "/api/student")
 public class StudentController extends BaseController {
 
+    private static final Logger logger = LogManager.getLogger(StudentController.class);
+
     @Autowired
     StudentService studentService;
     @RequestMapping(value = "/addStudent",method = RequestMethod.GET)
@@ -35,8 +39,10 @@ public class StudentController extends BaseController {
                            @RequestParam(name="address") String address,
                            HttpServletRequest req,
                            HttpServletResponse resp) throws Exception {
-        req.setCharacterEncoding("UTF-8");
+
         resp.setContentType("text/html;charset=utf-8");
+
+        logger.debug("student name:" + name);
 
         if (!RegExUtil.match("^[0-9]{4,16}$", sNo)) {
             writeResult(resp, RespStatusEnum.FAIL.getValue(), "学号必须为4-16位的数字组成", null);
