@@ -31,7 +31,6 @@ public class AdminService {
         } catch (Exception e) {
             Admin admin1 = adminDao.queryByAccount(admin.getAccount());
             if (admin1 != null) {
-
                 return addAdminStatusEnum.EXIST_USER_ACCOUNT;
             } else {
                 e.printStackTrace();

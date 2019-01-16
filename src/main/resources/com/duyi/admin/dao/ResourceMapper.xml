@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.duyi.admin.dao.ResourcesDao">
+
+    <insert id="addResources" parameterType="com.duyi.admin.domain.Resources">
+
+        insert into adm_resources(url,power_id,ctime, utime) values( #{url}, #{powerId}, #{ctime}, #{utime});
+
+    </insert>
+
+    <select id="queryByPowerIdAndURL" resultType="com.duyi.admin.domain.Resources">
+
+        select * from adm_resources where power_id = #{powerId} and url = #{url};
+
+    </select>
+
+    <select id="queryBypowerId" parameterType="integer" resultType="com.duyi.admin.domain.Resources">
+
+       select * from adm_resources where power_id = #{powerId};
+
+    </select>
+
+
+</mapper>

@@ -1,8 +1,10 @@
 package com.duyi.admin.controller;
 
 import com.duyi.admin.domain.Admin;
+import com.duyi.admin.domain.Resources;
 import com.duyi.admin.domain.UserPower;
 import com.duyi.admin.service.AdminService;
+import com.duyi.admin.service.ResourcesService;
 import com.duyi.admin.service.UserPowerService;
 import com.duyi.common.BaseController;
 import com.duyi.common.RespStatusEnum;
@@ -10,7 +12,6 @@ import com.duyi.util.MD5Util;
 import com.duyi.util.RSAEncrypt;
 import com.duyi.util.RegExUtil;
 import com.duyi.util.TimeUtil;
-import jdk.nashorn.internal.codegen.Emitter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,7 +30,8 @@ public class AdminController extends BaseController {
     AdminService adminService;
     @Autowired
     UserPowerService userPowerService;
-
+    @Autowired
+    ResourcesService resourcesService;
     @RequestMapping(value = "/addAdmin", method = RequestMethod.GET)
     public void addAdmin(@RequestParam("account") String account,
                          @RequestParam("name") String name,
@@ -38,6 +40,7 @@ public class AdminController extends BaseController {
                          @RequestParam("email") String email,
                          HttpServletResponse response) throws IOException {
 
+        System.out.println("addAdmin执行了");
         response.setContentType("text/html;charset=utf-8");
         if (!RegExUtil.match("^[a-zA-Z0-9_]{4,16}$", account)) {
             writeResult(response, RespStatusEnum.FAIL.getValue(), "用户名必须为4-16位的字母数字下划线组成", null);
@@ -154,5 +157,30 @@ public class AdminController extends BaseController {
             String subject = "渡一教育平台权限通知";
             userPowerService.sendEmail(account, power, to, subject);
         }
+    }
+
+    @RequestMapping(value = "/addResource",method = RequestMethod.GET)
+    public void addResource(@RequestParam("url") String url,
+                            @RequestParam("powerId") Integer powerId,
+                            HttpServletResponse response) throws IOException {
+        response.setContentType("text/html;charset=utf-8");
+        if (url == null || "".equals(powerId)) {
+            writeResult(response, RespStatusEnum.FAIL.getValue(), "用户名必须为4-16位的字母数字下划线组成", null);
+            return;
+        }
+
+        if (!RegExUtil.match("^[0-9]{1,4}$", powerId.toString())) {
+            writeResult(response, RespStatusEnum.FAIL.getValue(), "权限必须是1-4位数字", null);
+            return;
+        }
+        Resources resources = new Resources();
+        resources.setUrl(url);
+        resources.setPowerId(powerId);
+        resources.setCtime(TimeUtil.getNow());
+        resources.setUtime(TimeUtil.getNow());
+        ResourcesService.AddResourcesStuates result = resourcesService.addResources(resources);
+        writeResult(response,result.getStatusEnum().getValue(),result.getMsg(),null);
+
+
     }
 }
