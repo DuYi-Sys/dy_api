@@ -640,7 +640,7 @@ white'>发送聊天内容</span></h2>
                 <p class=MsoNormal><a name=6840-1546847030879></a><span lang=EN-US>&nbsp;</span></p>
 
                 <p class=MsoNormal><a name=9130-1546847030879></a><span lang=EN-US>url</span>：<span
-                        lang=EN-US style='color:#393939'>/api/tuling/sendMsg</span></p>
+                        lang=EN-US style='color:#393939'>/api/chat/sendMsg</span></p>
 
                 <p class=MsoNormal><a name=7048-1546847030879></a><span lang=EN-US>method</span>：<span
                         lang=EN-US>get</span></p>

@@ -47,6 +47,7 @@
                 <value>classpath*:com/duyi/meituan/dao/*.xml</value>
                 <value>classpath*:com/duyi/upload/dao/*.xml</value>
                 <value>classpath*:com/duyi/statistic/dao/*.xml</value>
+                <value>classpath*:com/duyi/admin/dao/*.xml</value>
             </list>
         </property>
 

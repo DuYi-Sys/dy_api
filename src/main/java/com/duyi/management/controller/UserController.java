@@ -83,7 +83,7 @@ public class UserController extends BaseController {
                         HttpServletResponse resp) throws Exception {
 
         resp.setContentType("text/html;charset=utf-8");
-        System.out.println(account + password + rePassword + email);
+//        System.out.println(account + password + rePassword + email);
 
         if (!RegExUtil.match("^[a-zA-Z0-9_]{4,16}$", account)) {
             writeResult(resp, RespStatusEnum.FAIL.getValue(), "用户名必须为4-16位的字母数字下划线组成", null);
@@ -121,11 +121,7 @@ public class UserController extends BaseController {
         user.setAppkey(appkey);
         user.setCtime(TimeUtil.getNow());
         user.setUtime(TimeUtil.getNow());
-
-
-
         UserService.UserStatusEnum result = userService.addUser(user);
-
         writeResult(resp, result.getStatusEnum().getValue(), result.getMsg(), null);
         if (result.getStatusEnum() == RespStatusEnum.SUCCESS) {
             //发送激活邮件
