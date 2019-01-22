@@ -4,8 +4,8 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
-		http://www.springframework.org/schema/beans
-		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	   http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:component-scan base-package="com.duyi"/>
     <mvc:annotation-driven/>
@@ -111,4 +111,10 @@
             <value>4096</value>
         </property>
     </bean>
+
+    <bean id="adminFilter" class="com.duyi.admin.filter.AdminLoginFilter"></bean>
+    <bean id="LoginFilter" class="com.duyi.management.filter.LoginFilter"></bean>
+    <bean id="ApiFilter" class="com.duyi.management.filter.ApiFilter"></bean>
+
+
 </beans>

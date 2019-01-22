@@ -17,4 +17,10 @@
 
     </select>
 
+    <select id="queryByAccount" resultType="com.duyi.admin.domain.UserPower">
+
+        select * from adm_user_power where account = #{account};
+
+    </select>
+
 </mapper>

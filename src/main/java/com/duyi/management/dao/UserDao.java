@@ -3,6 +3,7 @@ package com.duyi.management.dao;
 import com.duyi.management.domain.User;
 import org.apache.ibatis.annotations.Param;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 public interface UserDao {
@@ -11,7 +12,7 @@ public interface UserDao {
 
     void update(User admin);
 
-    void updatePassword(User admin);
+    void updatePassword(@Param("account") String account, @Param("password") String password);
 
     User queryById(@Param("id") long id);
 

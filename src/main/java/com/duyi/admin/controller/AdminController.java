@@ -18,12 +18,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.ServletResponse;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Controller
-@RequestMapping("/manage/admin")
 public class AdminController extends BaseController {
 
     @Autowired
@@ -32,15 +32,13 @@ public class AdminController extends BaseController {
     UserPowerService userPowerService;
     @Autowired
     ResourcesService resourcesService;
-    @RequestMapping(value = "/addAdmin", method = RequestMethod.GET)
+    @RequestMapping(value = "/admin/addAdmin", method = RequestMethod.GET)
     public void addAdmin(@RequestParam("account") String account,
                          @RequestParam("name") String name,
                          @RequestParam("password") String password,
                          @RequestParam("rePassword") String rePassword,
                          @RequestParam("email") String email,
                          HttpServletResponse response) throws IOException {
-
-        System.out.println("addAdmin执行了");
         response.setContentType("text/html;charset=utf-8");
         if (!RegExUtil.match("^[a-zA-Z0-9_]{4,16}$", account)) {
             writeResult(response, RespStatusEnum.FAIL.getValue(), "用户名必须为4-16位的字母数字下划线组成", null);
@@ -89,10 +87,11 @@ public class AdminController extends BaseController {
 
     }
 
-    @RequestMapping(value = "/adminLogin", method = RequestMethod.POST)
+    @RequestMapping(value = "/manage/adminLogin", method = RequestMethod.POST)
     public void adminLogin(@RequestParam("account") String account,
                            @RequestParam("password") String password,
                            HttpServletResponse response) throws Exception {
+
         response.setContentType("text/html;charset=utf-8");
 
         if (!RegExUtil.match("^[a-zA-Z0-9_]{4,16}$", account)) {
@@ -107,17 +106,20 @@ public class AdminController extends BaseController {
 
         AdminService.LoginStatusEnum result = adminService.login(account, password);
         if (result.getStatusEnum() == RespStatusEnum.SUCCESS) {
+//            System.out.println(account);
             String addminId = RSAEncrypt.encrypt(account);
+//            System.out.println(addminId);
             Cookie cookie = new Cookie("adminId", addminId);
+            cookie.setPath("/");
             response.addCookie(cookie);
+//            System.out.println("adminId添加了cookie");
         }
-
-        writeResult(response, result.getStatusEnum().getValue(), result.getMsg(), null);
+        writeResult(response, result.getStatusEnum().getValue(), result.getMsg(), "");
 
     }
 
 
-    @RequestMapping(value = "/addUserPower",method = RequestMethod.GET)
+    @RequestMapping(value = "/admin/addUserPower",method = RequestMethod.GET)
     public void addUserPower(@RequestParam("account") String account,
                              @RequestParam("powerId") Integer powerId,
                              HttpServletResponse response) throws IOException {
@@ -159,7 +161,7 @@ public class AdminController extends BaseController {
         }
     }
 
-    @RequestMapping(value = "/addResource",method = RequestMethod.GET)
+    @RequestMapping(value = "/admin/addResource",method = RequestMethod.GET)
     public void addResource(@RequestParam("url") String url,
                             @RequestParam("powerId") Integer powerId,
                             HttpServletResponse response) throws IOException {

@@ -2,6 +2,7 @@ package com.duyi.admin.service;
 
 import com.duyi.admin.dao.AdminDao;
 import com.duyi.admin.domain.Admin;
+import com.duyi.admin.domain.AdminPower;
 import com.duyi.common.RespStatusEnum;
 import com.duyi.util.MD5Util;
 import com.duyi.util.MailUtil;
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.net.URLEncoder;
+import java.util.List;
 
 @Service
 public class AdminService {
@@ -42,6 +44,8 @@ public class AdminService {
     public Admin queryByAccount(String account) {
         return adminDao.queryByAccount(account);
     }
+
+    public List<AdminPower> queryAll() { return adminDao.queryAll(); }
 
     public AdminService.LoginStatusEnum login(String account, String password) {
         Admin admin = adminDao.queryByAccount(account);

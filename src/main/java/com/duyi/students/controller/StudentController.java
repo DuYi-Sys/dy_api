@@ -1,5 +1,7 @@
 package com.duyi.students.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.duyi.common.BaseController;
 import com.duyi.common.RespStatusEnum;
 import com.duyi.students.domain.Student;
@@ -123,7 +125,10 @@ public class StudentController extends BaseController {
         resp.setContentType("text/html;charset=utf-8");
         List<Student> findByPage = studentService.findByPage(appkey, page, size);
         int count = studentService.count();
-        writeResult(resp,RespStatusEnum.SUCCESS.getValue(),count,findByPage);//?
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("cont",count);
+        jsonObject.put("findByPage",findByPage);
+        writeResult(resp,RespStatusEnum.SUCCESS.getValue(),"查询成功",jsonObject);//?
 
     }
 

@@ -35,6 +35,8 @@ public class UserPowerService {
         return false;
     }
 
+
+
     public void sendEmail(String account, String power, String to, String subject) {
 
         //邮箱内容

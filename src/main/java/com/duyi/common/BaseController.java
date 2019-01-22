@@ -26,25 +26,25 @@ public class BaseController {
         resp.getWriter().write(result.toJSONString());
     }
 
-    public void writeResult(HttpServletResponse resp, String status, String msg, String userName) throws IOException {
-
-        JSONObject result = new JSONObject();
-
-        result.put("status", status);
-        result.put("msg", msg);
-        result.put("userName", userName);
-
-        resp.getWriter().write(result.toJSONString());
-    }
-
-    public void writeResult(HttpServletResponse resp, String status, int count, Object data) throws IOException {
-
-        JSONObject result = new JSONObject();
-
-        result.put("status", status);
-        result.put("count", count);
-        result.put("findBypageList", data);
-
-        resp.getWriter().write(result.toJSONString());
-    }
+//    public void writeResult(HttpServletResponse resp, String status, String msg, String userName) throws IOException {
+//
+//        JSONObject result = new JSONObject();
+//
+//        result.put("status", status);
+//        result.put("msg", msg);
+//        result.put("userName", userName);
+//
+//        resp.getWriter().write(result.toJSONString());
+//    }
+//
+//    public void writeResult(HttpServletResponse resp, String status, int count, Object data) throws IOException {
+//
+//        JSONObject result = new JSONObject();
+//
+//        result.put("status", status);
+//        result.put("count", count);
+//        result.put("findBypageList", data);
+//
+//        resp.getWriter().write(result.toJSONString());
+//    }
 }

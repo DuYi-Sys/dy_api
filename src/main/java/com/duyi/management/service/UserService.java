@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.net.URLEncoder;
-import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 @Service
@@ -61,6 +60,21 @@ public class UserService {
                 + "<div style='width:950px;font-family:arial;'>欢迎使用渡一教育平台，您的激活链接为：<br/><h2 style='color:green'><a href=" + yzm + ">" + yzm + "</a></h2><br/>本邮件由系统自动发出，请勿回复。<br/>感谢您的使用。<br/>黑龙江渡一信息技术开发有限公司</div>"
                 + "</div>");
         MailUtil.sendMail(to, subject, sb.toString());
+    }
+
+    /**
+     * 发送安全码
+     * @param toEmail
+     * @param subject
+     */
+    public void sendSecurityCode(String toEmail, String subject, String securityCode) {
+        //邮箱内容
+        StringBuffer sb = new StringBuffer();
+        String yzm = securityCode;
+        sb.append("<!DOCTYPE>" + "<div bgcolor='#f1fcfa'   style='border:1px solid #d9f4ee; font-size:14px; line-height:22px; color:#005aa0;padding-left:1px;padding-top:5px;   padding-bottom:5px;'><span style='font-weight:bold;'>温馨提示：</span>"
+                + "<div style='width:950px;font-family:arial;'>您的验证码为：" + yzm + "<br/>仅本次有效<br/>欢迎使用渡一教育平台, <br/>本邮件自动发出，请勿回复。<br/>感谢您的使用。<br/>黑龙江渡一信息技术开发有限公司</div>"
+                + "</div>");
+        MailUtil.sendMail(toEmail, subject, sb.toString());
     }
 
     /**
@@ -131,7 +145,39 @@ public class UserService {
         return false;
     }
 
+    public UserService.UpadePasswordStatusEnum upadePassword (String account, String password) {
+        try {
+            userDao.updatePassword(account,password);
+            return UpadePasswordStatusEnum.SUCCESS;
+        } catch (Exception e) {
+            User u = userDao.findByAccount(account);
+            if(u == null) {
+                return UpadePasswordStatusEnum.NOT_FOND_USER;
+            } else {
+                return UpadePasswordStatusEnum.UNKNOW_ERROR;
+            }
+        }
+    }
+    public enum UpadePasswordStatusEnum {
 
+        NOT_FOND_USER(RespStatusEnum.FAIL, "用户不存在"), SUCCESS(RespStatusEnum.SUCCESS, "修改密码成功"), UNKNOW_ERROR(RespStatusEnum.FAIL, "未知错误");
+
+        private RespStatusEnum statusEnum;
+        private String msg;
+
+        UpadePasswordStatusEnum(RespStatusEnum statusEnum, String msg) {
+            this.statusEnum = statusEnum;
+            this.msg = msg;
+        }
+
+        public RespStatusEnum getStatusEnum() {
+            return statusEnum;
+        }
+
+        public String getMsg() {
+            return msg;
+        }
+    }
     public enum UserLoginStatusEnum {
         NOT_FOUND_USERNAME("找不到用户名", RespStatusEnum.FAIL), PASSWORD_ERROR("密码错误", RespStatusEnum.FAIL), SUCCESS("登录成功", RespStatusEnum.SUCCESS);
 
@@ -220,29 +266,13 @@ public class UserService {
     }
 
 
-
-//    public User login(String account, String password) {
-//
-//        User user = userDao.findByAccount(account);
-//
-//        String md5Password = MD5Util.MD5Encode(password, "utf8");
-//
-//        if (user != null && user.getPassword().equals(md5Password)) {
-//
-//            return user;
-//
-//        } else {
-//
-//            return null;
-//
-//        }
-//    }
-
-
-
-
-
-
-
+    public String securityCode() {
+        String securityCode = "";
+        for (int i = 0 ; i < 6 ; i ++) {
+            int code = (int)( Math.random() * 9);
+            securityCode += code;
+        }
+        return securityCode;
+    }
 
 }
