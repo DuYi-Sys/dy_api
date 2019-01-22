@@ -619,7 +619,7 @@
                         <td width=229 style='width:172.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt'>
-                            <p class=MsoNormal><span style='font-family:"Tahoma",sans-serif'>当需要返回数据内容是，该字段非空</span></p>
+                            <p class=MsoNormal><span style='font-family:"Tahoma",sans-serif'>当需要返回数据内容时，该字段非空</span></p>
                         </td>
                     </tr>
                 </table>
