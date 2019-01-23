@@ -20,7 +20,7 @@
 
     <update id="updatePassword">
 
-        update sys_user set password = #{password} where account = #{account};
+        update sys_user set password = #{password} where email = #{email};
 
     </update>
 

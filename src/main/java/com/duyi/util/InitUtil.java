@@ -24,13 +24,9 @@ public class InitUtil {
     @PostConstruct
     public void executeInit() {
         adminPowerList =  adminService.queryAll();
-        System.out.println("-------------------");
         for(AdminPower admin :adminPowerList) {
-//            System.out.println(admin);
             adminPowerSet.add(getPowerkey(admin.getAccount(), admin.getUrl()));
         }
-
-        System.out.println("-------------------");
     }
 
     public static String getPowerkey(String account, String url) {

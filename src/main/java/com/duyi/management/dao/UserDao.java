@@ -12,7 +12,7 @@ public interface UserDao {
 
     void update(User admin);
 
-    void updatePassword(@Param("account") String account, @Param("password") String password);
+    void updatePassword(@Param("email") String email, @Param("password") String password);
 
     User queryById(@Param("id") long id);
 

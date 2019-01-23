@@ -145,12 +145,12 @@ public class UserService {
         return false;
     }
 
-    public UserService.UpadePasswordStatusEnum upadePassword (String account, String password) {
+    public UserService.UpadePasswordStatusEnum upadePassword (String email, String password) {
         try {
-            userDao.updatePassword(account,password);
+            userDao.updatePassword(email,password);
             return UpadePasswordStatusEnum.SUCCESS;
         } catch (Exception e) {
-            User u = userDao.findByAccount(account);
+            User u = userDao.findByEmail(email);
             if(u == null) {
                 return UpadePasswordStatusEnum.NOT_FOND_USER;
             } else {

@@ -184,7 +184,7 @@ public class UserController extends BaseController {
     /**
      * 修改密码
      *
-     * @param account      帐号
+     * @param email      邮箱
      * @param password     密码
      * @param rePassword   确认密码
      * @param code 安全码
@@ -192,14 +192,16 @@ public class UserController extends BaseController {
      */
     @RequestMapping(value = "/changePassword", method = RequestMethod.GET)
     @ResponseBody
-    public void changePassword(@RequestParam("account") String account,
+    public void changePassword(@RequestParam("email") String email,
                                @RequestParam("password") String password,
                                @RequestParam("rePassword") String rePassword,
                                @RequestParam("code") String code,
                                HttpServletResponse response) throws Exception {
+
         response.setContentType("text/html;charset=utf-8");
-        if (!RegExUtil.match("^[a-zA-Z0-9_]{4,16}$", account)) {
-            writeResult(response, RespStatusEnum.FAIL.getValue(), "用户名必须为4-16位的字母数字下划线组成", null);
+
+        if (!RegExUtil.match("^[A-Za-z\\d]+([-_.][A-Za-z\\d]+)*@([A-Za-z\\d]+[-.])+[A-Za-z\\d]{2,5}$", email)) {
+            writeResult(response, RespStatusEnum.FAIL.getValue(), "邮箱格式不正确", null);
             return;
         }
 
@@ -213,30 +215,18 @@ public class UserController extends BaseController {
             return;
         }
 
-//        if (!RegExUtil.match("^[A-Za-z\\d]+([-_.][A-Za-z\\d]+)*@([A-Za-z\\d]+[-.])+[A-Za-z\\d]{2,5}$", email)) {
-//            writeResult(response, RespStatusEnum.FAIL.getValue(), "邮箱格式不正确", null);
-//            return;
-//        }
+        if(code == null || "".equals(code)) {
+            writeResult(response, RespStatusEnum.FAIL.getValue(), "请先获取验证码", null);
+            return;
+        }
 
         if (!securityCode.equals(code)) {
-            writeResult(response, RespStatusEnum.FAIL.getValue(), "您的安全码不正确", null);
+            writeResult(response, RespStatusEnum.FAIL.getValue(), "您的验证码不正确", null);
             return;
         }
         password = MD5Util.MD5Encode(password, "utf8");
-        UserService.UpadePasswordStatusEnum result = userService.upadePassword(account,password);
+        UserService.UpadePasswordStatusEnum result = userService.upadePassword(email,password);
         writeResult(response,result.getStatusEnum().getValue(),result.getMsg(),null);
-
-//        if(!hasSendCode) {
-//            String to = email;// 收件人
-//            String subject = "渡一用户激活";
-//            boolean b = userService.checkEmail(email);
-//            if(!b) {
-//                writeResult(response,RespStatusEnum.FAIL.getValue(),"邮箱不存在",null);
-//                return;
-//            }
-//            userService.sendSecurityCode(to,subject);
-//            writeResult(response,RespStatusEnum.SUCCESS.getValue(), "请前往邮箱获取安全码",null);
-//        }
 
     }
 
@@ -267,7 +257,6 @@ public class UserController extends BaseController {
             return;
         }
         securityCode = userService.securityCode();
-        System.out.println(securityCode);
         userService.sendSecurityCode(to, subject, securityCode);
         writeResult(response, RespStatusEnum.SUCCESS.getValue(), "请前往邮箱获取安全码", null);
 

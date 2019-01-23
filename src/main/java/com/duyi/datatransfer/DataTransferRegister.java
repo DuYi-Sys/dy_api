@@ -9,13 +9,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Component
+//@Component
 
 public class DataTransferRegister {
     public static Map<String, DataTransfer> map = new HashMap<>();
-    @Autowired
+//    @Autowired
     private  List<DataTransfer> list;
-    @PostConstruct
+//    @PostConstruct
     public void init() throws Exception {
         System.out.println(list.size());
         for(DataTransfer d : list) {
