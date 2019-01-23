@@ -26,7 +26,7 @@ public class InitUtil {
         adminPowerList =  adminService.queryAll();
         System.out.println("-------------------");
         for(AdminPower admin :adminPowerList) {
-            System.out.println(admin);
+//            System.out.println(admin);
             adminPowerSet.add(getPowerkey(admin.getAccount(), admin.getUrl()));
         }
 

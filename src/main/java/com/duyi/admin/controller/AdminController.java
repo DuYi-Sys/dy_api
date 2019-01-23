@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.ServletResponse;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -166,8 +165,8 @@ public class AdminController extends BaseController {
                             @RequestParam("powerId") Integer powerId,
                             HttpServletResponse response) throws IOException {
         response.setContentType("text/html;charset=utf-8");
-        if (url == null || "".equals(powerId)) {
-            writeResult(response, RespStatusEnum.FAIL.getValue(), "用户名必须为4-16位的字母数字下划线组成", null);
+        if (url == null || "".equals(url)) {
+            writeResult(response, RespStatusEnum.FAIL.getValue(), "权限路径不能为空", null);
             return;
         }
 
