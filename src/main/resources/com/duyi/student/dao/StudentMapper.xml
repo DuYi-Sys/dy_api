@@ -41,9 +41,9 @@
 
     </select>
 
-    <select id="getPageSum" resultType="integer">
+    <select id="getPageSum" parameterType="String" resultType="integer">
 
-        select count(1) from stu_student;
+        select count(1) from stu_student where appkey = #{appkey};
 
     </select>
 </mapper>

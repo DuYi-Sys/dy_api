@@ -60,8 +60,8 @@ public class StudentService {
      * 获取总条数
      * @return
      */
-    public int count() {
-        return studentDao.getPageSum();
+    public int count(String appkey) {
+        return studentDao.getPageSum(appkey);
     }
 
     /**

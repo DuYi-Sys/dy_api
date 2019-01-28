@@ -123,7 +123,7 @@ public class StudentController extends BaseController {
 
         resp.setContentType("text/html;charset=utf-8");
         List<Student> findByPage = studentService.findByPage(appkey, page, size);
-        int count = studentService.count();
+        int count = studentService.count(appkey);
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("cont",count);
         jsonObject.put("findByPage",findByPage);

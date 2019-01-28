@@ -18,5 +18,5 @@ public interface StudentDao {
 
     Student findBySno(@Param(value = "sNo") String sNo);
 
-    int getPageSum();
+    int getPageSum(String appkey);
 }
