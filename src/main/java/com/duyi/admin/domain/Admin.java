@@ -1,8 +1,10 @@
 package com.duyi.admin.domain;
 
+import com.duyi.datatransfer.DataTansferAble;
+
 import java.util.Objects;
 
-public class Admin {
+public class Admin implements DataTansferAble {
     private int id;
     private String account;
     private String name;

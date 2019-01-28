@@ -83,7 +83,6 @@ public class AdminController extends BaseController {
 
         }
 
-
     }
 
     @RequestMapping(value = "/manage/adminLogin", method = RequestMethod.POST)
@@ -105,13 +104,10 @@ public class AdminController extends BaseController {
 
         AdminService.LoginStatusEnum result = adminService.login(account, password);
         if (result.getStatusEnum() == RespStatusEnum.SUCCESS) {
-//            System.out.println(account);
             String addminId = RSAEncrypt.encrypt(account);
-//            System.out.println(addminId);
             Cookie cookie = new Cookie("adminId", addminId);
             cookie.setPath("/");
             response.addCookie(cookie);
-//            System.out.println("adminId添加了cookie");
         }
         writeResult(response, result.getStatusEnum().getValue(), result.getMsg(), "");
 

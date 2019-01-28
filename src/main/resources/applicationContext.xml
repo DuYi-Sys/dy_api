@@ -2,14 +2,16 @@
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
 	   http://www.springframework.org/schema/beans
-	   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <context:component-scan base-package="com.duyi"/>
     <mvc:annotation-driven/>
     <mvc:default-servlet-handler/>
+    <aop:aspectj-autoproxy  proxy-target-class="true" />
     <!--<mvc:resources location="/" mapping="/management/**/*.css" />-->
     <!--<mvc:resources location="/" mapping="/management/**/*.js" />-->
 
@@ -17,6 +19,8 @@
 
     <context:property-placeholder ignore-unresolvable="true" location="classpath:database.properties"/>
 
+    <bean id="dataTransferAOPUtil" class="com.duyi.datatransfer.aop.DataTransferAOPUtil">
+    </bean>
     <bean id="datasource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
         <!--驱动类名 -->
         <property name="driverClass" value="${db.driver}" />

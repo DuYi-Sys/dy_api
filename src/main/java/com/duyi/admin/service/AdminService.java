@@ -4,6 +4,8 @@ import com.duyi.admin.dao.AdminDao;
 import com.duyi.admin.domain.Admin;
 import com.duyi.admin.domain.AdminPower;
 import com.duyi.common.RespStatusEnum;
+import com.duyi.datatransfer.DataTransfer;
+import com.duyi.datatransfer.DataTransferUtil;
 import com.duyi.util.MD5Util;
 import com.duyi.util.MailUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,9 +30,11 @@ public class AdminService {
             adminDao.addAdmin(admin);
             //添加权限
 //            userPowerService.addUserPower(admin.getAccount(),powerId);
+//            DataTransferUtil.act(Admin.class, DataTransferUtil.DataActType.CREATE, null, admin);
             return addAdminStatusEnum.SUCCESS;
 
         } catch (Exception e) {
+            e.printStackTrace();
             Admin admin1 = adminDao.queryByAccount(admin.getAccount());
             if (admin1 != null) {
                 return addAdminStatusEnum.EXIST_USER_ACCOUNT;

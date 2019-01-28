@@ -1,10 +1,12 @@
 package com.duyi.util;
 
-import com.duyi.admin.domain.Admin;
 import com.duyi.admin.domain.AdminPower;
 import com.duyi.admin.service.AdminService;
-import com.duyi.admin.service.ResourcesService;
-import com.duyi.admin.service.UserPowerService;
+import com.duyi.datatransfer.aop.DataTransferAOP;
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -21,11 +23,22 @@ public class InitUtil {
     public static List<AdminPower> adminPowerList ;
     public static Set<String> adminPowerSet = new HashSet<>();
 
+    @Pointcut("execution(* com.duyi..*Dao.*(..))")
+    private void pointCut(){};
+
     @PostConstruct
-    public void executeInit() {
-        adminPowerList =  adminService.queryAll();
-        for(AdminPower admin :adminPowerList) {
-            adminPowerSet.add(getPowerkey(admin.getAccount(), admin.getUrl()));
+    @Before("pointCut()")
+    public void executeInit(JoinPoint joinPoint) {
+        System.out.println("执行了AOP1");
+        MethodSignature signature = (MethodSignature) joinPoint.getSignature();
+        DataTransferAOP dataTransferAOP = signature.getMethod().getDeclaredAnnotation(DataTransferAOP.class);
+        System.out.println("执行了AOP2");
+        if(dataTransferAOP != null) {
+            System.out.println("执行AOP3");
+            adminPowerList =  adminService.queryAll();
+            for(AdminPower admin :adminPowerList) {
+                adminPowerSet.add(getPowerkey(admin.getAccount(), admin.getUrl()));
+            }
         }
     }
 
