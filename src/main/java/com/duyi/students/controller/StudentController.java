@@ -1,6 +1,8 @@
 package com.duyi.students.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.duyi.common.BaseController;
 import com.duyi.common.RespStatusEnum;
 import com.duyi.students.domain.Student;
@@ -171,9 +173,6 @@ public class StudentController extends BaseController {
                        HttpServletResponse resp) throws IOException {
 
         resp.setContentType("text/html;charset=utf-8");
-
-        name = new String(name.getBytes("ISO-8859-1"), "UTF-8");
-        address = new String(address.getBytes("ISO-8859-1"), "UTF-8");
 
         if (!RegExUtil.match("^[0-9]{4,16}$", sNo)) {
             writeResult(resp, RespStatusEnum.FAIL.getValue(), "学号必须为4-16位的数字组成", null);

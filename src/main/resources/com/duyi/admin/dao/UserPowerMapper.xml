@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.duyi.admin.dao.UserPowerDao">
+
+    <insert id="addPower" parameterType="com.duyi.admin.domain.UserPower">
+
+        insert into adm_user_power(account,power_id,ctime, utime) values( #{account}, #{powerId}, #{ctime}, #{utime});
+
+    </insert>
+
+    <select id="queryByAccountAndPowerId" resultType="com.duyi.admin.domain.UserPower">
+
+        select * from adm_user_power where account = #{account} and power_id = #{powerId};
+
+    </select>
+
+    <select id="queryByAccount" resultType="com.duyi.admin.domain.UserPower">
+
+        select * from adm_user_power where account = #{account};
+
+    </select>
+
+</mapper>

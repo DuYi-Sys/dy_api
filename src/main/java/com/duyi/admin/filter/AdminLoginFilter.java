@@ -1,29 +1,27 @@
-package com.duyi.management.filter;
+package com.duyi.admin.filter;
 
-import com.duyi.management.domain.User;
-import com.duyi.management.service.UserService;
+import com.duyi.admin.domain.Admin;
+import com.duyi.admin.domain.AdminPower;
+import com.duyi.admin.service.AdminService;
+import com.duyi.common.BaseController;
+import com.duyi.common.RespStatusEnum;
+import com.duyi.util.InitUtil;
 import com.duyi.util.RSAEncrypt;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
+import org.springframework.web.bind.annotation.CookieValue;
 
 import javax.servlet.*;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
-public class LoginFilter implements Filter {
+public class AdminLoginFilter extends BaseController implements Filter {
 
-//    private static ApplicationContext ac;
-//    private static UserService userService;
     @Autowired
-    UserService userService;
-
-//    static {
-//        ac = new FileSystemXmlApplicationContext("classpath:applicationContext.xml");
-//        userService = (UserService)ac.getBean("userService");
-//    }
+    AdminService adminService;
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -39,20 +37,22 @@ public class LoginFilter implements Filter {
 
         StringBuffer path = ((HttpServletRequest) servletRequest).getRequestURL();
 
-        Cookie[] cookies = ((HttpServletRequest) servletRequest).getCookies();
+        response.setContentType("text/html;charset=utf-8");
+        response.setHeader("Access-Control-Allow-Origin", "*");
 
+        Cookie[] cookies = ((HttpServletRequest) servletRequest).getCookies();
         if (cookies == null) {
-            response.sendRedirect("/login.html");
+            response.sendRedirect("/adminLogin.html");
             return;
         }
 
         for (Cookie cookie : cookies) {
-
-            if ("uid".equals(cookie.getName())) {
+            if ("adminId".equals(cookie.getName())) {
                 try {
-                    String encodeSno = RSAEncrypt.decrypt(cookie.getValue());
-                    User user = userService.findByAccount(encodeSno);
-                    if (user != null) {
+                    String account = RSAEncrypt.decrypt(cookie.getValue());
+                    Admin admin = adminService.queryByAccount(account);
+                    String resource = request.getRequestURI();
+                    if (admin != null && InitUtil.hasPower(admin.getAccount(), resource)) {
                         filterChain.doFilter(servletRequest, servletResponse);
                         return;
                     }
@@ -61,12 +61,12 @@ public class LoginFilter implements Filter {
                 }
             }
         }
-        response.sendRedirect("/login.html");
+        response.sendRedirect("/adminLogin.html");
     }
+
 
     @Override
     public void destroy() {
 
     }
-
 }

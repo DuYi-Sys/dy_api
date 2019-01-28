@@ -382,21 +382,5 @@
 <script src="assets/js/jquery.sprFlat.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/pages/blank.js"></script>
-<script>
-    window.onload = function() {
-        var ifr = document.getElementById("iframeContent");
-        console.log(ifr.getBoundingClientRect().top);
-        console.log(window.innerHeight);
-        ifr.scrolling = "no";
-        console.log(ifr.contentWindow.document.body.scrollHeight);
-        ifr.style.height = ifr.contentWindow.document.body.scrollHeight + "px";
-    }
-</script>
-<style>
-    #iframeContent {
-        scrolling : no
-    }
-</style>
 </body>
-
 </html>

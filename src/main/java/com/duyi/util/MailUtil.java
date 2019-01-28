@@ -25,6 +25,18 @@ public class MailUtil {
     }
 
     public static boolean sendMail(String toUser, String subject, String content) {
+        long begin = System.currentTimeMillis();
+        MailThread mailThread = new MailThread(toUser, subject, content);
+        try {
+            mailThread.run();
+            System.out.println(System.currentTimeMillis() - begin);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public static boolean realSendMail(String toUser, String subject, String content){
         logger.info("开始发送邮件");
         final String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
         Properties properties = new Properties();
@@ -82,6 +94,25 @@ public class MailUtil {
         }
 
         return true;
+    }
+
+
+
+    public static class MailThread implements Runnable{
+        private String toUser;
+        private String subject;
+        private String content;
+
+        public MailThread(String toUser, String subject, String content) {
+            this.toUser = toUser;
+            this.subject = subject;
+            this.content = content;
+        }
+
+        @Override
+        public void run() {
+            realSendMail(this.toUser, this.subject, this.content);
+        }
     }
 
     public static void main(String[] args) {

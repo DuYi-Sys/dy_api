@@ -18,9 +18,9 @@
 
     </update>
 
-    <update id="updatePassword" parameterType="com.duyi.management.domain.User"  >
+    <update id="updatePassword">
 
-        update sys_user set password = #{password} where account = #{account};
+        update sys_user set password = #{password} where email = #{email};
 
     </update>
 

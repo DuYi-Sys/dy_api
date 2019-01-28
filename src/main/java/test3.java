@@ -1,6 +1,8 @@
 import com.alibaba.fastjson.JSONObject;
+import com.duyi.management.service.UserService;
 import com.duyi.tuling.controller.TulingController;
 import com.duyi.tuling.service.TulingService;
+import com.duyi.util.MD5Util;
 import com.duyi.util.TimeUtil;
 import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonObjectFormatVisitor;
 
@@ -36,6 +38,11 @@ public class test3 {
 
 //        int pre = TimeUtil.getPreDate(10);
 //        System.out.println(pre);
+        System.out.println(MD5Util.MD5Encode("123456","utf-8"));
+
+//        UserService service = new UserService();
+//        String securityCode = service.securityCode();
+//        System.out.println(securityCode);
 
         System.out.println(URLDecoder.decode("%E5%BC%A0%E4%B8%89"));
 

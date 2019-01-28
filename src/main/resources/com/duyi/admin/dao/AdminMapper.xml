@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.duyi.admin.dao.AdminDao">
+
+    <insert id="addAdmin" parameterType="com.duyi.admin.domain.Admin">
+
+        insert into adm_user(account,name,password,email,ctime, utime) values( #{account}, #{name}, #{password}, #{email}, #{ctime}, #{utime});
+
+    </insert>
+
+    <select id="queryByAccount" resultType="com.duyi.admin.domain.Admin">
+
+        select * from adm_user where account = #{account};
+
+    </select>
+
+    <select id="queryByEmail" resultType="com.duyi.admin.domain.Admin">
+
+        select * from adm_user where email = #{email};
+
+    </select>
+
+    <select id="queryAll" resultType="com.duyi.admin.domain.AdminPower">
+
+       select account,up.power_id,url,sign from adm_user_power up left join adm_resources ar on up.power_id = ar.power_id ;
+
+    </select>
+</mapper>
