@@ -13,6 +13,13 @@ public class StudentService {
     @Autowired
     StudentDao studentDao;
 
+    public List<Student> searchStudent(String appkey, int sex, String search, int offset, int size) {
+        return studentDao.searchStudent(appkey, sex, search, offset, size);
+    }
+    public int searchStudentCount(String appkey, int sex, String search) {
+        return studentDao.searchStudentCount(appkey, sex, search);
+    }
+
     /**
      * 添加一个学生
      * @param student

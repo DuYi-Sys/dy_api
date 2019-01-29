@@ -9,6 +9,9 @@ import com.duyi.students.domain.Student;
 import com.duyi.students.service.StudentService;
 import com.duyi.util.RegExUtil;
 import com.duyi.util.TimeUtil;
+import org.apache.ibatis.annotations.Param;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -108,7 +111,7 @@ public class StudentController extends BaseController {
         resp.setContentType("text/html;charset=utf-8");
 
         List<Student> findAll = studentService.findAll(appkey);
-        writeResult(resp,RespStatusEnum.SUCCESS.getValue(),"查询成功",findAll);//?
+        writeResult(resp,RespStatusEnum.SUCCESS.getValue(),"查询成功",findAll);
     }
 
     /**
@@ -124,11 +127,20 @@ public class StudentController extends BaseController {
     public void findByPage(@RequestParam(name = "appkey") String appkey, @RequestParam(name = "page") int page, @RequestParam(name = "size") int size, HttpServletRequest res, HttpServletResponse resp ) throws IOException {
 
         resp.setContentType("text/html;charset=utf-8");
+
+        if(page <= 0) {
+            page = 1;
+        }
+
+        if(size < 1 ) {
+            size = 1;
+        }
+
         List<Student> findByPage = studentService.findByPage(appkey, page, size);
         int count = studentService.count(appkey);
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("cont",count);
-        jsonObject.put("findByPage",findByPage);
+        jsonObject.put("searchList",findByPage);
         writeResult(resp,RespStatusEnum.SUCCESS.getValue(),"查询成功",jsonObject);
 
     }
@@ -223,6 +235,42 @@ public class StudentController extends BaseController {
         student.setUtime(TimeUtil.getNow());
         StudentService.updateStudentStatusEnum result = studentService.updateStudent(student);
         writeResult(resp,result.getStatusEnum().getValue(),result.getMsg(),null);
+
+    }
+
+    @RequestMapping(value = "/searchStudent", method = RequestMethod.GET)
+    public void searchStudent(
+            @RequestParam(name = "appkey") String appkey,
+            @RequestParam(name = "sex") int sex,
+            @RequestParam(name = "search") String search,
+            @RequestParam(name = "page") int page,
+            @RequestParam(name = "size") int size,
+            HttpServletRequest res,
+            HttpServletResponse resp ) throws IOException {
+
+        resp.setContentType("text/html;charset=utf-8");
+
+        if ( search == null || "".equals ( search ) ) {
+            writeResult(resp,RespStatusEnum.FAIL.getValue(),"请输入搜索条件",null);
+            return;
+        }
+
+        if(page <= 0) {
+            page = 1;
+        }
+
+        if(size < 1 ) {
+
+            size = 1;
+
+        }
+
+        List<Student> searchList = studentService.searchStudent(appkey, sex, search, (page - 1) * size, size);
+        int count = studentService.searchStudentCount(appkey, sex, search);
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("cont",count);
+        jsonObject.put("searchList",searchList);
+        writeResult(resp,RespStatusEnum.SUCCESS.getValue(),"查询成功",jsonObject);
 
     }
 

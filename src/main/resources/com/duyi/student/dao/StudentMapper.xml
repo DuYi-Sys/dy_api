@@ -5,8 +5,20 @@
 
 <mapper namespace="com.duyi.students.dao.StudentDao">
 
-    <insert id="add" parameterType="com.duyi.students.domain.Student">
+    <sql id="abc">
+        appkey = #{appkey} and
+        <if test="sex != -1">
+            sex = #{sex} and
+        </if>
+        (
+        name like concat(concat('%',#{search}),'%') or
+        email like concat(concat('%',#{search}),'%') or
+        sno like concat(concat('%',#{search}),'%')or
+        address like concat(concat('%',#{search}),'%')
+        )
+    </sql>
 
+    <insert id="add" parameterType="com.duyi.students.domain.Student">
         insert into stu_student(sno, name, email,sex,birth,phone,address,appkey,ctime,utime)values (#{sNo},#{name},#{email},#{sex},#{birth},#{phone},#{address},#{appkey},#{ctime},#{utime})
 
     </insert>
@@ -45,5 +57,31 @@
 
         select count(1) from stu_student where appkey = #{appkey};
 
+    </select>
+
+    <select id="searchStudent" resultType="com.duyi.students.domain.Student">
+        select *
+        from duyi_api.stu_student
+        where
+          appkey = #{appkey} and
+          <if test="sex != -1">
+            sex = #{sex} and
+          </if>
+          (
+            name like concat(concat('%',#{search}),'%') or
+            email like concat(concat('%',#{search}),'%') or
+            sno like concat(concat('%',#{search}),'%')or
+            address like concat(concat('%',#{search}),'%')
+          )
+        limit #{offset}, #{size};
+    </select>
+
+
+    <select id="searchStudentCount" resultType="java.lang.Integer">
+        select count(1)
+        from duyi_api.stu_student
+        where
+          <include refid="abc"></include>
+        ;
     </select>
 </mapper>

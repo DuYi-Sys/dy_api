@@ -19,4 +19,7 @@ public interface StudentDao {
     Student findBySno(@Param(value = "sNo") String sNo);
 
     int getPageSum(String appkey);
+
+    List<Student> searchStudent(@Param("appkey") String appkey, @Param("sex") int sex, @Param("search") String search, @Param("offset") int offset, @Param("size") int size);
+    int searchStudentCount(@Param("appkey") String appkey, @Param("sex") int sex, @Param("search") String search);
 }
