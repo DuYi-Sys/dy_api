@@ -1,10 +1,13 @@
 package com.duyi.util;
 
-import com.duyi.admin.domain.Admin;
 import com.duyi.admin.domain.AdminPower;
 import com.duyi.admin.service.AdminService;
-import com.duyi.admin.service.ResourcesService;
-import com.duyi.admin.service.UserPowerService;
+import com.duyi.datatransfer.aop.DataTransferAOP;
+import javafx.application.Application;
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -21,9 +24,14 @@ public class InitUtil {
     public static List<AdminPower> adminPowerList ;
     public static Set<String> adminPowerSet = new HashSet<>();
 
+    @Pointcut("execution(* com.duyi..*Dao.*(..))")
+    private void pointCut(){};
+
     @PostConstruct
     public void executeInit() {
+        System.out.println("初始化执行");
         adminPowerList =  adminService.queryAll();
+        System.out.println(adminPowerList);
         for(AdminPower admin :adminPowerList) {
             adminPowerSet.add(getPowerkey(admin.getAccount(), admin.getUrl()));
         }

@@ -1,12 +1,17 @@
 package com.duyi.datatransfer;
 
 public class DataTransferUtil {
-    public static void act(String tableName, DataActType dataActType, Object originData, Object nowData ){
-        DataTransfer dataTransfer = DataTransferRegister.map.get(tableName+"-"+dataActType.getValue());
+    public static <T extends DataTansferAble> void act(Class<T> clazz, DataActType dataActType, T originData, T nowData ){
+        DataTransfer dataTransfer = DataTransferRegister.getDataTransfer(clazz);
         if (dataTransfer != null) {
-            dataTransfer.execute(originData,nowData);
+            switch (dataActType) {
+                case CREATE: dataTransfer.create(originData, nowData);break;
+                case UPDATE: dataTransfer.update(originData, nowData);break;
+                case DELETE: dataTransfer.delete(originData, nowData);break;
+            }
         }
     }
+
 
 
     public  enum DataActType{

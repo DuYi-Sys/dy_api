@@ -6,7 +6,6 @@ import com.duyi.util.MD5Util;
 import com.duyi.util.TimeUtil;
 import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonObjectFormatVisitor;
 
-import java.net.URLDecoder;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -43,8 +42,6 @@ public class test3 {
 //        UserService service = new UserService();
 //        String securityCode = service.securityCode();
 //        System.out.println(securityCode);
-
-        System.out.println(URLDecoder.decode("%E5%BC%A0%E4%B8%89"));
 
     }
 

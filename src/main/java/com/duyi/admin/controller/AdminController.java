@@ -8,6 +8,7 @@ import com.duyi.admin.service.ResourcesService;
 import com.duyi.admin.service.UserPowerService;
 import com.duyi.common.BaseController;
 import com.duyi.common.RespStatusEnum;
+import com.duyi.datatransfer.DataTansferAble;
 import com.duyi.util.MD5Util;
 import com.duyi.util.RSAEncrypt;
 import com.duyi.util.RegExUtil;
@@ -73,7 +74,7 @@ public class AdminController extends BaseController {
         admin.setCtime(TimeUtil.getNow());
         admin.setUtime(TimeUtil.getNow());
         AdminService.addAdminStatusEnum result = adminService.addAdmin(admin);
-        writeResult(response, result.getStatusEnum().getValue(), result.getMsg(), null);
+        writeResult(response, result.getStatusEnum().getValue(), result.getDataMsg().getMsg(), null);
 
         if (result.getStatusEnum() == RespStatusEnum.SUCCESS) {
             //如果添加成功为管理员发送邮件
@@ -82,7 +83,6 @@ public class AdminController extends BaseController {
             adminService.sendEmail(account, password, to, subject);
 
         }
-
 
     }
 
@@ -105,15 +105,12 @@ public class AdminController extends BaseController {
 
         AdminService.LoginStatusEnum result = adminService.login(account, password);
         if (result.getStatusEnum() == RespStatusEnum.SUCCESS) {
-//            System.out.println(account);
             String addminId = RSAEncrypt.encrypt(account);
-//            System.out.println(addminId);
             Cookie cookie = new Cookie("adminId", addminId);
             cookie.setPath("/");
             response.addCookie(cookie);
-//            System.out.println("adminId添加了cookie");
         }
-        writeResult(response, result.getStatusEnum().getValue(), result.getMsg(), "");
+        writeResult(response, result.getStatusEnum().getValue(), result.getDataMsg().getMsg(), "");
 
     }
 

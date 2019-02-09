@@ -25,11 +25,9 @@ public class MailUtil {
     }
 
     public static boolean sendMail(String toUser, String subject, String content) {
-        long begin = System.currentTimeMillis();
         MailThread mailThread = new MailThread(toUser, subject, content);
         try {
             mailThread.run();
-            System.out.println(System.currentTimeMillis() - begin);
             return true;
         } catch (Exception e) {
             return false;
@@ -115,8 +113,6 @@ public class MailUtil {
         }
     }
 
-    public static void main(String[] args) {
-        MailUtil.sendMail("982294498@qq.com", "这是主体", "还有中文");
-    }
+
 
 }

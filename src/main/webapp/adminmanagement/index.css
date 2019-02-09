@@ -1,0 +1,40 @@
+.header_wrapper {
+    border-bottom: 2px solid #4b4b4b;
+    min-width: 1190px;
+    color: #666
+}
+.header_wrapper .header--wrapper {
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 1190px;
+    overflow: hidden
+}
+.header_wrapper .logo {
+    float: left;
+    width: 100px;
+    height: 36px;
+    overflow: hidden;
+    line-height: 36px;
+    font-family: \@楷体;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4b4b4b;
+    text-decoration: none;
+}
+.header_wrapper .login-block {
+    float: right;
+    line-height: 36px;
+}
+
+.header_wrapper .login-block .tip   {
+    margin-right: 10px;
+}
+.header_wrapper .login-block .btn {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.info-meum {
+    float: right;
+    margin: 0 auto;
+}

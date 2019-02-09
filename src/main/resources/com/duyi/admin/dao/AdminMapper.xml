@@ -25,7 +25,7 @@
 
     <select id="queryAll" resultType="com.duyi.admin.domain.AdminPower">
 
-       select account,up.power_id,url,sign from adm_user_power up left join adm_resources ar on up.power_id = ar.power_id ;
+       select account as account,up.power_id as power_id,url as url,sign as sign from adm_user_power up left join adm_resources ar on up.power_id = ar.power_id ;
 
     </select>
 </mapper>
