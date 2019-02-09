@@ -21,8 +21,9 @@ public class DataTransferRegister {
 
     @PostConstruct
     public void init() throws Exception {
-        System.out.println(list.size());
+        System.out.println("list长度为：" + list.size());
         for(DataTransfer dataTransfer : list) {
+            System.out.println(dataTransfer.getClass().getName());
             DataTransferDesc dataTransferDesc = dataTransfer.getClass().getAnnotation(DataTransferDesc.class);
             if (dataTransferDesc == null) {
                 throw new Exception("error DataTransferDesc is null, class name:" + dataTransfer.getClass().getName());

@@ -42,7 +42,7 @@ public class AdminLoginFilter extends BaseController implements Filter {
 
         Cookie[] cookies = ((HttpServletRequest) servletRequest).getCookies();
         if (cookies == null) {
-            response.sendRedirect("/adminLogin.html");
+            response.sendRedirect("/adminmanagement/adminLogin.html");
             return;
         }
 
@@ -61,7 +61,7 @@ public class AdminLoginFilter extends BaseController implements Filter {
                 }
             }
         }
-        response.sendRedirect("/adminLogin.html");
+        response.sendRedirect("/adminmanagement/adminLogin.html");
     }
 
 

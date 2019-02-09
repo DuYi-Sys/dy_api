@@ -3,6 +3,7 @@ package com.duyi.util;
 import com.duyi.admin.domain.AdminPower;
 import com.duyi.admin.service.AdminService;
 import com.duyi.datatransfer.aop.DataTransferAOP;
+import javafx.application.Application;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -27,18 +28,12 @@ public class InitUtil {
     private void pointCut(){};
 
     @PostConstruct
-    @Before("pointCut()")
-    public void executeInit(JoinPoint joinPoint) {
-        System.out.println("执行了AOP1");
-        MethodSignature signature = (MethodSignature) joinPoint.getSignature();
-        DataTransferAOP dataTransferAOP = signature.getMethod().getDeclaredAnnotation(DataTransferAOP.class);
-        System.out.println("执行了AOP2");
-        if(dataTransferAOP != null) {
-            System.out.println("执行AOP3");
-            adminPowerList =  adminService.queryAll();
-            for(AdminPower admin :adminPowerList) {
-                adminPowerSet.add(getPowerkey(admin.getAccount(), admin.getUrl()));
-            }
+    public void executeInit() {
+        System.out.println("初始化执行");
+        adminPowerList =  adminService.queryAll();
+        System.out.println(adminPowerList);
+        for(AdminPower admin :adminPowerList) {
+            adminPowerSet.add(getPowerkey(admin.getAccount(), admin.getUrl()));
         }
     }
 

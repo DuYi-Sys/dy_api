@@ -4,14 +4,13 @@ import com.duyi.admin.dao.AdminDao;
 import com.duyi.admin.domain.Admin;
 import com.duyi.admin.domain.AdminPower;
 import com.duyi.common.RespStatusEnum;
-import com.duyi.datatransfer.DataTransfer;
-import com.duyi.datatransfer.DataTransferUtil;
+import com.duyi.datatransfer.DataTansferAble;
+import com.duyi.datatransfer.impl.DataTansferAbleImpl;
 import com.duyi.util.MD5Util;
 import com.duyi.util.MailUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.net.URLEncoder;
 import java.util.List;
 
 @Service
@@ -49,7 +48,10 @@ public class AdminService {
         return adminDao.queryByAccount(account);
     }
 
-    public List<AdminPower> queryAll() { return adminDao.queryAll(); }
+    public List<AdminPower> queryAll() {
+        List<AdminPower> adminPowers = adminDao.queryAll();
+        return adminPowers;
+    }
 
     public AdminService.LoginStatusEnum login(String account, String password) {
         Admin admin = adminDao.queryByAccount(account);
@@ -62,7 +64,7 @@ public class AdminService {
         if (md5Password.equals(admin.getPassword())) {
             return LoginStatusEnum.SUCCESS;
         } else {
-            return LoginStatusEnum.UNKNOW_ERROR;
+            return LoginStatusEnum.PASSWORD_ERRO;
         }
     }
 
@@ -79,7 +81,7 @@ public class AdminService {
         //邮箱内容
         StringBuffer sb = new StringBuffer();
 //        String yzm = "http://api.duyiedu.com/userActivate?encryptionAccount=" + encryptionAccount;
-        String yzm = "http://127.0.0.1:8080/adminLogin.html";
+        String yzm = "http://127.0.0.1:8080/adminmanagement/adminLogin.html";
         sb.append("<!DOCTYPE>" + "<div bgcolor='#f1fcfa'   style='border:1px solid #d9f4ee; font-size:14px; line-height:22px; color:#005aa0;padding-left:1px;padding-top:5px;   padding-bottom:5px;'><span style='font-weight:bold;'>温馨提示：</span>"
                 + "<div style='width:950px;font-family:arial;'>欢迎使用渡一教育后台管理系统！<br/> 您的帐号为：'" + account + "' , 密码为:'" + password + "'<br/><h2 style='color:green'><a href=" + yzm + ">点击进入后台管理系统</a></h2><br/>本邮件由系统自动发出，请勿回复。<br/>感谢您的使用。<br/>黑龙江渡一信息技术开发有限公司</div>"
                 + "</div>");
@@ -88,44 +90,86 @@ public class AdminService {
 
     public enum addAdminStatusEnum {
 
-        EXIST_USER_ACCOUNT(RespStatusEnum.FAIL, "此管理员已存在"), SUCCESS(RespStatusEnum.SUCCESS, "添加成功"), UNKNOW_ERROR(RespStatusEnum.FAIL, "未知错误");
+        EXIST_USER_ACCOUNT(RespStatusEnum.FAIL, new DataTansferAbleImpl("此管理员已存在")), SUCCESS(RespStatusEnum.SUCCESS,new DataTansferAbleImpl("添加成功")), UNKNOW_ERROR(RespStatusEnum.FAIL, new DataTansferAbleImpl("此管理员已存在"));
 
         private RespStatusEnum statusEnum;
-        private String msg;
+        private DataTansferAbleImpl dataMsg;
 
-        addAdminStatusEnum(RespStatusEnum statusEnum, String msg) {
+        addAdminStatusEnum(RespStatusEnum statusEnum, DataTansferAbleImpl dataMsg) {
             this.statusEnum = statusEnum;
-            this.msg = msg;
+            this.dataMsg = dataMsg;
         }
 
         public RespStatusEnum getStatusEnum() {
             return statusEnum;
         }
 
-        public String getMsg() {
-            return msg;
+        public DataTansferAbleImpl getDataMsg() {
+            return dataMsg;
         }
     }
+
+
+//    public enum addAdminStatusEnum {
+//
+//        EXIST_USER_ACCOUNT(RespStatusEnum.FAIL, "此管理员已存在"), SUCCESS(RespStatusEnum.SUCCESS, "添加成功"), UNKNOW_ERROR(RespStatusEnum.FAIL, "未知错误");
+//
+//        private RespStatusEnum statusEnum;
+//        private String msg;
+//
+//        addAdminStatusEnum(RespStatusEnum statusEnum, String msg) {
+//            this.statusEnum = statusEnum;
+//            this.msg = msg;
+//        }
+//
+//        public RespStatusEnum getStatusEnum() {
+//            return statusEnum;
+//        }
+//
+//        public String getMsg() {
+//            return msg;
+//        }
+//    }
 
     public enum LoginStatusEnum {
 
-        NOT_FOND_ADMIN(RespStatusEnum.FAIL, "账号错误"), SUCCESS(RespStatusEnum.SUCCESS, "登录成功"), UNKNOW_ERROR(RespStatusEnum.FAIL, "未知错误"), PASSWORD_ERRO(RespStatusEnum.FAIL, "密码错误");
+        NOT_FOND_ADMIN(RespStatusEnum.FAIL, new DataTansferAbleImpl("用户不存在")), SUCCESS(RespStatusEnum.SUCCESS, new DataTansferAbleImpl("登录成功")), UNKNOW_ERROR(RespStatusEnum.FAIL,new DataTansferAbleImpl("未知错误")), PASSWORD_ERRO(RespStatusEnum.FAIL, new DataTansferAbleImpl("密码错误"));
 
         private RespStatusEnum statusEnum;
-        private String msg;
+        private DataTansferAbleImpl dataMsg;
 
-        LoginStatusEnum(RespStatusEnum statusEnum, String msg) {
+        LoginStatusEnum(RespStatusEnum statusEnum, DataTansferAbleImpl dataMsg) {
             this.statusEnum = statusEnum;
-            this.msg = msg;
+            this.dataMsg = dataMsg;
         }
 
         public RespStatusEnum getStatusEnum() {
             return statusEnum;
         }
 
-        public String getMsg() {
-            return msg;
+        public DataTansferAbleImpl getDataMsg() {
+            return dataMsg;
         }
     }
+//    public enum LoginStatusEnum {
+//
+//        NOT_FOND_ADMIN(RespStatusEnum.FAIL, "账号错误"), SUCCESS(RespStatusEnum.SUCCESS, "登录成功"), UNKNOW_ERROR(RespStatusEnum.FAIL, "未知错误"), PASSWORD_ERRO(RespStatusEnum.FAIL, "密码错误");
+//
+//        private RespStatusEnum statusEnum;
+//        private String msg;
+//
+//        LoginStatusEnum(RespStatusEnum statusEnum, String msg) {
+//            this.statusEnum = statusEnum;
+//            this.msg = msg;
+//        }
+//
+//        public RespStatusEnum getStatusEnum() {
+//            return statusEnum;
+//        }
+//
+//        public String getMsg() {
+//            return msg;
+//        }
+//    }
 
 }

@@ -32,7 +32,7 @@ public class DataTransferAOPUtil {
     private void pointCut(){};
 
     @Around("pointCut()")
-    private void checkSecurity(JoinPoint joinPoint) {
+    private Object checkSecurity(JoinPoint joinPoint) {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         DataTransferAOP dataTransferAOP = signature.getMethod().getDeclaredAnnotation(DataTransferAOP.class);
         if (dataTransferAOP != null) {
@@ -45,7 +45,14 @@ public class DataTransferAOPUtil {
             }
             DataTansferAble nowData = domainConstructor.getNowData(joinPoint.getArgs());
             DataTransferUtil.act(domainConstructor.getDomainType(joinPoint.getArgs()), dataTransferAOP.DATA_ACT_TYPE(), originData, nowData);
+        } else {
+            try {
+                return ((ProceedingJoinPoint) joinPoint).proceed();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+            }
         }
+        return null;
     }
 
 }

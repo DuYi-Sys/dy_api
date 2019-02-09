@@ -113,8 +113,6 @@ public class MailUtil {
         }
     }
 
-    public static void main(String[] args) {
-        MailUtil.sendMail("982294498@qq.com", "这是主体", "还有中文");
-    }
+
 
 }
